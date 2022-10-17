@@ -75,15 +75,68 @@ $(".sec2 .herose .Hr a:last").click(function(){
 });    
 
 
+$(".sec1 > .slide > .control > li:first").click(function(){
+    $(".sec1 > .slide > .guide > li:first").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:first > .textguide").addClass("on").siblings().removeClass("on");
+});
 
-$(document).ready(function(index, a){
-    $(".cardlist > div > a > img").addClass(function(index){
-        return `box${index+1}`;
+$(".sec1 > .slide > .control > li:nth(1)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(1) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(2)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(2) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(3)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(3) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(4)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(4) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(5)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(5) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(6)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(6) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(7)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(7) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+$(".sec1 > .slide > .control > li:nth(8)").click(function(){
+    $(".sec1 > .slide > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
+    $(".sec1 > .slide > .guide > li:nth(8) > .textguide").addClass("on").siblings().removeClass("on");
+});
+
+// $(document).ready(function(index, a){
+//     $(".cardlist > div > a > img").addClass(function(index){
+//         return `box${index+1}`;
+//     });
+// });
+
+
+$(document).ready(function(index, li){
+    $(".sec1 > .slide > .guide > li").addClass(function(index){
+        return `intro${index+1}`;
     });
 });
 
 
-
+// $(".sec1 > .slide > .control > li").on(function(index, li){
+//     $(".sec1 > .slide > .guide > li").addClass()
+// });
 
 
 

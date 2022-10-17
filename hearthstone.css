@@ -5,7 +5,11 @@
 /* a{cursor: pointer;} */
 ul, li{list-style-type: none;}
 a > img{background-repeat: no-repeat; background-size: contain; text-indent: -999px; overflow: hidden;}
-.top{width: 100vw; bottom: 0; height: 30px; display: flex; justify-content: space-between;}
+h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
+p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
+
+
+.top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between;}
 .leftmenu{width: fit-content; height: 100%; padding: 2px;}
 .rightmenu{padding: 10px; width: fit-content; height: 100%; display: flex; flex-direction: row;}
 .rightmenu .sitemap{display: flex; align-items: center; gap: 15px;}
@@ -39,30 +43,43 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec2{display: none;}
 
 
-.sec1{width: 100%; height: 100%;}
-.slide{width: 100vw; height: 100vh; padding-top: 50px; background-color: #ff6600; display: flex; flex-direction: row; overflow: hidden;}
+.sec1{width: 100%; height: 100vh; position: relative;}
+.slide{width: 100%; height: 100%; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden;}
 
-.slide .control{width: 10%; height: 100vh; z-index: 3;}
-.slide .guide{width: 90%; height: 100vh;}
+.slide .control{flex: 0 1 100px; height: 100%; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
+.slide .guide{flex: 1 1 0; height: 100%; position: relative;}
+.slide .guide .textguide{display: none;}
+.slide .guide li{height: 50%; width: 100%; transition: all 2s; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center;}
 
-
-.slide ul.control li{width: 100px; height: 100px; cursor: pointer; opacity: 0.5;}
-.slide ul.control li.on{opacity: 1;}
-.slide ul.control li:hover{opacity: 1;}
-.slide ul.control .mana1{background-image: url(/new/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana2{background-image: url(/new/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana3{background-image: url(/new/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana4{background-image: url(/new/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana5{background-image: url(/new/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana6{background-image: url(/new/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana7{background-image: url(/new/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana8{background-image: url(/new/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana9{background-image: url(/new/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
-
+.slide .guide .textguide.on{display: block; height: 100%; width: 60%; word-wrap:break-word; position: absolute; top: 55%; text-align: center;}
+.slide .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom;}
+.slide .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center bottom;}
+.slide .guide .intro3.on{background-image: url(/project/1x/intro_heroactive.png); background-position: center 95%;}
+.slide .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom;}
+.slide .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom;}
+.slide .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%;}
+.slide .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center;}
+.slide .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%;}
+.slide .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%;}
 
 
+.slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
+.slide ul.control li.on{opacity: 1; display: inline-block;}
+.slide ul.control li:hover{opacity: 1; display: inline-block;}
+.slide ul.control .mana1{background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana2{background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana3{background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana4{background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana5{background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana6{background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana7{background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana8{background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana9{background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
 
-.slide .guide li{width: 100%;}
+
+
+
+
 
 
 
@@ -108,8 +125,6 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .wrap{width: 100%; height: 300px; display: flex; flex-wrap: wrap; flex-direction: row;}
 
 .sec2 .heropage .inner .text{padding: 10px; width: 100%;}
-.sec2 .heropage .inner .text h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
-.sec2 .heropage .inner .text p{font-size: 1rem; text-align: center;}
 .sec2 .heropage .inner .close{position: absolute; bottom: 20px; right: 5px; z-index: 100; width: 30px; height: 30px;}
 
 
@@ -128,36 +143,36 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec3 .class{width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px;}
 .sec3 .searchmenu{display: flex; width: 100%; height: 60px; align-items: center; justify-content: space-between;}
 .sec3 .searchmenu .manacost{height: 100%; display: flex; align-items: center;}
-.sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/new/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana0:hover{background-image: url(/new/1x/0마나hover.png);}
-.sec3 .searchmenu .manacost .mana1{width: 60px; height: 60px; background-image: url(/new/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana1:hover{background-image: url(/new/1x/1마나hover.png);}
-.sec3 .searchmenu .manacost .mana2{width: 60px; height: 60px; background-image: url(/new/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana2:hover{background-image: url(/new/1x/2마나hover.png);}
-.sec3 .searchmenu .manacost .mana3{width: 60px; height: 60px; background-image: url(/new/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana3:hover{background-image: url(/new/1x/3마나hover.png);}
-.sec3 .searchmenu .manacost .mana4{width: 60px; height: 60px; background-image: url(/new/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana4:hover{background-image: url(/new/1x/4마나hover.png);}
-.sec3 .searchmenu .manacost .mana5{width: 60px; height: 60px; background-image: url(/new/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana5:hover{background-image: url(/new/1x/5마나hover.png);}
-.sec3 .searchmenu .manacost .mana6{width: 60px; height: 60px; background-image: url(/new/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana6:hover{background-image: url(/new/1x/6마나hover.png);}
-.sec3 .searchmenu .manacost .mana7{width: 60px; height: 60px; background-image: url(/new/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana7:hover{background-image: url(/new/1x/7마나hover.png);}
-.sec3 .searchmenu .manacost .mana8{width: 60px; height: 60px; background-image: url(/new/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana8:hover{background-image: url(/new/1x/8마나hover.png);}
-.sec3 .searchmenu .manacost .mana9{width: 60px; height: 60px; background-image: url(/new/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana9:hover{background-image: url(/new/1x/9마나hover.png);}
-.sec3 .searchmenu .manacost .mana10{width: 60px; height: 60px; background-image: url(/new/1x/mana/10.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana10:hover{background-image: url(/new/1x/10마나hover.png);}
+.sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/project/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana0:hover{background-image: url(/project/1x/0마나hover.png);}
+.sec3 .searchmenu .manacost .mana1{width: 60px; height: 60px; background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana1:hover{background-image: url(/project/1x/1마나hover.png);}
+.sec3 .searchmenu .manacost .mana2{width: 60px; height: 60px; background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana2:hover{background-image: url(/project/1x/2마나hover.png);}
+.sec3 .searchmenu .manacost .mana3{width: 60px; height: 60px; background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana3:hover{background-image: url(/project/1x/3마나hover.png);}
+.sec3 .searchmenu .manacost .mana4{width: 60px; height: 60px; background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana4:hover{background-image: url(/project/1x/4마나hover.png);}
+.sec3 .searchmenu .manacost .mana5{width: 60px; height: 60px; background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana5:hover{background-image: url(/project/1x/5마나hover.png);}
+.sec3 .searchmenu .manacost .mana6{width: 60px; height: 60px; background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana6:hover{background-image: url(/project/1x/6마나hover.png);}
+.sec3 .searchmenu .manacost .mana7{width: 60px; height: 60px; background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana7:hover{background-image: url(/project/1x/7마나hover.png);}
+.sec3 .searchmenu .manacost .mana8{width: 60px; height: 60px; background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana8:hover{background-image: url(/project/1x/8마나hover.png);}
+.sec3 .searchmenu .manacost .mana9{width: 60px; height: 60px; background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana9:hover{background-image: url(/project/1x/9마나hover.png);}
+.sec3 .searchmenu .manacost .mana10{width: 60px; height: 60px; background-image: url(/project/1x/mana/10.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana10:hover{background-image: url(/project/1x/10마나hover.png);}
 .sec3 .searchmenu .rarity{height: 100%; display: flex; align-items: center; gap: 20px;}
-.sec3 .searchmenu .rarity .normal{background-image: url(/new/1x/normal.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .rare{background-image: url(/new/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .unique{background-image: url(/new/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .legend{background-image: url(/new/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .normal{background-image: url(/project/1x/normal.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .rare{background-image: url(/project/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .unique{background-image: url(/project/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .legend{background-image: url(/project/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
 
 
-.inner .left .one:hover{background-image: url(/new/1x/1마나hover.png);}
+.inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);}
 
 
 
@@ -165,13 +180,13 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 .sec3{display: none; padding-top: 60px;}
 .sec3.on{display: block;}
-.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/new/1x/라이브러리\ 배경.png); background-size: contain;}
+.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-size: contain;}
 .sec3 .cardlist .wrap a img{width: 300px; height: 350px;}
 .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;}
 
 
 
-.sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua;}
+.sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua; display: none;}
 .solocard{width: 1200px; height: 800px; background-color: beige; display: flex;}
 .sec4 .solocard .right{width: 50%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center;}
 .sec4 .solocard .left{ width: 50%; height: 100%; background: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png) no-repeat 50% 50%;}
