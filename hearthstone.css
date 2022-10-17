@@ -49,15 +49,15 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .slide ul.control li{width: 100px; height: 100px; cursor: pointer; opacity: 0.5;}
 .slide ul.control li.on{opacity: 1;}
 .slide ul.control li:hover{opacity: 1;}
-.slide ul.control .mana1{background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana2{background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana3{background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana4{background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana5{background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana6{background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana7{background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana8{background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.slide ul.control .mana9{background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana1{background-image: url(/new/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana2{background-image: url(/new/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana3{background-image: url(/new/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana4{background-image: url(/new/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana5{background-image: url(/new/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana6{background-image: url(/new/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana7{background-image: url(/new/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana8{background-image: url(/new/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana9{background-image: url(/new/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
 
 
 
@@ -128,36 +128,36 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec3 .class{width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px;}
 .sec3 .searchmenu{display: flex; width: 100%; height: 60px; align-items: center; justify-content: space-between;}
 .sec3 .searchmenu .manacost{height: 100%; display: flex; align-items: center;}
-.sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/project/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana0:hover{background-image: url(/project/1x/0마나hover.png);}
-.sec3 .searchmenu .manacost .mana1{width: 60px; height: 60px; background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana1:hover{background-image: url(/project/1x/1마나hover.png);}
-.sec3 .searchmenu .manacost .mana2{width: 60px; height: 60px; background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana2:hover{background-image: url(/project/1x/2마나hover.png);}
-.sec3 .searchmenu .manacost .mana3{width: 60px; height: 60px; background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana3:hover{background-image: url(/project/1x/3마나hover.png);}
-.sec3 .searchmenu .manacost .mana4{width: 60px; height: 60px; background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana4:hover{background-image: url(/project/1x/4마나hover.png);}
-.sec3 .searchmenu .manacost .mana5{width: 60px; height: 60px; background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana5:hover{background-image: url(/project/1x/5마나hover.png);}
-.sec3 .searchmenu .manacost .mana6{width: 60px; height: 60px; background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana6:hover{background-image: url(/project/1x/6마나hover.png);}
-.sec3 .searchmenu .manacost .mana7{width: 60px; height: 60px; background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana7:hover{background-image: url(/project/1x/7마나hover.png);}
-.sec3 .searchmenu .manacost .mana8{width: 60px; height: 60px; background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana8:hover{background-image: url(/project/1x/8마나hover.png);}
-.sec3 .searchmenu .manacost .mana9{width: 60px; height: 60px; background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana9:hover{background-image: url(/project/1x/9마나hover.png);}
-.sec3 .searchmenu .manacost .mana10{width: 60px; height: 60px; background-image: url(/project/1x/mana/10.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana10:hover{background-image: url(/project/1x/10마나hover.png);}
+.sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/new/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana0:hover{background-image: url(/new/1x/0마나hover.png);}
+.sec3 .searchmenu .manacost .mana1{width: 60px; height: 60px; background-image: url(/new/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana1:hover{background-image: url(/new/1x/1마나hover.png);}
+.sec3 .searchmenu .manacost .mana2{width: 60px; height: 60px; background-image: url(/new/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana2:hover{background-image: url(/new/1x/2마나hover.png);}
+.sec3 .searchmenu .manacost .mana3{width: 60px; height: 60px; background-image: url(/new/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana3:hover{background-image: url(/new/1x/3마나hover.png);}
+.sec3 .searchmenu .manacost .mana4{width: 60px; height: 60px; background-image: url(/new/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana4:hover{background-image: url(/new/1x/4마나hover.png);}
+.sec3 .searchmenu .manacost .mana5{width: 60px; height: 60px; background-image: url(/new/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana5:hover{background-image: url(/new/1x/5마나hover.png);}
+.sec3 .searchmenu .manacost .mana6{width: 60px; height: 60px; background-image: url(/new/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana6:hover{background-image: url(/new/1x/6마나hover.png);}
+.sec3 .searchmenu .manacost .mana7{width: 60px; height: 60px; background-image: url(/new/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana7:hover{background-image: url(/new/1x/7마나hover.png);}
+.sec3 .searchmenu .manacost .mana8{width: 60px; height: 60px; background-image: url(/new/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana8:hover{background-image: url(/new/1x/8마나hover.png);}
+.sec3 .searchmenu .manacost .mana9{width: 60px; height: 60px; background-image: url(/new/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana9:hover{background-image: url(/new/1x/9마나hover.png);}
+.sec3 .searchmenu .manacost .mana10{width: 60px; height: 60px; background-image: url(/new/1x/mana/10.png); background-repeat: no-repeat; background-size: contain;}
+.sec3 .searchmenu .manacost .mana10:hover{background-image: url(/new/1x/10마나hover.png);}
 .sec3 .searchmenu .rarity{height: 100%; display: flex; align-items: center; gap: 20px;}
-.sec3 .searchmenu .rarity .normal{background-image: url(/project/1x/normal.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .rare{background-image: url(/project/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .unique{background-image: url(/project/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .legend{background-image: url(/project/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .normal{background-image: url(/new/1x/normal.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .rare{background-image: url(/new/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .unique{background-image: url(/new/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
+.sec3 .searchmenu .rarity .legend{background-image: url(/new/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
 
 
-.inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);}
+.inner .left .one:hover{background-image: url(/new/1x/1마나hover.png);}
 
 
 
@@ -165,7 +165,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 .sec3{display: none; padding-top: 60px;}
 .sec3.on{display: block;}
-.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-size: contain;}
+.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/new/1x/라이브러리\ 배경.png); background-size: contain;}
 .sec3 .cardlist .wrap a img{width: 300px; height: 350px;}
 .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;}
 
