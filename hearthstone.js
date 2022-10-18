@@ -16,6 +16,14 @@ $(function() {
     $(".gnb .navmenu li .min:eq(0)").stop().trigger("mouseenter");     
 });
 
+$(document).ready(function(index, li){
+    $("#slide > .guide > li").addClass(function(index){
+        return `intro${index+1}`;
+    });
+});
+
+
+
 $(function(){
     $(".gnb .navmenu .m").on("mouseenter focusin click", function(){
         $("ul",this).show();
@@ -32,6 +40,47 @@ $(".gnb .navmenu .m ul").hide();
         $(this).addClass("on").stop();
         $(".gnb .navmenu .m ul li").not(this).removeClass("on").stop();
     });
+
+
+
+$(".gnb .navmenu .m:first a").click(function(){
+    $("#gameintroduce").addClass("on").siblings().removeClass("on");
+});    
+
+$(".gnb .navmenu .m:first .snb li:first a").click(function(){
+    $("#silde").addClass("on").siblings().removeClass("on");
+});    
+
+$(".gnb .navmenu .m:first .snb li:nth(1) a").click(function(){
+    $("#how").addClass("on").siblings().removeClass("on");
+});    
+
+
+
+
+
+
+
+
+$(".gnb .navmenu .m:nth(1) a").click(function(){
+    $(".sec2").addClass("on").siblings().removeClass("on");
+});    
+
+$(".gnb .navmenu .m:nth(2) a").click(function(){
+    $(".sec3").addClass("on").siblings().removeClass("on");
+});    
+
+
+$(".gnb .navmenu .m:nth(2) li:first").click(function(){
+    $(".sec3").addClass("on").siblings().removeClass("on");
+});    
+
+$(".gnb .navmenu .m:nth(2) li:last").click(function(){
+    $(".sec4").addClass("on").siblings().removeClass("on");
+});    
+
+
+
 
 
 $(".sec2 .herose .Hr a:first").click(function(){
@@ -75,89 +124,84 @@ $(".sec2 .herose .Hr a:last").click(function(){
 });    
 
 
-$(".sec1 > .slide > .control > li:first").click(function(){
-    $(".sec1 > .slide > .guide > li:first").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:first > .textguide").addClass("on").siblings().removeClass("on");
+
+
+//     var imgIndex = $(this).index();
+    //     $("ul.guide li").eq(imgIndex).stop().fadeIn()
+    //                     .siblings().fadeOut(); 
+
+
+
+$("#slide > .control > li:first").click(function(){
+    $("#slide > .guide > li:first").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide li:first").addClass("on").siblings().removeClass("on");
+});
+    
+
+$("#slide > .control > li:nth(1)").click(function(){
+    $("#slide > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide li:nth(1)").addClass("on").siblings().removeClass("on");
 });
 
-$(".sec1 > .slide > .control > li:nth(1)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(1) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(2)").click(function(){
+    $("#slide > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(2)").addClass("on").siblings().removeClass("on");
 });
 
-$(".sec1 > .slide > .control > li:nth(2)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(2) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(3)").click(function(){
+    $("#slide > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(3)").addClass("on").siblings().removeClass("on");
+    
 });
 
-$(".sec1 > .slide > .control > li:nth(3)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(3) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(4)").click(function(){
+    $("#slide > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(4)").addClass("on").siblings().removeClass("on");
+    
 });
 
-$(".sec1 > .slide > .control > li:nth(4)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(4) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(5)").click(function(){
+    $("#slide > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(5)").addClass("on").siblings().removeClass("on");
+    
 });
 
-$(".sec1 > .slide > .control > li:nth(5)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(5) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(6)").click(function(){
+    $("#slide > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(6)").addClass("on").siblings().removeClass("on");
+    
 });
 
-$(".sec1 > .slide > .control > li:nth(6)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(6) > .textguide").addClass("on").siblings().removeClass("on");
+$("#slide > .control > li:nth(7)").click(function(){
+    $("#slide > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(7)").addClass("on").siblings().removeClass("on");
+    
 });
 
-$(".sec1 > .slide > .control > li:nth(7)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(7) > .textguide").addClass("on").siblings().removeClass("on");
-});
-
-$(".sec1 > .slide > .control > li:nth(8)").click(function(){
-    $(".sec1 > .slide > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
-    $(".sec1 > .slide > .guide > li:nth(8) > .textguide").addClass("on").siblings().removeClass("on");
-});
-
-// $(document).ready(function(index, a){
-//     $(".cardlist > div > a > img").addClass(function(index){
-//         return `box${index+1}`;
-//     });
-// });
-
-
-$(document).ready(function(index, li){
-    $(".sec1 > .slide > .guide > li").addClass(function(index){
-        return `intro${index+1}`;
-    });
+$("#slide > .control > li:nth(8)").click(function(){
+    $("#slide > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
+    $("#slide > .textguide > li:nth(8)").addClass("on").siblings().removeClass("on");
+    
 });
 
 
-// $(".sec1 > .slide > .control > li").on(function(index, li){
-//     $(".sec1 > .slide > .guide > li").addClass()
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $("ul.guide li:first").show();
+$("ul.guide li:first").show();
     $("ul.control li").click(function() { 
         $(this).addClass("on").siblings().removeClass("on");
-        var imgIndex = $(this).index();
-        $("ul.guide li").eq(imgIndex).stop(true).fadeIn(500)
-                        .siblings().fadeOut(200);
     });
+
+
+
+
+
+
+    // $("ul.guide li:first").show();
+    // $("ul.control li").click(function() { 
+    //     $(this).addClass("on").siblings().removeClass("on");
+    //     var imgIndex = $(this).index();
+    //     $("ul.guide li").eq(imgIndex).stop().fadeIn()
+    //                     .siblings().fadeOut();
+    // });
 
 
 
@@ -221,14 +265,14 @@ $('.sec2 > .heropage > .bg > .inner > .skin > .wrap').slick({
 
   });
     
-  $(function() {
-    $("ul.guide li:first").show();
-    $("ul.control li").click(function() { 
-        $(this).addClass("on").siblings().removeClass("on");
-        var imgIndex = $(this).index();
-        $("ul.guide li").eq(imgIndex).stop(true).fadeIn(500)
-                        .siblings().fadeOut(200);
-    });
+//   $(function() {
+//     $("ul.guide li:first").show();
+//     $("ul.control li").click(function() { 
+//         $(this).addClass("on").siblings().removeClass("on");
+//         var imgIndex = $(this).index();
+//         $("ul.guide li").eq(imgIndex).stop(true).fadeIn(500)
+//                         .siblings().fadeOut(200);
+//     });
 
 
     
@@ -237,7 +281,7 @@ $('.sec2 > .heropage > .bg > .inner > .skin > .wrap').slick({
 
 
 
-});
+// });
 
 
 

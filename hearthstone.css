@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 
-*{margin: 0; padding: 0; box-sizing: border-box; word-break: keep-all;}
+*{margin: 0; padding: 0; box-sizing: border-box; word-break: keep-all; background-repeat: no-repeat;}
 /* a{cursor: pointer;} */
 ul, li{list-style-type: none;}
 a > img{background-repeat: no-repeat; background-size: contain; text-indent: -999px; overflow: hidden;}
@@ -40,27 +40,30 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .gnb .m ul li:last-child a{border: none;}
 
 
-.sec2{display: none;}
 
 
-.sec1{width: 100%; height: 100vh; position: relative;}
-.slide{width: 100%; height: 100%; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden;}
+.sec1{width: 100%; height: 100%;}
+.sec1 .gameguide{width: 100vw; height: 100vh; 
+    /* background: url(/project/1x/메인화면.png) no-repeat 50% 50%; */
+}
+#slide{width: 100%; height: 100%; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden; position: relative;}
 
-.slide .control{flex: 0 1 100px; height: 100%; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
-.slide .guide{flex: 1 1 0; height: 100%; position: relative;}
-.slide .guide .textguide{display: none;}
-.slide .guide li{height: 50%; width: 100%; transition: all 2s; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center;}
+#slide .control{flex: 0 1 100px; height: 100%; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
+#slide .guide{flex: 1 1 0; height: 50%; position: relative;}
 
-.slide .guide .textguide.on{display: block; height: 100%; width: 60%; word-wrap:break-word; position: absolute; top: 55%; text-align: center;}
-.slide .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom;}
-.slide .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center bottom;}
-.slide .guide .intro3.on{background-image: url(/project/1x/intro_heroactive.png); background-position: center 95%;}
-.slide .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom;}
-.slide .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom;}
-.slide .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%;}
-.slide .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center;}
-.slide .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%;}
-.slide .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%;}
+#slide .guide li{height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center; position: absolute;}
+
+
+
+#slide .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center 90%; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro3.on{background-image: url(/project/1x/intro_hero.png); background-position: center 95%; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%; transition: all 2s ease-in; transform:scaleY(1.1)}
+#slide .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%; transition: all 2s ease-in; transform:scaleY(1.1)}
 
 
 .slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
@@ -76,13 +79,17 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .slide ul.control .mana8{background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
 .slide ul.control .mana9{background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
 
+#slide .textguide li{display: none;}
+#slide .textguide li.on{position: absolute; top: 70%; left: 25%; height: 100%; width: 50%; word-wrap:break-word; text-align: center; display: block;}
+/* 모바일화면시 left 30%해야함 top은 65 */
 
 
 
-
-
-
-
+#gameintroduce .basic{width: 100vw; height: 100vh; background: url(/project/1x/메인화면.png) no-repeat 50% bottom / cover; }
+#gameintroduce .first{width: 100vw; height: 100vh; background: url(/project/1x/firsthover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .second{width: 100vw; height: 100vh; background: url(/project/1x/secondhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .third{width: 100vw; height: 100vh; background: url(/project/1x/thirdhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .fourth{width: 100vw; height: 100vh; background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; }
 
 
 
@@ -95,21 +102,33 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 .sec2{width: 100%; height: 100%;}
 .sec2 .herose{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
-.sec2 .herose .Hr{flex: 1 1 0; position: relative;}
-.sec2 .herose .Hr .hidename{width: 100%; height: 0; overflow: hidden; position: absolute; top: 60%; text-align: center; word-break: break-all;}
+.sec2 .herose .Hr{flex: 1 1 0; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.sec2 .herose .Hr .hidename{width: 100%; height: 0; position: absolute; top: 0%; text-align: center; word-wrap:break-word}
 .sec2 .herose .Hr:hover .hidename{height: fit-content; transition: all 0.5s ease-in-out; color: #ffffff;}
+
+.Hr a{width: 100%; max-width: 80px; height: 100%; max-height: 80px; background-repeat: no-repeat; background-size: contain;}
 .Hr.demonhunter{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt881c2890e465706d/5e5fe3d58902221b5e1dd5ea/dh.jpg) no-repeat 48%;}
+.Hr.demonhunter a{background-image: url(/project/1x/악마사냥꾼1.png);}
 .Hr.druid{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt810ba2b34c90b740/5e501a45297b4d1b5ff02394/druid.jpg) no-repeat 54%;}
+.Hr.druid a{background-image: url(/project/1x/드루이드1.png);}
 .Hr.hunter{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt12bb0cfe0878742b/5e4da461a9f0fb732c24c39b/hunter.jpg) no-repeat 50%;}
+.Hr.hunter a{background-image: url(/project/1x/사냥꾼1.png);}
 .Hr.magician{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/bltfad439f31b38dad2/5e4da46f8286c81bdae7858c/mage.jpg) no-repeat 50%;}
+.Hr.magician a{background-image: url(/project/1x/마법사1.png);}
 .Hr.paladin{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt198019879a096f53/5e4ebd3a8dc1e51c531689a4/paladin.jpg) no-repeat 52%;}
+.Hr.paladin a{background-image: url(/project/1x/성기사1.png);}
 .Hr.priest{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt4ff23385f5f401ef/5e500e588dc1e51c53168a5a/priest.jpg) no-repeat 48%;}
+.Hr.priest a{background-image: url(/project/1x/사제1.png);}
 .Hr.rogue{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt2fc4edc7ed836f8a/5e6008788286c81bdae78b9d/Rogue.jpg) no-repeat 49%;}
+.Hr.rogue a{background-image: url(/project/1x/도적1.png);}
 .Hr.shaman{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/bltd6694bd0e56ba114/5e4da3cba481381bd5d2e9d7/shaman.jpg) no-repeat 52%;}
+.Hr.shaman a{background-image: url(/project/1x/주술사1.png);}
 .Hr.warlock{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/bltad0a2dc55b70fa29/5e4ee38e8d83401be1195eaa/warlock.jpg) no-repeat 50%;}
+.Hr.warlock a{background-image: url(/project/1x/흑마법사1.png);}
 .Hr.warrior{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt5677de4c919e9430/5e4da44ca9f0fb732c24c397/warrior.jpg) no-repeat 50%;}
+.Hr.warrior a{background-image: url(/project/1x/전사1.png);}
 .Hr:hover{border: solid #B0FF73 2px; opacity: 0.7;}
-.Hr a img{position: absolute; left: 30%; top: 50%;}
+/* .Hr a img{position: absolute; left: 30%; top: 50%; min-width: 20px; min-height: 20px;} */
 .sec2 .heropage{width: 100%; height: 100%;}
 .sec2 .heropage .bg{display: none; height: fit-content; position: relative;}
 .sec2 .heropage .bg.on{display: block;}
@@ -178,21 +197,24 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec3{display: none; padding-top: 60px;}
-.sec3.on{display: block;}
+.sec3{padding-top: 60px;}
 .sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-size: contain;}
 .sec3 .cardlist .wrap a img{width: 300px; height: 350px;}
 .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;}
 
 
 
-.sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua; display: none;}
+.sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua;}
 .solocard{width: 1200px; height: 800px; background-color: beige; display: flex;}
 .sec4 .solocard .right{width: 50%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center;}
 .sec4 .solocard .left{ width: 50%; height: 100%; background: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png) no-repeat 50% 50%;}
 
 /* .slide, .sec3, .sec4{display: none;} */
 /* #herointro{display: none;} */
+
+
+
+
 
 
 
