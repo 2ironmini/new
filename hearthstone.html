@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
     <title>블리자드_하스스톤</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
@@ -21,13 +22,10 @@
                         <li>
                             <a href="#slide">게임의 진행</a>
                         </li>
-                        <li>
-                            <a href="#">기능 설명</a>
-                        </li>
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="#heropage" class="min">영웅 소개</a>
+                    <a href="#herose" class="min">영웅 소개</a>
                     <ul class="snb">
                         <!-- <li><a href="#magician">마법사</a></li>
                         <li><a href="#">성기사</a></li>
@@ -42,32 +40,32 @@
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="#sec3" class="min">카드라이브러리</a>
+                    <a href="#sec3" class="min">카드 라이브러리</a>
                     <ul class="snb">
-                        <li><a href="#">카드라이브러리(전체)</a></li>
-                        <li><a href="#">카드라이브러리(개별)</a></li>
+                        <li><a href="#sec3">전체 카드</a></li>
+                        <li><a href="#sec4">개별 카드</a></li>
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="#" class="min">플레이모드</a>
+                    <a href="#" class="min">미구현</a>
                     <ul class="snb">
-                        <li><a href="#">정규전/일반전</a></li>
-                        <li><a href="#">전장</a></li>
+                        <li><a href="#">미구현</a></li>
+                        <li><a href="#">미구현</a></li>
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="" class="min">새소식</a>
+                    <a href="" class="min">미구현</a>
                     <ul class="snb">
-                        <li><a href="">패치노트</a></li>
-                        <li><a href="">대회</a></li>
+                        <li><a href="">미구현</a></li>
+                        <li><a href="">미구현</a></li>
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="" class="min">커뮤니티</a>
+                    <a href="" class="min">미구현</a>
                     <ul class="snb">
-                        <li><a href="#">하스스톤 스트리머</a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
+                        <li><a href="#">미구현</a></li>
+                        <li><a href="">미구현</a></li>
+                        <li><a href="">미구현</a></li>
                     </ul>
                 </li>
             </ul>
@@ -75,15 +73,15 @@
     </header>
     <div class="sec1">
         <div class="gameguide">
-            <div class="gameintroduce" id="gameintroduce">
+            <!-- <div class="gameintroduce" id="gameintroduce">
                 <div class="basic"></div>
                 <div class="first"></div>
                 <div class="second"></div>
                 <div class="third"></div>
                 <div class="fourth"></div>
-            </div>
+            </div> -->
             <div class="slide" id="slide">
-                <ul class="control">
+                <ul class="control grid1">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -94,7 +92,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <ul class="guide">
+                <ul class="guide grid2">
                     <li>
                         <!-- <div class="textguide">
                             <h2>손</h2>
@@ -150,7 +148,7 @@
                         </div> -->
                     </li>
                 </ul>    
-                <ul class="textguide">
+                <ul class="textguide grid3">
                     <li>
                         <div>
                             <h2>손</h2>
@@ -212,10 +210,7 @@
     <div class="sec2">
         <div class="herose" id="herose">
             <div class="Hr magician">
-                <!-- <a href="#magician">
-                    <img src="/project/1x/마법사1.png" alt="">
-                </a> -->
-                <a href="#magician">
+                <a href="#magician">    
                 </a>
                 <div class="hidename">
                     <h1>마법사</h1>
@@ -284,7 +279,6 @@
                     <h1>주술사</h1>
                 </div>
             </div>
-            
         </div>
         <div class="heropage" id="heropage">
             <div class="bg magician" id="magician">
@@ -299,7 +293,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/magician/1.png" alt=""></div>
                             <div><img src="/project/1x/magician/2.png" alt=""></div>
                             <div><img src="/project/1x/magician/3.png" alt=""></div>
@@ -356,7 +350,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/paladin/1.png" alt=""></div>
                             <div><img src="/project/1x/paladin/2.png" alt=""></div>
                             <div><img src="/project/1x/paladin/3.png" alt=""></div>
@@ -407,7 +401,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/demonhunter/1.png" alt=""></div>
                             <div><img src="/project/1x/demonhunter/2.png" alt=""></div>
                             <div><img src="/project/1x/demonhunter/3.png" alt=""></div>
@@ -454,7 +448,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/druid/1.png" alt=""></div>
                             <div><img src="/project/1x/druid/2.png" alt=""></div>
                             <div><img src="/project/1x/druid/3.png" alt=""></div>
@@ -505,7 +499,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/hunter/1.png" alt=""></div>
                             <div><img src="/project/1x/hunter/2.png" alt=""></div>
                             <div><img src="/project/1x/hunter/3.png" alt=""></div>
@@ -553,7 +547,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/warlock/1.png" alt=""></div>
                             <div><img src="/project/1x/warlock/2.png" alt=""></div>
                             <div><img src="/project/1x/warlock/3.png" alt=""></div>
@@ -602,7 +596,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/warrior/1.png" alt=""></div>
                             <div><img src="/project/1x/warrior/2.png" alt=""></div>
                             <div><img src="/project/1x/warrior/3.png" alt=""></div>
@@ -650,7 +644,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/priest/1.png" alt=""></div>
                             <div><img src="/project/1x/priest/2.png" alt=""></div>
                             <div><img src="/project/1x/priest/3.png" alt=""></div>
@@ -675,8 +669,7 @@
                     </div>
                     <div class="text">
                         <h2>회복</h2><p>사제는 강력한 치유능력과 생명력 회복 능력으로 상대방의 데미지를 완화할 수 있는 직업입니다. 어둠이 짙을수록 빛도 강해진다네요!</p>
-                        <h2>상대 카드 복사 및 조종</h2><p>사제라고 밝은 부분만 있는 것은 아닙니다! 옛 스승, 발리라에게서 배운 도적질로 상대방의 손이나 덱,전장에 있는 카드를 복사하거나 조종할 수 있습니다! 이런게 빛...?</p>
-                        <h2>풍부한 제압기</h2><p>단일제압기는 물론, 광역 제압기가 풍부한 사제는 상대방의 필드를 한순간에 무력화시킬 수 있습니다.</p>
+                        <h2>상대 카드 복사 및 조종</h2><p>사제라고 밝은 부분만 있는 것은 아닙니다! 옛 스승, 발리라에게서 배운 도적질로 상대방의 손이나 덱,전장에 있는 카드를 복사하거나 조종할 수 있습니다!</p>
                         <h2>하수인복제,강화,침묵</h2><p>자신의 하수인을 빛의 힘으로 강화하거나 복제하여 강력한 하수인을 만들어냅니다, 또한 상대방의 하수인을 침묵시켜서 순식간에 상대방의 필드를 약화시킬 수 있습니다.</p>
                         <h2>죽음의 메아리 시너지</h2><p>죽은자의 영혼 또한 어루만져주는 사제는 그들의 메아리를 잊지 않습니다. <em>죽음의 메아리</em> 하수인을 부활시키거나 그 효과들을 다시 사용하여 한 순간에 강력한 효과를 발동할 수 있습니다.</p>
                     </div>
@@ -699,7 +692,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/rogue/1.png" alt=""></div>
                             <div><img src="/project/1x/rogue/2.png" alt=""></div>
                             <div><img src="/project/1x/rogue/3.png" alt=""></div>
@@ -722,7 +715,6 @@
                     </div>
                     <div class="text">
                         <h2>연계</h2><p>연계는 도적 전용 특수능력으로 이번 턴에 이미 낸 카드가 있으면 추가 효과를 냅니다. 연계를 발동할 수 있으면 테두리가 노랗게 빛나서 손쉽게 효과 발동여부를 확인할 수 있습니다.</p>
-                        <h2>은신</h2><p>도적은 어둠속에서 적을 노리고 있습니다. 뒷덜미가 서늘하다면 이미 늦었습니다.</p>
                         <h2>비용 감소</h2><p>도적은 주문이나 하수인의 코스트를 더 적은 비용으로 사용할 수 있게 하는 카드가 존재합니다. 해당 카드를 이용하여 더 많은수의 카드를 사용하여 폭풍같은 플레이가 가능합니다.</p>
                         <h2>다른 직업 카드 생성</h2><p>뒷골목에서 실력을 갈고닦은 도적에겐 타 직업의 카드 또한 자신의 것이나 다름없습니다. 타직업의 카드를 발견 및 생성하여 스타일리쉬한 플레이가 가능합니다. 상대방이 예측할 수 없는 카드로 전장의 판도를 뒤집으세요!</p>
                     </div>
@@ -745,7 +737,7 @@
                         </div>
                     </div>
                     <div class="skin">
-                        <div class="wrap">
+                        <div class="slick">
                             <div><img src="/project/1x/shaman/1.png" alt=""></div>
                             <div><img src="/project/1x/shaman/2.png" alt=""></div>
                             <div><img src="/project/1x/shaman/3.png" alt=""></div>
@@ -1233,7 +1225,7 @@
                 </li>
             </ul> -->
     </div>
-    <div class="sec4">
+    <div class="sec4" id="sec4">
         <div class="solocard">
             <div class="left">
             </div>

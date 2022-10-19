@@ -42,16 +42,17 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec1{width: 100%; height: 100%;}
-.sec1 .gameguide{width: 100vw; height: 100vh; 
-    /* background: url(/project/1x/메인화면.png) no-repeat 50% 50%; */
-}
-#slide{width: 100%; height: 100%; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden; position: relative;}
+/* .sec1{width: 100vw; height: 100vh;} */
+/* .sec1 .gameguide{width: 100vw; height: 100vh;} */
 
-#slide .control{flex: 0 1 100px; height: 100%; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
+/* .sec1 .gameguide .gameintroduce{overflow: hidden;} */
+
+#slide{width: 100vw; height: 100vh; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden; position: relative;}
+
+#slide .control{height: 100%; display: flex; flex: 0 1 100px; z-index: 3; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
 #slide .guide{flex: 1 1 0; height: 50%; position: relative;}
 
-#slide .guide li{height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center; position: absolute;}
+#slide .guide li{height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center; position: absolute; top: 0px;}
 
 
 
@@ -69,7 +70,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
 .slide ul.control li.on{opacity: 1; display: inline-block;}
 .slide ul.control li:hover{opacity: 1; display: inline-block;}
-.slide ul.control .mana1{background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
+.slide ul.control .mana1{background: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
 .slide ul.control .mana2{background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
 .slide ul.control .mana3{background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
 .slide ul.control .mana4{background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
@@ -84,12 +85,12 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 /* 모바일화면시 left 30%해야함 top은 65 */
 
 
-
-#gameintroduce .basic{width: 100vw; height: 100vh; background: url(/project/1x/메인화면.png) no-repeat 50% bottom / cover; }
-#gameintroduce .first{width: 100vw; height: 100vh; background: url(/project/1x/firsthover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .second{width: 100vw; height: 100vh; background: url(/project/1x/secondhover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .third{width: 100vw; height: 100vh; background: url(/project/1x/thirdhover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .fourth{width: 100vw; height: 100vh; background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce{width: 100vw; height: 100vh; overflow: hidden; background-color: #000000;}
+#gameintroduce .basic{background: url(/project/1x/메인화면.png) no-repeat 50% bottom / cover; }
+#gameintroduce .first{background: url(/project/1x/firsthover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .second{background: url(/project/1x/secondhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .third{background: url(/project/1x/thirdhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .fourth{background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; }
 
 
 
@@ -102,10 +103,12 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 .sec2{width: 100%; height: 100%;}
 .sec2 .herose{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
-.sec2 .herose .Hr{flex: 1 1 0; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column;}
-.sec2 .herose .Hr .hidename{width: 100%; height: 0; position: absolute; top: 0%; text-align: center; word-wrap:break-word}
-.sec2 .herose .Hr:hover .hidename{height: fit-content; transition: all 0.5s ease-in-out; color: #ffffff;}
+.sec2 .heropage{width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column;}
+.sec2 .herose .Hr{flex: 1 1 0; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.sec2 .herose .Hr .hidename{height: 0; text-align: center; word-wrap:break-word; display: block;}
+.sec2 .herose .Hr .hidename h1{display: none;}
 
+.sec2 .herose .Hr:hover .hidename h1{height: fit-content; display: block; color: #ffffff; display: block; word-wrap:break-word; display: inline-block;}
 .Hr a{width: 100%; max-width: 80px; height: 100%; max-height: 80px; background-repeat: no-repeat; background-size: contain;}
 .Hr.demonhunter{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt881c2890e465706d/5e5fe3d58902221b5e1dd5ea/dh.jpg) no-repeat 48%;}
 .Hr.demonhunter a{background-image: url(/project/1x/악마사냥꾼1.png);}
@@ -128,33 +131,36 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .Hr.warrior{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt5677de4c919e9430/5e4da44ca9f0fb732c24c397/warrior.jpg) no-repeat 50%;}
 .Hr.warrior a{background-image: url(/project/1x/전사1.png);}
 .Hr:hover{border: solid #B0FF73 2px; opacity: 0.7;}
-/* .Hr a img{position: absolute; left: 30%; top: 50%; min-width: 20px; min-height: 20px;} */
-.sec2 .heropage{width: 100%; height: 100%;}
-.sec2 .heropage .bg{display: none; height: fit-content; position: relative;}
-.sec2 .heropage .bg.on{display: block;}
 
 
+/* .sec2 .heropage .bg{height: fit-content; position: relative;}
+.sec2 .heropage .bg.on{display: block; width: 100vw; height: 100vh;} */
 
-.sec2 .heropage .inner{max-width: 1200px; height: 100%; margin: 0 auto; display: flex; align-items: center; flex-direction: column; gap: 10px; justify-content: flex-start;}
+.sec2 .heropage .bg{flex: 1 1 0; height: 100vh; display: none; position: relative;}
+.sec2 .heropage .bg{height:100vh; display: block;}
+
+.sec2 .heropage .inner{max-width: 1200px; height: 100vh; margin: 0 auto; display: flex; align-items: center; flex-direction: column; gap: 10px; justify-content: center;}
 .sec2 .heropage .inner h1{padding: 10px; font-size: 2rem;}
 .sec2 .heropage .inner .basic{width: 100%; height: 300px; display: flex; flex-direction: row;}
 .sec2 .heropage .inner .basic .hero{width: 50%; display: flex; justify-content: flex-end;}
 .sec2 .heropage .inner .basic .active{width: 50%; display: flex;}
-.sec2 .heropage .inner .skin{width: 100%; height: 300px;}
-.wrap{width: 100%; height: 300px; display: flex; flex-wrap: wrap; flex-direction: row;}
-
-.sec2 .heropage .inner .text{padding: 10px; width: 100%;}
-.sec2 .heropage .inner .close{position: absolute; bottom: 20px; right: 5px; z-index: 100; width: 30px; height: 30px;}
+.sec2 .heropage .inner .skin{width: 100%; height: 300px; display: flex; align-items: center; justify-content: center;display: flex; flex-wrap: wrap; flex-direction: row; overflow: hidden; justify-content: space-around;}
+.slick{width: 100%; height: 300px; }
+.slick div img{width: 266px; height: 300px;}
 
 
-
-
+.sec2 .heropage .inner .text{padding: 10px; width: 100%; height: fit-content; }
+.sec2 .heropage .inner .close{position: absolute; bottom: 50%; right: 30px; z-index: 100; width: 30px; height: 30px;}
 
 
 
 
 
-/* .sec2 .aside{position: fixed; right: 10px; top: 50%; transform: translateY(-50%); width: 100px; display: flex; flex-direction: column; z-index: 99;} */
+
+
+
+
+
 
 
 
@@ -198,7 +204,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 .sec3{padding-top: 60px;}
-.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-size: contain;}
+.sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
 .sec3 .cardlist .wrap a img{width: 300px; height: 350px;}
 .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;}
 
@@ -209,8 +215,12 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec4 .solocard .right{width: 50%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center;}
 .sec4 .solocard .left{ width: 50%; height: 100%; background: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png) no-repeat 50% 50%;}
 
-/* .slide, .sec3, .sec4{display: none;} */
-/* #herointro{display: none;} */
+
+
+
+/* display제어 */
+#gameintroduce, #slide, .sec2, #sec3, #sec4, .heropage{display: none;}
+#gameintroduce.on, #slide.on, .sec2.on, #sec3.on, #sec4.on, .heropage.on{display:block;}
 
 
 

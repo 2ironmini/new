@@ -35,6 +35,27 @@ $(function(){
     
 });
 
+// -----------------------------------------------------all nav depth
+$(".gnb .navmenu .m:first a").click(function(){
+    $(".sec1").addClass("on").siblings().removeClass("on");
+});    
+$(".gnb .navmenu .m:nth(1) a").click(function(){
+    $(".sec2").addClass("on").siblings().removeClass("on");
+});    
+$(".gnb .navmenu .m:nth(2) a").click(function(){
+    $("#sec3").addClass("on").siblings().removeClass("on");
+});    
+// $(".gnb .navmenu .m:nth(3) a").click(function(){
+//     $("#gameintroduce").addClass("on").siblings().removeClass("on");
+// });    
+// $(".gnb .navmenu .m:nth(4) a").click(function(){
+//     $("#gameintroduce").addClass("on").siblings().removeClass("on");
+// });    
+// $(".gnb .navmenu .m:nth(5) a").click(function(){
+//     $("#gameintroduce").addClass("on").siblings().removeClass("on");
+// });    
+
+
 $(".gnb .navmenu .m ul").hide();  
     $(".gnb .navmenu .m ul li").hover(function(){
         $(this).addClass("on").stop();
@@ -42,94 +63,87 @@ $(".gnb .navmenu .m ul").hide();
     });
 
 
+// -----------------------------------------------------
 
-$(".gnb .navmenu .m:first a").click(function(){
+// -----------------------------------------------------nav1 depth
+
+
+
+
+$(".gnb .navmenu .m:first .snb li:first a").click(function(){
     $("#gameintroduce").addClass("on").siblings().removeClass("on");
 });    
 
-$(".gnb .navmenu .m:first .snb li:first a").click(function(){
-    $("#silde").addClass("on").siblings().removeClass("on");
-});    
-
-$(".gnb .navmenu .m:first .snb li:nth(1) a").click(function(){
-    $("#how").addClass("on").siblings().removeClass("on");
+$(".gnb .navmenu .m:first .snb li:last a").click(function(){
+    $("#slide").addClass("on").siblings().removeClass("on");
 });    
 
 
 
+// -----------------------------------------------------
 
+// -----------------------------------------------------nav3 depth
 
-
-
-
-$(".gnb .navmenu .m:nth(1) a").click(function(){
-    $(".sec2").addClass("on").siblings().removeClass("on");
+$(".gnb .navmenu .m:nth(2) .snb li:first a").click(function(){
+    $("#sec3").addClass("on").siblings().removeClass("on");
 });    
 
-$(".gnb .navmenu .m:nth(2) a").click(function(){
-    $(".sec3").addClass("on").siblings().removeClass("on");
-});    
-
-
-$(".gnb .navmenu .m:nth(2) li:first").click(function(){
-    $(".sec3").addClass("on").siblings().removeClass("on");
-});    
-
-$(".gnb .navmenu .m:nth(2) li:last").click(function(){
-    $(".sec4").addClass("on").siblings().removeClass("on");
+$(".gnb .navmenu .m:nth(2) .snb li:nth(1) a").click(function(){
+    $("#sec4").addClass("on").siblings().removeClass("on");
 });    
 
 
+// -----------------------------------------------------
 
 
 
-$(".sec2 .herose .Hr a:first").click(function(){
-    $(".heropage > .bg:first").addClass("on").siblings().stop().removeClass("on");
+
+// -----------------------------------------------------영웅소개 depth
+
+$(".sec2 .herose .Hr:first a").click(function(){
+    $("#magician").addClass("on").siblings().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(1)").click(function(){
-    $(".heropage > div:nth(1)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(1) a").click(function(){
+    $("#paladin").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(2)").click(function(){
-    $(".heropage > div:nth(2)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(2) a").click(function(){
+    $("#demonhunter").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(3)").click(function(){
-    $(".heropage > div:nth(3)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(3) a").click(function(){
+    $("#druid").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(4)").click(function(){
-    $(".heropage > div:nth(4)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(4) a").click(function(){
+    $("#hunter").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(5)").click(function(){
-    $(".heropage > div:nth(5)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(5) a").click(function(){
+    $("#warlock").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(6)").click(function(){
-    $(".heropage > div:nth(6)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(6) a").click(function(){
+    $("#warrior").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(7)").click(function(){
-    $(".heropage > div:nth(7)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(7) a").click(function(){
+    $("priest").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr > a:nth(8)").click(function(){
-    $(".heropage > div:nth(8)").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:nth(8) a").click(function(){
+    $("#rogue").addClass("on").siblings().stop().removeClass("on");
 });    
 
-$(".sec2 .herose .Hr a:last").click(function(){
-    $(".heropage > div:last").addClass("on").siblings().stop().removeClass("on");
+$(".sec2 .herose .Hr:last a").click(function(){
+    $("#shaman").addClass("on").siblings().stop().removeClass("on");
 });    
 
+// -----------------------------------------------------
 
 
-
-//     var imgIndex = $(this).index();
-    //     $("ul.guide li").eq(imgIndex).stop().fadeIn()
-    //                     .siblings().fadeOut(); 
-
+// -----------------------------------------------------#slide 컨트롤
 
 
 $("#slide > .control > li:first").click(function(){
@@ -191,17 +205,9 @@ $("ul.guide li:first").show();
     });
 
 
+    // -----------------------------------------------------
 
 
-
-
-    // $("ul.guide li:first").show();
-    // $("ul.control li").click(function() { 
-    //     $(this).addClass("on").siblings().removeClass("on");
-    //     var imgIndex = $(this).index();
-    //     $("ul.guide li").eq(imgIndex).stop().fadeIn()
-    //                     .siblings().fadeOut();
-    // });
 
 
 
@@ -242,13 +248,11 @@ $(document).ready(function(){
     $(".sec2 > .heropage > .inner > .skin > .wrap > div").addClass("center")
     });
 
-// $('.slick').slick({
-//     centerMode: true,
-//     centerPadding: 0,
-//     slidesToShow: 3,
+
+    
     
 $(document).ready(function(){  
-$('.sec2 > .heropage > .bg > .inner > .skin > .wrap').slick({
+$(".sec2 > .heropage > .bg > .inner > .skin > .slick").slick({
     centerMode: false,
     centerPadding: 60,
     slidesToShow: 4,
@@ -265,49 +269,11 @@ $('.sec2 > .heropage > .bg > .inner > .skin > .wrap').slick({
 
   });
     
-//   $(function() {
-//     $("ul.guide li:first").show();
-//     $("ul.control li").click(function() { 
-//         $(this).addClass("on").siblings().removeClass("on");
-//         var imgIndex = $(this).index();
-//         $("ul.guide li").eq(imgIndex).stop(true).fadeIn(500)
-//                         .siblings().fadeOut(200);
-//     });
-
 
     
     
 
 
-
-
-// });
-
-
-
-
-
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       arrows: true,
-    //       centerMode: true,
-    //       centerPadding: '40px',
-    //       slidesToShow: 29
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       centerPadding: '40px',
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
-  
 
 
 
