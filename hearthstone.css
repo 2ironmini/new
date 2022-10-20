@@ -43,23 +43,23 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 .sec1{width: 100vw; height: 100vh;}
-.sec1 .gameguide{width: 100vw; height: 100vh; position: relative;}
+.sec1 .gameguide{width: 100vw; height: 100vh; position: relative; overflow: hidden;}
 
-/* .sec1 .gameguide .gameintroduce{overflow: hidden;} */
+
 
 #slide{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
 
 #slide .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 100px; z-index: 2;}
-#slide .right{width: 100%; height: 100%; display: flex; flex-direction: column; position: absolute;}
+#slide .right{width: 100%; height: 100%; display: flex; flex-direction: column;}
 #slide .right li{width: 100%; height: 100%;}
 
 
 
 #slide .right li .textguide li{display: none;}
-#slide .right li .textguide li.on{height: 100%; width: 50%; word-wrap:break-word; display: block; display: flex; align-items: center;}
+#slide .right li .textguide li.on{height: 100%; width: 70%; word-wrap:break-word; display: block; display: flex; align-items: center;}
 #slide .right li .textguide{width: 100%; height: 40vh; display: flex; justify-content: center;}
-#slide .right li .guide{width: 100vw; height: 60vh;}
-#slide .right li .guide li{background-size: cover; }
+#slide .right li .guide{width: 100vw; height: 60vh; display: flex; flex-direction: row; padding: 0; margin: 0;}
+#slide .right li .guide li{background-size: cover; height: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center;}
 
 
 
@@ -101,12 +101,25 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 /* 모바일화면시 left 30%해야함 top은 65 */
 
 
-#gameintroduce{width: 100vw; height: 100vh; overflow: hidden; background-color: #000000;}
-#gameintroduce .basic{background: url(/project/1x/메인화면.png) no-repeat 50% bottom / cover; }
-#gameintroduce .first{background: url(/project/1x/firsthover.png) no-repeat 50% bottom / cover; }
+#gameintroduce{width: 100%; height: 100%; overflow: hidden;}
+
+#gameintroduce .basic{width: 100vw; height: 100vh;}
+#gameintroduce .basic{background: url(/project/1x/main.png) no-repeat 50% top / cover; position: relative;}
+#gameintroduce .basic:hover{background: url(/project/1x/firsthover.png) no-repeat center top / cover; transform: scale(1.4); transition: all 2s ease-in-out;}
+#gameintroduce .basic > a{position: absolute; width: 17%; height: 6%; top: 28%; left: 41%; text-decoration: none; text-indent: -999999px; overflow: hidden;}
+
+#whatHS{transform: scale(0);}
+#whatHS.on{width: 100vw; height: 100vh; transform: scale(1); transition: all ease-in-out 1s; display: flex; padding-top: 50px; flex-direction: column;}
+#whatHS.on h1{display: inline-block; text-align: center;}
+#whatHS.on .HSintro{height: 100%; width: 100%;}
+#whatHS.on .slidebt{}
+
+
+
+/* 
 #gameintroduce .second{background: url(/project/1x/secondhover.png) no-repeat 50% bottom / cover; }
 #gameintroduce .third{background: url(/project/1x/thirdhover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .fourth{background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; }
+#gameintroduce .fourth{background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; } */
 
 
 

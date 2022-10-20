@@ -1,3 +1,22 @@
+// var lastWidth = $(window).width();
+//     $(window).resize(function () {
+//         if ($(window).width() != lastWidth) {
+//             location.reload();
+//             lastWidth = $(window).width();
+//             return false;
+//         }
+//     });
+
+
+
+
+
+
+
+
+
+
+
 $(function() {
     var w = $(".gnb .navmenu .m").width();            
     $(".gnb").append("<span></span>");
@@ -208,14 +227,16 @@ $("ul.guide li:first").show();
     // -----------------------------------------------------
 
 
+// ----------------------------------------------------- introduce
+
+$("#gameintroduce .basic a").click(function() { 
+    $("#whatHS").addClass("on").siblings().removeClass("on");
+});
 
 
 
 
-
-
-
-
+// -----------------------------------------------------
 
 $(document).ready(function(index, li){
     $(".slide > .control > li").addClass(function(index){
