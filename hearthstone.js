@@ -17,7 +17,7 @@ $(function() {
 });
 
 $(document).ready(function(index, li){
-    $("#slide > .guide > li").addClass(function(index){
+    $("#slide > .right > li > .guide > li").addClass(function(index){
         return `intro${index+1}`;
     });
 });
@@ -147,54 +147,54 @@ $(".sec2 .herose .Hr:last a").click(function(){
 
 
 $("#slide > .control > li:first").click(function(){
-    $("#slide > .guide > li:first").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide li:first").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:first").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide li:first").addClass("on").siblings().removeClass("on");
 });
     
 
 $("#slide > .control > li:nth(1)").click(function(){
-    $("#slide > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide li:nth(1)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide li:nth(1)").addClass("on").siblings().removeClass("on");
 });
 
 $("#slide > .control > li:nth(2)").click(function(){
-    $("#slide > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(2)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(2)").addClass("on").siblings().removeClass("on");
 });
 
 $("#slide > .control > li:nth(3)").click(function(){
-    $("#slide > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(3)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(3)").addClass("on").siblings().removeClass("on");
     
 });
 
 $("#slide > .control > li:nth(4)").click(function(){
-    $("#slide > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(4)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(4)").addClass("on").siblings().removeClass("on");
     
 });
 
 $("#slide > .control > li:nth(5)").click(function(){
-    $("#slide > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(5)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(5)").addClass("on").siblings().removeClass("on");
     
 });
 
 $("#slide > .control > li:nth(6)").click(function(){
-    $("#slide > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(6)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(6)").addClass("on").siblings().removeClass("on");
     
 });
 
 $("#slide > .control > li:nth(7)").click(function(){
-    $("#slide > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(7)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(7)").addClass("on").siblings().removeClass("on");
     
 });
 
 $("#slide > .control > li:nth(8)").click(function(){
-    $("#slide > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
-    $("#slide > .textguide > li:nth(8)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
+    $("#slide > .right > li > .textguide > li:nth(8)").addClass("on").siblings().removeClass("on");
     
 });
 
@@ -237,17 +237,6 @@ $(document).ready(function(index, a){
         return `mana${index+0}`;
     });
 });
-
-$(document).ready(function(index, a){
-    $(".sec1 > .inner > div > a").addClass(function(index){
-        return `manabt${index+1}`;
-    });
-});
-
-$(document).ready(function(){
-    $(".sec2 > .heropage > .inner > .skin > .wrap > div").addClass("center")
-    });
-
 
     
     

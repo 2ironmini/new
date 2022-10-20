@@ -42,29 +42,46 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-/* .sec1{width: 100vw; height: 100vh;} */
-/* .sec1 .gameguide{width: 100vw; height: 100vh;} */
+.sec1{width: 100vw; height: 100vh;}
+.sec1 .gameguide{width: 100vw; height: 100vh; position: relative;}
 
 /* .sec1 .gameguide .gameintroduce{overflow: hidden;} */
 
-#slide{width: 100vw; height: 100vh; padding-top: 50px; display: flex; flex-direction: row; overflow: hidden; position: relative;}
+#slide{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
 
-#slide .control{height: 100%; display: flex; flex: 0 1 100px; z-index: 3; flex-direction: column; align-items: center; justify-content: center; gap: 10px;}
-#slide .guide{flex: 1 1 0; height: 50%; position: relative;}
-
-#slide .guide li{height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center; justify-content: center; position: absolute; top: 0px;}
-
+#slide .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 100px; z-index: 2;}
+#slide .right{width: 100%; height: 100%; display: flex; flex-direction: column; position: absolute;}
+#slide .right li{width: 100%; height: 100%;}
 
 
-#slide .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center 90%; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro3.on{background-image: url(/project/1x/intro_hero.png); background-position: center 95%; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%; transition: all 2s ease-in; transform:scaleY(1.1)}
-#slide .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%; transition: all 2s ease-in; transform:scaleY(1.1)}
+
+#slide .right li .textguide li{display: none;}
+#slide .right li .textguide li.on{height: 100%; width: 50%; word-wrap:break-word; display: block; display: flex; align-items: center;}
+#slide .right li .textguide{width: 100%; height: 40vh; display: flex; justify-content: center;}
+#slide .right li .guide{width: 100vw; height: 60vh;}
+#slide .right li .guide li{background-size: cover; }
+
+
+
+
+#slide .right li .guide .intro1{display: none;}
+#slide .right li .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom; display: inline-block;}
+#slide .right li .guide .intro2{display: none; }
+#slide .right li .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center 90%; display: block;}
+#slide .right li .guide .intro3{display: none;}
+#slide .right li .guide .intro3.on{background-image: url(/project/1x/intro_hero.png); background-position: center 95%; display: block;}
+#slide .right li .guide .intro4{display: none;}
+#slide .right li .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom; display: block;}
+#slide .right li .guide .intro5{display: none;}
+#slide .right li .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom; display: block;}
+#slide .right li .guide .intro6{display: none;}
+#slide .right li .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%; display: block;}
+#slide .right li .guide .intro7{display: none;}
+#slide .right li .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center; display: block;}
+#slide .right li .guide .intro8{display: none;}
+#slide .right li .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%; display: block;}
+#slide .right li .guide .intro9{display: none;}
+#slide .right li .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%; display: block;}
 
 
 .slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
@@ -80,8 +97,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .slide ul.control .mana8{background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
 .slide ul.control .mana9{background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
 
-#slide .textguide li{display: none;}
-#slide .textguide li.on{position: absolute; top: 70%; left: 25%; height: 100%; width: 50%; word-wrap:break-word; text-align: center; display: block;}
+
 /* 모바일화면시 left 30%해야함 top은 65 */
 
 
