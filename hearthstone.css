@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 *{margin: 0; padding: 0; box-sizing: border-box; word-break: keep-all; background-repeat: no-repeat;}
 /* a{cursor: pointer;} */
@@ -17,7 +18,8 @@ p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
 .rightmenu .sitemap .sns:nth-last-child(2){color:dodgerblue;}
 .rightmenu .sitemap .sns:nth-last-child(1){color:midnightblue;}
 
-
+.sec1{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1;}
+.sec1.on{display: block;}
 header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .gnb{position: relative; width: fit-content; height: 50px; margin: 0 auto;}
 .gnb .navmenu .m{height: 50px; width: 150px; line-height: 40px; display: flex; justify-content: center; align-items: center;}
@@ -42,7 +44,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec1{width: 100vw; height: 100vh;}
+.sec1{width: 100vw; height: 100%;}
 .sec1 .gameguide{width: 100vw; height: 100vh; position: relative; overflow: hidden;}
 
 
@@ -50,38 +52,41 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 #slide{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
 
 #slide .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 100px; z-index: 2;}
-#slide .right{width: 100%; height: 100%; display: flex; flex-direction: column;}
-#slide .right li{width: 100%; height: 100%;}
+
+
+#slide .right{width: 100vw; height: 100vh;}
+#slide .right li{width: 100vw; height: 100vh;}
+#slide .right li .guide{width: 100vw; height: 60vh; transform: scale(0);}
+#slide .right li .guide.on {transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center;}
+#slide .right li .guide.on li{display: none;}
+#slide .right li .textguide{width: 100vw; height: 40vh; transform:  scaleX(0); display: flex;}
+#slide .right li .textguide.on{transform: scaleX(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center;}
+#slide .right li .textguide.on li{display: none; width: 70%; color: #ffffff;}
+#slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_hero.png) no-repeat center 95% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(4).on{background: url(/project/1x/intro_weapon.png) no-repeat 30% bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(5).on{background: url(/project/1x/intro_mana.png) no-repeat right bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(6).on{background: url(/project/1x/intro_deck.png) no-repeat right 70% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+#slide .right li .textguide.on li:nth-child(1).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(2).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(3).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(4).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(5).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(6).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(7).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(8).on{display:flex; align-items: center; justify-content: center;}
+#slide .right li .textguide.on li:nth-child(9).on{display:flex; align-items: center; justify-content: center;}
 
 
 
-#slide .right li .textguide li{display: none;}
-#slide .right li .textguide li.on{height: 100%; width: 70%; word-wrap:break-word; display: block; display: flex; align-items: center;}
-#slide .right li .textguide{width: 100%; height: 40vh; display: flex; justify-content: center;}
-#slide .right li .guide{width: 100vw; height: 60vh; display: flex; flex-direction: row; padding: 0; margin: 0;}
-#slide .right li .guide li{background-size: cover; height: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center;}
 
 
 
 
-#slide .right li .guide .intro1{display: none;}
-#slide .right li .guide .intro1.on{background-image: url(/project/1x/intro_hand.png); background-position: center bottom; display: inline-block;}
-#slide .right li .guide .intro2{display: none; }
-#slide .right li .guide .intro2.on{background-image: url(/project/1x/intro_hero.png); background-position: center 90%; display: block;}
-#slide .right li .guide .intro3{display: none;}
-#slide .right li .guide .intro3.on{background-image: url(/project/1x/intro_hero.png); background-position: center 95%; display: block;}
-#slide .right li .guide .intro4{display: none;}
-#slide .right li .guide .intro4.on{background-image: url(/project/1x/intro_weapon.png); background-position: 30% bottom; display: block;}
-#slide .right li .guide .intro5{display: none;}
-#slide .right li .guide .intro5.on{background-image: url(/project/1x/intro_mana.png); background-position: right bottom; display: block;}
-#slide .right li .guide .intro6{display: none;}
-#slide .right li .guide .intro6.on{background-image: url(/project/1x/intro_deck.png); background-position: right 70%; display: block;}
-#slide .right li .guide .intro7{display: none;}
-#slide .right li .guide .intro7.on{background-image: url(/project/1x/intro_minion.png); background-position: center center; display: block;}
-#slide .right li .guide .intro8{display: none;}
-#slide .right li .guide .intro8.on{background-image: url(/project/1x/intro_log.png); background-position: left 45%; display: block;}
-#slide .right li .guide .intro9{display: none;}
-#slide .right li .guide .intro9.on{background-image: url(/project/1x/intro_end.png); background-position: right 45%; display: block;}
 
 
 .slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
@@ -105,30 +110,28 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 #gameintroduce .basic{width: 100vw; height: 100vh;}
 #gameintroduce .basic{background: url(/project/1x/main.png) no-repeat 50% top / cover; position: relative;}
-#gameintroduce .basic:hover{background: url(/project/1x/firsthover.png) no-repeat center top / cover; transform: scale(1.4); transition: all 2s ease-in-out;}
+#gameintroduce .basic:hover{background: url(/project/1x/firsthover.png) no-repeat center top / cover; transform: scale(1.4); transition: all 2s ease-in-out; overflow: hidden;}
 #gameintroduce .basic > a{position: absolute; width: 17%; height: 6%; top: 28%; left: 41%; text-decoration: none; text-indent: -999999px; overflow: hidden;}
 
-#whatHS{transform: scale(0);}
-#whatHS.on{width: 100vw; height: 100vh; transform: scale(1); transition: all ease-in-out 1s; display: flex; padding-top: 50px; flex-direction: column;}
-#whatHS.on h1{display: inline-block; text-align: center;}
-#whatHS.on .HSintro{height: 100%; width: 100%;}
-#whatHS.on .slidebt{}
+#whatHS{width: 100vw; height: 100vh; transform: scale(0);}
+#whatHS.on{width: 100vw; height: 100vh; transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; padding-top: 50px; align-items: center; background-color: #000000;}
+#whatHS.on h1{display: inline-block; text-align: center; color: #ffffff;}
+
+#whatHS.on .HSintro{height: 100vh; width: 100vw;}
+
+#whatHS.on .HSintro li{display: none;}
+#whatHS.on .HSintro li:nth-child(1){display: block; background: url(/project/1x/게임안내/standardintro.png) no-repeat 13% center / cover; width: 100%; height: 100%;}
+#whatHS.on .HSintro li:nth-child(2){background: url(/project/1x/게임안내/등급전시스템.png) no-repeat 37% center / cover; width: 100%; height: 100%;}
+#whatHS.on .HSintro li:nth-child(3){background: url(/project/1x/게임안내/standardintro.png) no-repeat 61% center / cover; width: 100%; height: 100%;}
+#whatHS.on .HSintro li:nth-child(4){background: url(/project/1x/게임안내/등급전시스템.png) no-repeat 87% center / cover; width: 100%; height: 100%;}
 
 
 
-/* 
-#gameintroduce .second{background: url(/project/1x/secondhover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .third{background: url(/project/1x/thirdhover.png) no-repeat 50% bottom / cover; }
-#gameintroduce .fourth{background: url(/project/1x/fourthhover.png) no-repeat 50% bottom / cover; } */
+#whatHS.on .slidebt{transform: scale(1); height: 10%; width: 50%; position: absolute; bottom: 5%; left: 25%; display: flex; justify-content: space-between;}
+#whatHS.on .slidebt .material-symbols-outlined{font-size: 5rem; color: #ffffff; cursor: pointer;}
+#whatHS.on .slidebt .material-symbols-outlined.off{cursor: default; opacity: 0.5;}
 
 
-
-
-
-
-
-
-/* .slide{display: none;} */
 
 .sec2{width: 100vw; height: 100vh;}
 .sec2 .herose{width: 100vw; height: 100vh; display: flex; flex-direction: row; overflow: hidden;}
