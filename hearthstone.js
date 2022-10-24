@@ -179,7 +179,7 @@ $(".sec2 .herose .Hr:nth(6) a").click(function(){
 });    
 
 $(".sec2 .herose .Hr:nth(7) a").click(function(){
-    $("priest").addClass("on").siblings().stop().removeClass("on");
+    $("#priest").addClass("on").siblings().stop().removeClass("on");
 });    
 
 $(".sec2 .herose .Hr:nth(8) a").click(function(){
