@@ -8,7 +8,7 @@ ul, li{list-style-type: none;}
 a > img{background-repeat: no-repeat; background-size: contain; text-indent: -999px; overflow: hidden;}
 h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
 p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
-body{min-width: 460px;}
+
 
 .top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between;}
 .leftmenu{width: fit-content; height: 100%; padding: 2px;}
