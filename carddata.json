@@ -19,7 +19,10 @@
       "flavorText": "드루이드라면 누구나 한 번쯤 \"자극 주세요!!\" 소리를 들어보셨을 겁니다.",
       "cropImage": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/603c6da3133b0bfcdc267898cabda4167402e4c8ca7a4ab43d7c1e5466a7ebf8.png",
       "copyOfCardId": 254,
-      "duels": {"relevant": true,"constructed": true}
+      "duels": {
+        "relevant": true,
+        "constructed": true
+      }
     },
     {
       "id": 69689,
