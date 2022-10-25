@@ -2030,66 +2030,83 @@
             21
         ]
         },
-              {
-                "id": 78383,
-                "collectible": 1,
-                "slug": "78383-sesselie-of-the-fae-court",
-                "classId": 2,
-                "multiClassIds": [],
-                "cardTypeId": 4,
-                "cardSetId": 1691,
-                "rarityId": 5,
-                "artistName": "MAR Studio",
-                "health": 8,
-                "attack": 8,
-                "manaCost": 8,
-                "name": "페이 궁정의 세셀리에",
-                "text": "<b>도발</b>, <b>죽음의 메아리:</b> 하수인을 뽑습니다. 그 하수인의 비용이 (8) 감소합니다.",
-                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/68789899c18a49666bca29a2e8ea213362ef51afb2921d7f2404150f765b8293.png",
-                "imageGold": "",
-                "flavorText": "자신이 페이 궁정에서 왔다고 하는데, 설마 페이 과장?!",
-                "cropImage": null,
-                "keywordIds": [
-                  1,
-                  12
-                ]
-              },
-              {
-                "id": 78509,
-                "collectible": 1,
-                "slug": "78509-convoke-the-spirits",
-                "classId": 2,
-                "multiClassIds": [],
-                "spellSchoolId": 4,
-                "cardTypeId": 5,
-                "cardSetId": 1691,
-                "rarityId": 4,
-                "artistName": "Jim Nelson",
-                "manaCost": 10,
-                "name": "영혼 소집",
-                "text": "무작위 드루이드 주문들을 8회 시전합니다. <i>(대상은 무작위로 선택)</i>",
-                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/24016a9a418e6c68218c58f5d0a0a4c831f1148241cd20dca26d4299bc09c4ba.png",
-                "imageGold": "",
-                "flavorText": "영혼들은 얘깃거리가 생기면 서로를 소집합니다.",
-                "cropImage": null
-              }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
+        {
+          "id": 78383,
+          "collectible": 1,
+          "slug": "78383-sesselie-of-the-fae-court",
+          "classId": 2,
+          "multiClassIds": [],
+          "cardTypeId": 4,
+          "cardSetId": 1691,
+          "rarityId": 5,
+          "artistName": "MAR Studio",
+          "health": 8,
+          "attack": 8,
+          "manaCost": 8,
+          "name": "페이 궁정의 세셀리에",
+          "text": "<b>도발</b>, <b>죽음의 메아리:</b> 하수인을 뽑습니다. 그 하수인의 비용이 (8) 감소합니다.",
+          "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/68789899c18a49666bca29a2e8ea213362ef51afb2921d7f2404150f765b8293.png",
+          "imageGold": "",
+          "flavorText": "자신이 페이 궁정에서 왔다고 하는데, 설마 페이 과장?!",
+          "cropImage": null,
+          "keywordIds": [
+            1,
+            12
+          ]
+        },
+        {
+          "id": 78509,
+          "collectible": 1,
+          "slug": "78509-convoke-the-spirits",
+          "classId": 2,
+          "multiClassIds": [],
+          "spellSchoolId": 4,
+          "cardTypeId": 5,
+          "cardSetId": 1691,
+          "rarityId": 4,
+          "artistName": "Jim Nelson",
+          "manaCost": 10,
+          "name": "영혼 소집",
+          "text": "무작위 드루이드 주문들을 8회 시전합니다. <i>(대상은 무작위로 선택)</i>",
+          "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/24016a9a418e6c68218c58f5d0a0a4c831f1148241cd20dca26d4299bc09c4ba.png",
+          "imageGold": "",
+          "flavorText": "영혼들은 얘깃거리가 생기면 서로를 소집합니다.",
+          "cropImage": null
+        },
+        {
+          "id": 78117,
+          "collectible": 1,
+          "slug": "78117-dispose-of-evidence",
+          "classId": 14,
+          "multiClassIds": [],
+          "cardTypeId": 5,
+          "cardSetId": 1691,
+          "rarityId": 3,
+          "artistName": "Jason Kang",
+          "manaCost": 0,
+          "name": "증거 인멸",
+          "text": "이번 턴에 내 영웅이 공격력을 +3 얻습니다. 내 손에 있는 카드를 선택하여 내 덱에 섞어 넣습니다.",
+          "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png",
+          "imageGold": "",
+          "flavorText": "죄를 지으면 대가를 치르고 싶지 않은 법이죠."
+        },
+        {
+          "id": 63467,
+          "collectible": 1,
+          "slug": "63467-sigil-of-silence",
+          "classId": 14,
+          "multiClassIds": [],
+          "spellSchoolId": 6,
+          "cardTypeId": 5,
+          "cardSetId": 1525,
+          "rarityId": 3,
+          "artistName": "Vlad Botos",
+          "manaCost": 0,
+          "name": "침묵의 인장",
+          "text": "내 다음 턴이 시작될 때, 모든 적 하수인을 <b>침묵</b>시킵니다.",
+          "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/596c64da77e78a3d75f05645bf1f364ccf2f78d0667541e83cd5ac4ef546c8c7.png",
+          "imageGold": "",
+          "flavorText": "말문이 막히는 주문입니다."
+        }
   ]
 }
