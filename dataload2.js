@@ -8,13 +8,14 @@ async function load(){
     loadCard(CARDDATA);
 }
 
+
 function loadCard(obj){
-    const section = document.querySelector('section');
+    const section = document.querySelector("#sec3 .cardlist .wrap");
     const we = obj.cards
     
     for (const me of we)
     {
-        const id = document.createElement('article');
+        const id = document.createElement('div');
         const name = document.createElement('p')
         const classId = document.createElement('p');
         const spellType = document.createElement('p');
@@ -26,13 +27,16 @@ function loadCard(obj){
         const manaCost = document.createElement('p');
         const text = document.createElement('p');
         const flavorText = document.createElement('p');
-        const img = document.createElement('p');
-        const duels = document.createElement('p');
-        const myList = document.createElement('ul');
+        const attack = document.createElement('p');
+        const health = document.createElement('p');
+        const img = document.createElement('img');
+        img.src = me.image;
+        img.alt = me.name;
 
-        
+
         name.textContent = me.name;
-        id.textContent = `id: ${me.id}`;
+        id.textContent = '';
+        // id.textContent = `id: ${me.id}`;
         classId.textContent = `classId: ${me.classId}`;
         spellType.textContent = `spellSchoolId: ${me.spellSchoolId}`;
         minionType.textContent = `minionTypeId: ${me.minionTypeId}`;
@@ -43,15 +47,17 @@ function loadCard(obj){
         manaCost.textContent = `manaCost: ${me.manaCost}`;
         text.textContent = `text: ${me.text}`;
         flavorText.textContent = `flavorText: ${me.flavorText}`;
+        attack.textContent = `attack: ${me.attack}`;
+        health.textContent = `health: ${me.health}`;
         img.textContent = `image: ${me.image}`;
-        // duels.textContent = 'useage:';
+        
     
-        // const useage = me.duels;
-        // for(const duels of useage){
-        //     const listItem = document.createElement('li');
-        //     listItem.textContent = duels;
-        //     myList.appendChild(listItem);
-        // }
+
+
+
+
+
+
         
         id.appendChild(name);
         id.appendChild(classId);
@@ -64,11 +70,41 @@ function loadCard(obj){
         id.appendChild(text);
         id.appendChild(flavorText);
         id.appendChild(img);
-        id.appendChild(duels);
-        id.appendChild(myList);
+
 
         section.appendChild(id);
     }
 }
 
+
+// link.addEventListener('click', addOn);
+    
+//     function addOn() {
+//         this.id.add("on")
+//     }
+
+
+
 load();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
