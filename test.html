@@ -39,15 +39,14 @@
         .sec3 .cardlist{gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
         .sec3 .cardlist .wrap div{flex: 0 0 220px;}
         .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
-        .sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua;}
-        .solocard{width: 1200px; height: 800px; background-color: beige; display: flex;}
-        .sec4 .solocard .right{width: 50%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center;}
-        .sec4 .solocard .left{ width: 50%; height: 100%;}
+        .sec4{width: 100vw; height: 100vh; position: relative;}
+        .solocard{width: 50%; height: 50%; position: absolute; top: 25%; left: 25%; background-color: aqua;}
         
         
         
-        /* #god div{text-indent: -999999999999px; display: flex;} */
-        #god div img{width: 100%; height: 100%; cursor: pointer;}
+        
+        #god div{text-indent: -999999999999px; display: flex; cursor: pointer;}
+        #god div img{width: 100%; height: 100%;}
     </style>
 </head>
 
@@ -212,29 +211,12 @@
         </div>
           
     </div>
-    <!-- <div class="sec4" id="sec4">
-        <div class="solocard">
-            <div class="left">
-            </div>
-            <div class="right">
-                <p class="name">증거인멸</p>
-                <p class="class">14</p>
-                <p class="manacost">0</p>
-                <p class="miniontype"></p>
-                <p class="spelltype"></p>
-                <p class="set">1691</p>
-                <p class="rarity">3</p>
-                <p class="artist">Jason Kang</p>
-                <p class="text">이번 턴에 내 영웅이 공격력을 +3 얻습니다. 내 손에 있는 카드를 선택하여 내 덱에 섞어 넣습니다.</p>
-                <p class="flavortext">죄를 지으면 대가를 치르고 싶지 않은 법이죠.
-                </p>
-                <p class="makecostn">40</p>
-                <p class="makecostg">80</p>
-                <p class="harv">20</p>
-
-            </div>
+    <div class="sec4" id="sec4" >
+        <div class="solocard" id="fullscreen-div">
+            
+            
         </div>
-    </div> -->
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>

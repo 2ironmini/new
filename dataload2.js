@@ -22,7 +22,7 @@ function loadCard(obj){
         const minionType = document.createElement('p');
         const cardType = document.createElement('p');
         const cardSet = document.createElement('p');
-        const rarity = document.createElement('p');
+        const rarityID = document.createElement('p');
         const artistName = document.createElement('p');
         const manaCost = document.createElement('p');
         const text = document.createElement('p');
@@ -32,31 +32,48 @@ function loadCard(obj){
         const img = document.createElement('img');
         img.src = me.image;
         img.alt = me.name;
+        
+
+        function addOn() {
+            id.classList.add("on");
+        };
+        // let removeOn = () => {
+        //     id.classList.remove("on");
+        // };
+        id.addEventListener('click', addOn);
+        
+        // id.addEventListener('click', removeOn);
 
 
         name.textContent = me.name;
         id.textContent = '';
         // id.textContent = `id: ${me.id}`;
-        classId.textContent = `classId: ${me.classId}`;
-        spellType.textContent = `spellSchoolId: ${me.spellSchoolId}`;
+        classId.textContent = `${me.classId}`;
+        spellType.textContent = `spellSchoolId: ${me.spellSchoolId}`
         minionType.textContent = `minionTypeId: ${me.minionTypeId}`;
-        cardType.textContent = `cardTypeId: ${me.cardTypeId}`;
+        cardType.textContent = `${me.cardTypeId}`;
         cardSet.textContent = `cardSetId: ${me.cardSetId}`;
-        rarity.textContent = `rarityId: ${me.rarityId}`;
+        rarityID.textContent = `rarityId: ${me.rarityId}`;
         artistName.textContent = `artistName: ${me.artistName}`;
         manaCost.textContent = `manaCost: ${me.manaCost}`;
-        text.textContent = `text: ${me.text}`;
-        flavorText.textContent = `flavorText: ${me.flavorText}`;
+        text.textContent = `${me.text}`;
+        flavorText.textContent = `${me.flavorText}`;
         attack.textContent = `attack: ${me.attack}`;
         health.textContent = `health: ${me.health}`;
         img.textContent = `image: ${me.image}`;
         
-    
-
-
-
-
-
+        if (spellType.textContent = undefined) {
+            spellType.textContent = '';
+        }
+        if (minionType.textContent = undefined) {
+            minionType.textContent = '';
+        }
+        if (attack.textContent = undefined) {
+            attack.textContent = '';
+        }
+        if (health.textContent = undefined) {
+            health.textContent = '';
+        }
 
         
         id.appendChild(name);
@@ -73,10 +90,10 @@ function loadCard(obj){
         id.appendChild(health);
         id.appendChild(img);
         
-
-
         section.appendChild(id);
-    }
+        
+    
+}
 }
 
 
@@ -91,6 +108,11 @@ function loadCard(obj){
 load();
 
 
+// $("#god div").click(function () {
+//     $(this).next().stop(true).slideToggle(300);
+//     $(".gnb > li > a").not(this).next().slideUp(300);
+//     return false;
+// });
 
 
 
@@ -104,6 +126,7 @@ load();
 
 
 
+            
 
 
 
