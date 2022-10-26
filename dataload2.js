@@ -32,6 +32,7 @@ function loadCard(obj){
         const img = document.createElement('img');
         img.src = me.image;
         img.alt = me.name;
+        id.className = me.classId;
         
 
         function addOn() {
@@ -62,18 +63,19 @@ function loadCard(obj){
         health.textContent = `health: ${me.health}`;
         img.textContent = `image: ${me.image}`;
         
-        if (spellType.textContent = undefined) {
-            spellType.textContent = '';
-        }
-        if (minionType.textContent = undefined) {
-            minionType.textContent = '';
-        }
-        if (attack.textContent = undefined) {
-            attack.textContent = '';
-        }
-        if (health.textContent = undefined) {
-            health.textContent = '';
-        }
+        
+        // if (spellType.textContent = undefined) {
+        //     spellType.textContent = '';
+        // }
+        // if (minionType.textContent = undefined) {
+        //     minionType.textContent = '';
+        // }
+        // if (attack.textContent = undefined) {
+        //     attack.textContent = '';
+        // }
+        // if (health.textContent = undefined) {
+        //     health.textContent = '';
+        // }
 
         
         id.appendChild(name);
@@ -89,7 +91,7 @@ function loadCard(obj){
         id.appendChild(attack);
         id.appendChild(health);
         id.appendChild(img);
-        
+        id.appendChild(rarityID);
         section.appendChild(id);
         
     
