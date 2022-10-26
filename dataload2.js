@@ -69,7 +69,10 @@ function loadCard(obj){
         id.appendChild(manaCost);
         id.appendChild(text);
         id.appendChild(flavorText);
+        id.appendChild(attack);
+        id.appendChild(health);
         id.appendChild(img);
+        
 
 
         section.appendChild(id);
