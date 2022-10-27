@@ -4,10 +4,8 @@ async function load(){
     const response = await fetch(request);
     const CARDDATA = await response.json();
 
-    
     loadCard(CARDDATA);
 }
-
 
 function loadCard(obj){
     const section = document.querySelector("#sec3 .cardlist .wrap");
@@ -61,7 +59,7 @@ function loadCard(obj){
         flavorText.textContent = `${me.flavorText}`;
         attack.textContent = `attack: ${me.attack}`;
         health.textContent = `health: ${me.health}`;
-        img.textContent = `image: ${me.image}`;
+        // img.textContent = `image: ${me.image}`;
         
         
         // if (spellType.textContent = undefined) {
@@ -99,33 +97,29 @@ function loadCard(obj){
 }
 
 
-// link.addEventListener('click', addOn);
-    
-//     function addOn() {
-//         this.id.add("on")
-//     }
-
-
-
 load();
 
 
-// $("#god div").click(function () {
-//     $(this).next().stop(true).slideToggle(300);
-//     $(".gnb > li > a").not(this).next().slideUp(300);
-//     return false;
-// });
 
 
 
 
 
+// 악사
+
+var druid = "#god div.2";
+var demonhunter = "@god div.14";
+
+$(".job div:nth(4)").click(function(){
+    $(druid).toggle().stop();
+});
 
 
 
-
-
-
+// 드루
+// $(".job div:nth(6)").click(function(){
+//     $("#god div.14").not(this).hide();
+// });    
 
 
             

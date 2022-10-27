@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <title>a</title>
     <style>
-        .sec3 .class{width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px;}
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        .job{width: 100%; height: 70px; display: flex; justify-content: space-around; align-items: center;}
+        .job div{max-width: 70px; height: 100%; flex: 1 1 70px; display: flex;}
+        .job div div{flex: 0 1 70px; background-repeat: no-repeat; background-position: 50%; background-size: contain; cursor: pointer;}
+        .job div:first-child div{background-image: url(/project/1x/마법사1.png);}
+        .job div:nth-child(2) div{background-image: url(/project/1x/성기사1.png);}
+        .job div:nth-child(3) div{background-image: url(/project/1x/악마사냥꾼1.png);}
+        .job div:nth-child(4) div{background-image: url(/project/1x/드루이드1.png);}
+        .job div:nth-child(5) div{background-image: url(/project/1x/사냥꾼1.png);}
+        .job div:nth-child(6) div{background-image: url(/project/1x/흑마법사1.png);}
+        .job div:nth-child(7) div{background-image: url(/project/1x/전사1.png);}
+        .job div:nth-child(8) div{background-image: url(/project/1x/사제1.png);}
+        .job div:nth-child(9) div{background-image: url(/project/1x/도적1.png);}
+        .job div:nth-child(10) div{background-image: url(/project/1x/주술사1.png);}
+        .job div:last-child div{background-image: url(/project/1x/주술사1.png);}
+        
+
+/* 
         .sec3 .searchmenu{display: flex; width: 100%; height: 60px; align-items: center; justify-content: space-between;}
         .sec3 .searchmenu .manacost{height: 100%; display: flex; align-items: center;}
         .sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/project/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
@@ -34,176 +51,171 @@
         .sec3 .searchmenu .rarity .rare{background-image: url(/project/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
         .sec3 .searchmenu .rarity .unique{background-image: url(/project/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
         .sec3 .searchmenu .rarity .legend{background-image: url(/project/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-        .inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);}
-        .sec3{padding-top: 60px;}
-        .sec3 .cardlist{gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
+        .inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);} */
+        .sec3{width: 100vw; height: 100%;}
+        .sec3 .cardlist{background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
         .sec3 .cardlist .wrap div{flex: 0 0 220px;}
         .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
         .sec4{width: 100vw; height: 100vh; position: relative;}
         .solocard{width: 50%; height: 50%; position: absolute; top: 25%; left: 25%; background-color: aqua;}
         
-        
-        
-        
+
         #god div{text-indent: -999999999999px; display: flex; cursor: pointer;}
         #god div img{width: 100%; height: 100%;}
     </style>
 </head>
 
 <body>
+    <div class="job">
+        <div class="magicianpage">
+            <div></div>
+        </div>
+        <div class="paladinpage">
+            <div></div>
+        </div>
+        <div class="demonhunterpage">
+            <div></div>
+        </div>
+        <div class="druidpage">
+            <div></div>
+        </div>
+        <div class="hunterpage">
+            <div></div>
+        </div>
+        <div class="warlockpage">
+            <div></div>
+        </div>
+        <div class="warriorpage">
+            <div></div>
+        </div>
+        <div class="priestpage">
+            <div></div>
+        </div>
+        <div class="roguepage">
+            <div></div>
+        </div>
+        <div class="shamanpage">
+            <div></div>
+        </div>
+        <div class="naturalpage">
+            <div></div>
+        </div>
+    </div>
+    <!-- <div class="searchmenu">
+        <div class="manacost">
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+            <a href="">
+                <img src="#" alt="">
+            </a>
+        </div>
+        <div class="rarity">
+            <a href="">
+                <img src="#" alt="" class="normal">
+            </a>
+            <a href="">
+                <img src="#" alt="" class="rare">
+            </a>
+            <a href="">
+                <img src="#" alt="" class="unique">
+            </a>
+            <a href="">
+                <img src="#" alt="" class="legend">
+            </a>
+        </div>
+    </div>
+    <div class="selecthmenu">
+        <select>
+            <option>카드팩별</option>
+            <option>나락과 질서</option>
+            <option>나스리아 성채 살인 사건</option>
+            <option>가라앉은 도시로의 항해</option>
+            <option>알터랙 계곡</option>
+            <option>스톰윈드</option>
+            <option>불모의 땅</option>
+            <option>핵심</option>
+        </select>
+        <select class="attack">
+            <option>공격력</option>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10+</option>
+        </select>
+        <select class="health">
+            <option>체력</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10+</option>
+        </select>
+        <select class="spelltype">
+            <option>주문 속성</option>
+            <option>냉기</option>
+            <option>비전</option>
+            <option>암흑</option>
+            <option>자연</option>
+            <option>지옥</option>
+            <option>화염</option>
+            <option>기타</option>
+        </select>
+        <select class="miniontype">
+            <option>하수인 종족</option>
+            <option>가시맷돼지</option>
+            <option>기계</option>
+            <option>나가</option>
+            <option>멀록</option>
+            <option>악마</option>
+            <option>야수</option>
+            <option>용족</option>
+            <option>정령</option>
+            <option>토템</option>
+            <option>해적</option>
+            <option>기타</option>
+        </select>
+    </div> -->
     <div class="sec3" id="sec3">
-        <!-- <div class="class">
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/드루이드1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/마법사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/사냥꾼1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/사제1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/성기사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/악마사냥꾼1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/전사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/주술사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/흑마법사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-        </div>
-        <div class="searchmenu">
-            <div class="manacost">
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-            </div>
-            <div class="rarity">
-                <a href="">
-                    <img src="#" alt="" class="normal">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="rare">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="unique">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="legend">
-                </a>
-            </div>
-            <select>
-                <option>카드팩별</option>
-                <option>나락과 질서</option>
-                <option>나스리아 성채 살인 사건</option>
-                <option>가라앉은 도시로의 항해</option>
-                <option>알터랙 계곡</option>
-                <option>스톰윈드</option>
-                <option>불모의 땅</option>
-                <option>핵심</option>
-            </select>
-        </div>
-        <div class="searchmenu">
-            <select class="attack">
-                <option>공격력</option>
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10+</option>
-            </select>
-            <select class="health">
-                <option>체력</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10+</option>
-            </select>
-            <select class="spelltype">
-                <option>주문 속성</option>
-                <option>냉기</option>
-                <option>비전</option>
-                <option>암흑</option>
-                <option>자연</option>
-                <option>지옥</option>
-                <option>화염</option>
-                <option>기타</option>
-            </select>
-            <select class="miniontype">
-                <option>하수인 종족</option>
-                <option>가시맷돼지</option>
-                <option>기계</option>
-                <option>나가</option>
-                <option>멀록</option>
-                <option>악마</option>
-                <option>야수</option>
-                <option>용족</option>
-                <option>정령</option>
-                <option>토템</option>
-                <option>해적</option>
-                <option>기타</option>
-            </select>
-        </div> -->
         <div class="cardlist demonhunter">
             <div class="wrap" id="god">
                
