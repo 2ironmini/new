@@ -14,7 +14,25 @@ function loadCard(obj){
     for (const me of we)
     {
         const id = document.createElement('div');
-        const name = document.createElement('p')
+        const closeBt = document.createElement('div');
+
+        id.addEventListener
+        function addOn() {
+            id.classList.add("on");
+        };
+        id.addEventListener('click', addOn);
+
+        let removeOn = () => 
+        {
+            id.remove("on");
+        };
+        closeBt.addEventListener('click', removeOn);
+        
+
+
+
+        const textbox = document.createElement('div')
+        const name = document.createElement('h4')
         const classId = document.createElement('p');
         const spellType = document.createElement('p');
         const minionType = document.createElement('p');
@@ -32,34 +50,86 @@ function loadCard(obj){
         img.alt = me.name;
         id.className = me.classId;
         id.id = me.id;
+        name.className = 'name';
+        classId.className = 'classId';
+        spellType.className = 'spellType';
+        minionType.className = 'minionType';
+        cardType.className = 'cardType';
+        cardSet.className = 'cardSet';
+        rarityID.className = 'rarity';
+        artistName.className = 'artistName';
+        manaCost.className = 'manaCost';
+        attack.className = 'attack';
+        health.className = 'health';
+        closeBt.className = 'closeBt';
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        textbox.className = 'textbox';
         
 
-        function addOn() {
-            id.classList.add("on");
-        };
-        // let removeOn = () => {
-        //     id.classList.remove("on");
-        // };
-        id.addEventListener('click', addOn);
+    
         
-        // id.addEventListener('click', removeOn);
+var mage = "div.4";
+var paladin = "div.5";
+var demonhunter = "div.14";
+var druid = "div.2";
+var hunter = "div.3";
+var warlock = "div.9";
+var warrior = "div.10";
+var priest = "div.6";
+var rogue = "div.7";
+var shaman = "div.8";
+var natural = "div.12";
 
+
+// 스위치로해보기 344p
 
         name.textContent = me.name;
         // id.className = `${me.id}`;
         // id.textContent = `${me.id}`;
-        classId.textContent = `${me.classId}`;
-        spellType.textContent = `spellSchoolId: ${me.spellSchoolId}`
-        minionType.textContent = `minionTypeId: ${me.minionTypeId}`;
+        classId.textContent = `${me.classId}`
+            if (classId.textContent = 2) {classId.textContent = '드루이드';}
+            else if (classId.textContent = 3) {classId.textContent = '사냥꾼';}
+            else if (classId.textContent = 4) {classId.textContent = '마법사';}
+            else if (classId.textContent = 5) {classId.textContent = '성기사';}
+            else if (classId.textContent = 6) {classId.textContent = '사제';}
+            else if (classId.textContent = 7) {classId.textContent = '도적';}
+            else if (classId.textContent = 8) {classId.textContent = '주술사';}
+            else if (classId.textContent = 9) {classId.textContent = '흑마법사';}
+            else if (classId.textContent = 10) {classId.textContent = '전사';}
+            else if (classId.textContent = 12) {classId.textContent = '중립';}
+            else if (classId.textContent = 14) {classId.textContent = '악마 사냥꾼';};
+
+        spellType.textContent = `${me.spellSchoolId}`;
+        minionType.textContent = `${me.minionTypeId}`;
         cardType.textContent = `${me.cardTypeId}`;
-        cardSet.textContent = `cardSetId: ${me.cardSetId}`;
-        rarityID.textContent = `rarityId: ${me.rarityId}`;
-        artistName.textContent = `artistName: ${me.artistName}`;
-        manaCost.textContent = `manaCost: ${me.manaCost}`;
+        cardSet.textContent = `${me.cardSetId}`;
+        rarityID.textContent = `${me.rarityId}`;
+        artistName.textContent = `${me.artistName}`;
+        manaCost.textContent = `${me.manaCost}`;
         text.textContent = `${me.text}`;
         flavorText.textContent = `${me.flavorText}`;
-        attack.textContent = `attack: ${me.attack}`;
-        health.textContent = `health: ${me.health}`;
+        attack.textContent = `${me.attack}`;
+        health.textContent = `${me.health}`;
+
+
+
+
+
+
+
+
         // img.textContent = `image: ${me.image}`;
         
         
@@ -76,26 +146,26 @@ function loadCard(obj){
         //     health.textContent = '';
         // }
 
+        id.prepend(img);
+        textbox.appendChild(name);
+        textbox.appendChild(classId);
+        textbox.appendChild(spellType);
+        textbox.appendChild(minionType);
+        textbox.appendChild(cardType);
+        textbox.appendChild(cardSet);
+        textbox.appendChild(artistName);
+        textbox.appendChild(manaCost);
+        textbox.appendChild(text);
+        textbox.appendChild(flavorText);
+        textbox.appendChild(attack);
+        textbox.appendChild(health);
+        textbox.appendChild(closeBt);
+        id.appendChild(textbox);
+        textbox.appendChild(rarityID);
         
-        id.appendChild(name);
-        id.appendChild(classId);
-        id.appendChild(spellType);
-        id.appendChild(minionType);
-        id.appendChild(cardType);
-        id.appendChild(cardSet);
-        id.appendChild(artistName);
-        id.appendChild(manaCost);
-        id.appendChild(text);
-        id.appendChild(flavorText);
-        id.appendChild(attack);
-        id.appendChild(health);
-        id.appendChild(img);
-        id.appendChild(rarityID);
         section.appendChild(id);
-        
-        
-    
 }
+    
 }
 
 
@@ -288,10 +358,6 @@ $(".job .naturalpage").click(function(){
 // $(".job div:nth(6)").click(function(){
 //     $("#god div.14").not(this).hide();
 // });    
-
-
-            
-
 
 
 
