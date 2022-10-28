@@ -31,6 +31,7 @@ function loadCard(obj){
         img.src = me.image;
         img.alt = me.name;
         id.className = me.classId;
+        id.id = me.id;
         
 
         function addOn() {
@@ -45,8 +46,8 @@ function loadCard(obj){
 
 
         name.textContent = me.name;
-        id.textContent = '';
-        // id.textContent = `id: ${me.id}`;
+        // id.className = `${me.id}`;
+        // id.textContent = `${me.id}`;
         classId.textContent = `${me.classId}`;
         spellType.textContent = `spellSchoolId: ${me.spellSchoolId}`
         minionType.textContent = `minionTypeId: ${me.minionTypeId}`;
@@ -92,6 +93,7 @@ function loadCard(obj){
         id.appendChild(rarityID);
         section.appendChild(id);
         
+        
     
 }
 }
@@ -120,141 +122,154 @@ var priest = "div.6";
 var rogue = "div.7";
 var shaman = "div.8";
 var natural = "div.12";
-// var JOB = (mage + paladin + demonhunter + druid + hunter + warlock + warrior + priest + rogue + shaman + natural)
+
+
 
 $(".job .magicianpage").click(function(){
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).show().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .paladinpage").click(function(){
-    $(mage).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).show().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .demonhunterpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).show().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .druidpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).show().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .hunterpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).show().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .warlockpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).show().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .warriorpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).show().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .priestpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).show().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .roguepage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(shaman).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).show().stop();
+    $(shaman).hide().stop();
+    $(natural).hide().stop();
 });
 $(".job .shamanpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(natural).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).show().stop();
+    $(natural).hide().stop();
 });
 $(".job .naturalpage").click(function(){
-    $(mage).toggle().stop();
-    $(paladin).toggle().stop();
-    $(demonhunter).toggle().stop();
-    $(druid).toggle().stop();
-    $(hunter).toggle().stop();
-    $(warlock).toggle().stop();
-    $(warrior).toggle().stop();
-    $(priest).toggle().stop();
-    $(rogue).toggle().stop();
-    $(shaman).toggle().stop();
+    $(mage).hide().stop();
+    $(paladin).hide().stop();
+    $(demonhunter).hide().stop();
+    $(druid).hide().stop();
+    $(hunter).hide().stop();
+    $(warlock).hide().stop();
+    $(warrior).hide().stop();
+    $(priest).hide().stop();
+    $(rogue).hide().stop();
+    $(shaman).hide().stop();
+    $(natural).show().stop();
+
 });
-// $(".job .naturalpage").click(function(){
+
 //     // $(mage).toggle().stop();
 //     // $(paladin).toggle().stop();
 //     // $(demonhunter).toggle().stop();
