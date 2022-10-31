@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Math 객체</title>
+    <script>
+        console.log(Math.PI); // 원주율 값 프로퍼티
+
+
+        // 배열에 숫자 45개를 생성시켜 놓고, 랜덤으로 값 추출하기
+        const luckyNumber = [];
+        for (var i = 1; i <= 6; i++) {
+            luckyNumber.push(i); // 1(index 0) ~ 45(index 44)까지 배열로 추가
+            // .push()메서드는 마지막 배열값을 추가한다
+        }
+        console.log(luckyNumber.toString()); //배열 확인
+        console.log(luckyNumber.length); //개수확인
+
+        let num = Math.floor(Math.random() * luckyNumber.length) + 1;
+        // Math.random()을 통해 0~1사이의 난수가 나오고, 여기에 luckyNumber 배열의 길이(45개)를 곱한다. 0 ~ 44.9955까지 출력
+        // luckyNumber 배열의 길이(45개) 한도내에서 랜덤 1개 추출, .floor()통해서 소수점 제거 0~44
+        // 나의 목적은 0보다 커야하니 1 더해주기
+        console.log(`행운의 번호는 ${num}입니다 :)`);
+
+
+        /*---------------------------------------------*/
+        // 숫자 중복이슈를 해결한, 로또번호 생성기
+
+        function lottoNum() {
+            const lotto = [];
+
+            (function makeNum() {
+                if (lotto.length < 6) {
+                    // lotto 배열에 값이 6개가 될때까지
+                    let num2 = Math.floor(Math.random() * 45) + 1;
+                    // 1~45의 숫자중에서 랜덤숫자 생성하며 변수num2에 선언
+                    
+                    if (notSame(num2)) {
+                        // 중복번호 체크 함수를 통해 true가 나오면
+                        
+                        lotto.push(num2);
+                        // 빈 lotto 배열에 마지막 배열값을 추가한다
+                    }
+                    makeNum(); // 재귀함수 콜링
+                }
+                
+                // 중복번호 체크 함수, true와 false를 구분하기 위한 함수
+                function notSame(num2) {
+                    return lotto.every(function(element){
+                       //.every()메서드의 콜백함수는 첫번째 파라미터로 element(배열에서 처리되는 현재 요소)를 받는다.
+
+                       return num2 !== element
+                       // 배열의 현재 값과 생성된 변수 num2와 값이 같지 않은지를 판단, 같지 않아야 true반환
+                       // true값을 if문의 조건으로 사용하기 위해 비교연산자를 부정하여 뒤집었다, 같은 숫자가 나오지 않았다를 true로 쓰려고 함.
+                    }); // 기존 함수
+
+                    return lotto.every((element) => num2 !== element);
+                    // 화살표 함수로 표현
+                }
+            })(); // 함수 즉시실행하여
+            return lotto; // 배열 생성
+        }
+        console.log(`중복없는 로또번호 생성기에서 추출한 행운의 번호 6개는\n${lottoNum()} 입니다 :D`);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
