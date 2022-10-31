@@ -18,7 +18,7 @@
         .job div:nth-child(8) div{background-image: url(/project/1x/사제1.png);}
         .job div:nth-child(9) div{background-image: url(/project/1x/도적1.png);}
         .job div:nth-child(10) div{background-image: url(/project/1x/주술사1.png);}
-        .job div:last-child div{background-image: url(/project/1x/주술사1.png);}
+        .job div:last-child div{background-image: url(/project/1x/ALL1.png);}
         
 
 /* 
@@ -53,15 +53,23 @@
         .sec3 .searchmenu .rarity .legend{background-image: url(/project/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
         .inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);} */
         .sec3{width: 100vw; height: 100%;}
-        .sec3 .cardlist{background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
+        .sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / contain;}
         .sec3 .cardlist .wrap div{flex: 0 0 220px;}
         .sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
-        .sec4{width: 100vw; height: 100vh; position: relative;}
-        .solocard{width: 50%; height: 50%; position: absolute; top: 25%; left: 25%; background-color: aqua;}
+        #god div{display: flex; cursor: pointer; flex-direction: row;}
+        #god div img{width: 220px; height: 300px;}
+        #god div .textbox{display: none;}
+        
+        #god div.on{position: fixed; top: 0%; left: 0%; background-color: rgba(0, 0, 0, 0.4); cursor: default; width: calc(100%); height: calc(100%); transition: all ease-in-out 1s;}
         
 
-        #god div{text-indent: -999999999999px; display: flex; cursor: pointer;}
-        #god div img{width: 100%; height: 100%;}
+        #god div.on img{position: absolute; top: 30%; left: calc(20%); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
+        #god div.on .textbox{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 50%; height: 300px; position: absolute; top: 30%; left: calc(20% + 220px); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
+        #god div.on .textbox .closeBt{background: url(/project/ui/xmark-solid.svg) no-repeat 50% / contain; width: 80px; height: 80px; z-index: 10; position: absolute; top: 0%; cursor: pointer; right: 0; background-color: #fff; border-radius: 30%;}
+        /* #god div.on img{order: 1;}
+        #god div.on .textbox{order: 2;} */
+        
+        
     </style>
 </head>
 
@@ -101,58 +109,28 @@
             <div></div>
         </div>
     </div>
-    <!-- <div class="searchmenu">
+    <div class="searchmenu">
         <div class="manacost">
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
-            <a href="">
-                <img src="#" alt="">
-            </a>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         <div class="rarity">
-            <a href="">
-                <img src="#" alt="" class="normal">
-            </a>
-            <a href="">
-                <img src="#" alt="" class="rare">
-            </a>
-            <a href="">
-                <img src="#" alt="" class="unique">
-            </a>
-            <a href="">
-                <img src="#" alt="" class="legend">
-            </a>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
-    <div class="selecthmenu">
+    <!-- <div class="selecthmenu">
         <select>
             <option>카드팩별</option>
             <option>나락과 질서</option>
@@ -217,20 +195,10 @@
     </div> -->
     <div class="sec3" id="sec3">
         <div class="cardlist demonhunter">
-            <div class="wrap" id="god">
-               
+            <div class="wrap" id="god">          
             </div>
         </div>
-          
     </div>
-    <div class="sec4" id="sec4" >
-        <div class="solocard" id="fullscreen-div">
-            
-            
-        </div>
-    </div>
-
-
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="/project/dataload2.js"></script>
 </body>
