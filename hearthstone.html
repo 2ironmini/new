@@ -44,8 +44,8 @@
                 <li class="m">
                     <a href="#sec3" class="min">카드 라이브러리</a>
                     <ul class="snb">
-                        <li><a href="#sec3">전체 카드</a></li>
-                        <li><a href="#sec4">개별 카드</a></li>
+                        <!-- <li><a href="#sec3">전체 카드</a></li>
+                        <li><a href="#sec4">개별 카드</a></li> -->
                     </ul>
                 </li>
                 <li class="m">
@@ -801,439 +801,152 @@
         </div> -->
     </div>
     <div class="sec3" id="sec3">
-        <div class="class">
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/드루이드1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/마법사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/사냥꾼1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/사제1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/성기사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/악마사냥꾼1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/전사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/주술사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/흑마법사1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-            <a href="">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-        </div>
         <div class="searchmenu">
-            <div class="manacost">
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
+            <div class="job">
+                <div class="magicianpage">
+                    <div></div>
+                </div>
+                <div class="paladinpage">
+                    <div></div>
+                </div>
+                <div class="demonhunterpage">
+                    <div></div>
+                </div>
+                <div class="druidpage">
+                    <div></div>
+                </div>
+                <div class="hunterpage">
+                    <div></div>
+                </div>
+                <div class="warlockpage">
+                    <div></div>
+                </div>
+                <div class="warriorpage">
+                    <div></div>
+                </div>
+                <div class="priestpage">
+                    <div></div>
+                </div>
+                <div class="roguepage">
+                    <div></div>
+                </div>
+                <div class="shamanpage">
+                    <div></div>
+                </div>
+                <div class="naturalpage">
+                    <div></div>
+                </div>
             </div>
-            <div class="rarity">
-                <a href="">
-                    <img src="#" alt="" class="normal">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="rare">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="unique">
-                </a>
-                <a href="">
-                    <img src="#" alt="" class="legend">
-                </a>
-            </div>
-            <select>
-                <option>카드팩별</option>
-                <option>나락과 질서</option>
-                <option>나스리아 성채 살인 사건</option>
-                <option>가라앉은 도시로의 항해</option>
-                <option>알터랙 계곡</option>
-                <option>스톰윈드</option>
-                <option>불모의 땅</option>
-                <option>핵심</option>
-            </select>
+            <form id="form">
+                <fieldset>
+                    <legend>카드 검색</legend>
+                    <div class="radios">
+                        <div>
+                            <input type="radio" id="miniondio" name="search" value="하수인" onclick=radiocheckMinion()>
+                            <label for="miniondio">하수인</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="spelldio" name="search" value="주문" onclick=radiocheckSpell()>
+                            <label for="spelldio">주문</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="raritydio" name="search" value="희귀도" onclick=radiocheckRarity()>
+                            <label for="raritydio">희귀도</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="setdio" name="search" value="확장팩" onclick=radiocheckSet()>
+                            <label for="setdio">확장팩</label>
+                        </div>
+                    </div>
+                    <div class="types">
+                        <div>
+                            <select id="familysel" name="familysel" disabled>
+                                <option value="" selected="selected">하수인 종족</option>
+                                <option value="43">가시맷돼지</option>
+                                <option value="17">기계</option>
+                                <option value="92">나가</option>
+                                <option value="14">멀록</option>
+                                <option value="15">악마</option>
+                                <option value="20">야수</option>
+                                <option value="24">용족</option>
+                                <option value="18">정령</option>
+                                <option value="21">토템</option>
+                                <option value="23">해적</option>
+                                <option value="26">기타</option>
+                                <option value="other">종족 없음</option>
+                            </select>
+                            <select id="attacksel" name="attacksel" disabled>
+                                <option value="" selected="selected">공격력</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10+">10+</option>
+                            </select>
+                            <select id="healthsel" disabled class="minionsel">
+                                <option value="" selected="selected">체력</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10+">10+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="spellsel" disabled>
+                                <option value="" selected="selected">주문 속성</option>
+                                <option value="3">냉기</option>
+                                <option value="1">비전</option>
+                                <option value="6">암흑</option>
+                                <option value="4">자연</option>
+                                <option value="7">지옥</option>
+                                <option value="2">화염</option>
+                                <option value="5">신성</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select id="raritysel" disabled>
+                                <option value="" selected="selected">희귀도별</option>
+                                <option value="1">일반</option>
+                                <option value="3">희귀</option>
+                                <option value="4">특급</option>
+                                <option value="5">전설</option>
+                            </select>        
+                        </div>
+                        <div>
+                            <select id="setsel" disabled>
+                                <option value="" selected="selected">카드팩별</option>
+                                <option value="9999">나락과 질서</option>
+                                <option value="1691">나스리아 성채 살인 사건</option>
+                                <option value="1658">가라앉은 도시로의 항해</option>
+                                <option value="1626">알터랙 계곡</option>
+                                <option value="1578">스톰윈드</option>
+                                <option value="1525">불모의 땅</option>
+                                <option value="1637">핵심</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
-        <div class="searchmenu">
-            <select class="attack">
-                <option>공격력</option>
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10+</option>
-            </select>
-            <select class="health">
-                <option>체력</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10+</option>
-            </select>
-            <select class="spelltype">
-                <option>주문 속성</option>
-                <option>냉기</option>
-                <option>비전</option>
-                <option>암흑</option>
-                <option>자연</option>
-                <option>지옥</option>
-                <option>화염</option>
-                <option>기타</option>
-            </select>
-            <select class="miniontype">
-                <option>하수인 종족</option>
-                <option>가시맷돼지</option>
-                <option>기계</option>
-                <option>나가</option>
-                <option>멀록</option>
-                <option>악마</option>
-                <option>야수</option>
-                <option>용족</option>
-                <option>정령</option>
-                <option>토템</option>
-                <option>해적</option>
-                <option>기타</option>
-            </select>
-        </div>
-        <div class="cardlist demonhunter">
-            <div class="wrap">
-                <a href="#">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-                <a href="">
-                    <img src="#" alt="">
-                </a>
-            </div>
-        </div>
-            <!-- 
-           
-            <ul>
-                <li>카드타입별
-                    <ul>
-                        <li>하수인</li>
-                        <li>주문</li>
-                        <li>무기
-                            <ul>
-                                <li>공격력</li>
-                                <li>내구도</li>
-                            </ul>
-                        </li>
-                        <li>영웅 변신</li>
-                        <li>장소</li>
-                    </ul>
-                </li>
-            </ul> -->
-    </div>
-    <div class="sec4" id="sec4">
-        <div class="solocard">
-            <div class="left">
-            </div>
-            <div class="right">
-                <p class="name">증거인멸</p>
-                <p class="class">14</p>
-                <p class="manacost">0</p>
-                <p class="miniontype"></p>
-                <p class="spelltype"></p>
-                <p class="set">1691</p>
-                <p class="rarity">3</p>
-                <p class="artist">Jason Kang</p>
-                <p class="text">이번 턴에 내 영웅이 공격력을 +3 얻습니다. 내 손에 있는 카드를 선택하여 내 덱에 섞어 넣습니다.</p>
-                <p class="flavortext">죄를 지으면 대가를 치르고 싶지 않은 법이죠.
-                </p>
-                <p class="makecostn">40</p>
-                <p class="makecostg">80</p>
-                <p class="harv">20</p>
-
+        <div class="cardlist">
+            <div class="wrap" id="god">          
             </div>
         </div>
     </div>
-    <!-- <footer>
+    <footer>
         <div class="top">
             <div class="leftmenu">
                 <a href="https://www.blizzard.com/ko-kr/" class="blizzard">
@@ -1254,7 +967,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script src="/project/hearthstone.js"></script>

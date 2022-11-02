@@ -10,7 +10,7 @@ h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
 p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
 body{min-width: 320px;}
 
-.top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between;}
+.top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between; position: fixed;}
 .leftmenu{width: fit-content; height: 100%; padding: 2px;}
 .rightmenu{padding: 10px; width: fit-content; height: 100%; display: flex; flex-direction: row;}
 .rightmenu .sitemap{display: flex; align-items: center; gap: 15px;}
@@ -196,6 +196,44 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
+#sec3{width: 100vw; height: 100%; padding-top: 50px;}
+#sec3 .searchmenu{width: 100vw; height: 100%;}
+#sec3 .job{width: 100%; height: 70px; display: flex; justify-content: space-around; align-items: center;}
+#sec3 .job div{max-width: 70px; height: 100%; flex: 1 1 70px; display: flex;}
+#sec3 .job div div{flex: 0 1 70px; background-repeat: no-repeat; background-position: 50%; background-size: contain; cursor: pointer;}
+#sec3 .job div:first-child div{background-image: url(/project/1x/마법사1.png);}
+#sec3 .job div:nth-child(2) div{background-image: url(/project/1x/성기사1.png);}
+#sec3 .job div:nth-child(3) div{background-image: url(/project/1x/악마사냥꾼1.png);}
+#sec3 .job div:nth-child(4) div{background-image: url(/project/1x/드루이드1.png);}
+#sec3 .job div:nth-child(5) div{background-image: url(/project/1x/사냥꾼1.png);}
+#sec3 .job div:nth-child(6) div{background-image: url(/project/1x/흑마법사1.png);}
+#sec3 .job div:nth-child(7) div{background-image: url(/project/1x/전사1.png);}
+#sec3 .job div:nth-child(8) div{background-image: url(/project/1x/사제1.png);}
+#sec3 .job div:nth-child(9) div{background-image: url(/project/1x/도적1.png);}
+#sec3 .job div:nth-child(10) div{background-image: url(/project/1x/주술사1.png);}
+#sec3 .job div:last-child div{background-image: url(/project/1x/ALL1.png);}
+
+
+
+#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; min-width: 100vw; min-height: 100vh;}
+#sec3 .cardlist .wrap div{flex: 0 0 220px;}
+#sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
+#god div{display: flex; cursor: pointer; flex-direction: row;}
+#god div img{width: 220px; height: 300px;}
+#god div .textbox{display: none;}
+
+#god div.on{position: fixed; top: 0%; left: 0%; background-color: rgba(0, 0, 0, 0.4); cursor: default; width: calc(100%); height: calc(100%); transition: all ease-in-out 1s;}
+#god div.on img{position: absolute; top: 30%; left: calc(20%); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
+#god div.on .textbox{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 50%; height: 300px; position: absolute; top: 30%; left: calc(20% + 220px); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
+#god div.on .textbox .closeBt{background: url(/project/ui/xmark-solid.svg) no-repeat 50% / contain; width: 80px; height: 80px; z-index: 10; position: absolute; top: 0%; cursor: pointer; right: 0; background-color: #fff; border-radius: 30%;}
+
+#sec3 .searchmenu{width: 100vw; height: 100%; display: flex; flex-direction: column;}
+#form fieldset{display: flex; flex-direction: column; color: #fff; width: 100%; height: 100%;}
+#form fieldset legend{text-align: center;}
+#form fieldset .radios{display: flex; flex-direction: row;}
+#form fieldset .radios div{flex: 1 1 0;}
+#form fieldset .types{display: flex; flex-direction: row;}
+#form fieldset .types div{flex: 1 1 0;}
 
 
 
@@ -205,56 +243,22 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec3 .class{width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 10px;}
-.sec3 .searchmenu{display: flex; width: 100%; height: 60px; align-items: center; justify-content: space-between;}
-.sec3 .searchmenu .manacost{height: 100%; display: flex; align-items: center;}
-.sec3 .searchmenu .manacost .mana0{width: 60px; height: 60px; background-image: url(/project/1x/mana/0.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana0:hover{background-image: url(/project/1x/0마나hover.png);}
-.sec3 .searchmenu .manacost .mana1{width: 60px; height: 60px; background-image: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana1:hover{background-image: url(/project/1x/1마나hover.png);}
-.sec3 .searchmenu .manacost .mana2{width: 60px; height: 60px; background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana2:hover{background-image: url(/project/1x/2마나hover.png);}
-.sec3 .searchmenu .manacost .mana3{width: 60px; height: 60px; background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana3:hover{background-image: url(/project/1x/3마나hover.png);}
-.sec3 .searchmenu .manacost .mana4{width: 60px; height: 60px; background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana4:hover{background-image: url(/project/1x/4마나hover.png);}
-.sec3 .searchmenu .manacost .mana5{width: 60px; height: 60px; background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana5:hover{background-image: url(/project/1x/5마나hover.png);}
-.sec3 .searchmenu .manacost .mana6{width: 60px; height: 60px; background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana6:hover{background-image: url(/project/1x/6마나hover.png);}
-.sec3 .searchmenu .manacost .mana7{width: 60px; height: 60px; background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana7:hover{background-image: url(/project/1x/7마나hover.png);}
-.sec3 .searchmenu .manacost .mana8{width: 60px; height: 60px; background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana8:hover{background-image: url(/project/1x/8마나hover.png);}
-.sec3 .searchmenu .manacost .mana9{width: 60px; height: 60px; background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana9:hover{background-image: url(/project/1x/9마나hover.png);}
-.sec3 .searchmenu .manacost .mana10{width: 60px; height: 60px; background-image: url(/project/1x/mana/10.png); background-repeat: no-repeat; background-size: contain;}
-.sec3 .searchmenu .manacost .mana10:hover{background-image: url(/project/1x/10마나hover.png);}
-.sec3 .searchmenu .rarity{height: 100%; display: flex; align-items: center; gap: 20px;}
-.sec3 .searchmenu .rarity .normal{background-image: url(/project/1x/normal.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .rare{background-image: url(/project/1x/rare.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .unique{background-image: url(/project/1x/unique.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-.sec3 .searchmenu .rarity .legend{background-image: url(/project/1x/legend.png); background-repeat: no-repeat; background-size: contain; width: 30px; height: 40px;}
-
-
-.inner .left .one:hover{background-image: url(/project/1x/1마나hover.png);}
 
 
 
+/* 
 
-
-.sec3{padding-top: 60px;}
 .sec3 .cardlist{padding: 30px; gap: 30px; background-image: url(/project/1x/라이브러리\ 배경.png); background-repeat: repeat-y; background-size: contain;}
 .sec3 .cardlist .wrap a img{width: 300px; height: 350px;}
-.sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;}
+.sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; align-items: center;} */
 
 
-
+/* 
 .sec4{width: 100vw; height: 90vh; display: flex; align-items: center; justify-content: center; flex-direction: row; background-color: aqua;}
 .solocard{width: 1200px; height: 800px; background-color: beige; display: flex;}
 .sec4 .solocard .right{width: 50%; height: 100%; text-align: center; display: flex; flex-direction: column; justify-content: center;}
 .sec4 .solocard .left{ width: 50%; height: 100%; background: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png) no-repeat 50% 50%;}
-
+ */
 
 
 
