@@ -55,6 +55,7 @@ function loadCard(obj){
         const attack = document.createElement('p');
         const health = document.createElement('p');
         const img = document.createElement('img');
+        
 
         img.src = me.image;
         img.alt = me.name;
@@ -214,14 +215,40 @@ $("p.health.10").html("체력 : 10+");
 
 
 
+
+
+// FamilySearch.addEventListener
+//         function addOn() {
+//             FamilySearch.classList.add("FamilySearch");
+//         };
+// result_family.addEventListener('change', Event);
+
+// let removeOn = () => 
+// {
+//     id.remove("on");
+// };
+// closeBt.addEventListener('click', removeOn);
+
+
+//         "#god div:contains('종족 : 나가','카드 타입 : 하수인')"
+// $("#familysel option").on('click')
+
+let Family = [
+  {species: 'Naga', name : "나가"},
+  {species: 'Nagas', name : "나가들"}
+]
+
+let result = Family.filter((value) => value.Family == '나가')
+console.log(result);
+
 $(document).ready(function() {
-    $("#familysel").change(function() {
+    $("#familysel").on('change',function() {
       var result_family = $('#familysel option:selected').val();
       if (result_family == '92') {
-        $("#god div:not(:contains('종족 : 나가'))").hide(this);
+        $("#god div:not(:contains('종족 : 나가'))").hide(this).show();
       } 
       else if (result_family == '14') {
-        $("#god div:not(:contains('종족 : 멀록'))").hide(this);
+        $("#god div:not(:contains('종족 : 멀록'))").hide(this).show();
       } 
       else if (result_family == '15') {
         $("#god div:not(:contains('종족 : 악마'))").hide(this);
@@ -256,11 +283,12 @@ $(document).ready(function() {
       else if (result_family == 'other') {
         $("#god div:not(:contains('종족 : 없음'))").hide(this);
       } 
-    }); 
+      return $("#god div");
+    });
   }); 
 
 $(document).ready(function() {
-    $("#attacksel").change(function() {
+    $("#attacksel").on('change',function() {
       var result_attack = $('#attacksel option:selected').val();
       if (result_attack == '0') {
         $("#god div:not(:contains('공격력 : 0'))").hide(this);
@@ -299,7 +327,7 @@ $(document).ready(function() {
   }); 
 
 $(document).ready(function() {
-    $("#healthsel").change(function() {
+    $("#healthsel").on('change',function() {
       var result_health = $('#healthsel option:selected').val();
       if (result_health == '1') {
         $("#god div:not(:contains('체력 : 1.'))").hide(this);
@@ -335,8 +363,8 @@ $(document).ready(function() {
     }); 
   }); 
 
-$(document).ready(function() {
-    $("#spellsel").change(function() {
+var Spell = $(document).ready(function() {
+    $("#spellsel").on('change',function() {
       var result_spell = $('#spellsel option:selected').val();
       if (result_spell == '1') {
         $("#god div:not(:contains('주문 속성 : 자연'))").hide(this);
@@ -362,12 +390,11 @@ $(document).ready(function() {
       else if (result_spell == 'other') {
         $("#god div:not(:contains('주문 속성 : 없음'))").hide(this);
       } 
-     
     }); 
   }); 
 
 $(document).ready(function() {
-    $("#raritysel").change(function() {
+    $("#raritysel").on('change',function() {
       var result_rarity = $('#raritysel option:selected').val();
       if (result_rarity == '1') {
         $("#god div:not(:contains('희귀도 : 일반'))").hide(this);
@@ -385,7 +412,7 @@ $(document).ready(function() {
   }); 
 
 $(document).ready(function() {
-    $("#setsel").change(function() {
+    $("#setsel").on('change',function() {
       var result_set = $('#setsel option:selected').val();
       if (result_set == '1691') {
         $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
@@ -410,6 +437,20 @@ $(document).ready(function() {
       } 
     }); 
   }); 
+
+
+// id.addEventListener
+//         function addOn() {
+//             id.classList.add("on");
+//         };
+//         id.addEventListener('click', addOn);
+
+//         let removeOn = () => 
+//         {
+//             id.remove("on");
+//         };
+//         closeBt.addEventListener('click', removeOn);
+
 
 
 //   $("p.minionType.14").html("종족 : 멀록");
@@ -453,7 +494,49 @@ var rogue = "div.7";
 var shaman = "div.8";
 var natural = "div.12";
 
+
+// $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
+// $(mage).show(this).hide(not(mage));
+
+// id.addEventListener
+//         function addOn() {
+//             id.classList.add("on");
+//         };
+//         id.addEventListener('click', addOn);
+
+//         let removeOn = () => 
+//         {
+//             id.remove("on");
+//         };
+//         closeBt.addEventListener('click', removeOn);
+// var Allcard = "#god div";
+// var nmagiciancard = "#god div:not(:contains('직업 : 마법사'))";
+// var npaladincard = "#god div:not(:contains('직업 : 성기사'))";
+// var ndemonhuntercard = "#god div:not(:contains('직업 : 성기사'))";
+// var ndruidcard = "#god div:not(:contains('직업 : 드루이드'))";
+// var nhuntercard = "#god div:not(:contains('직업 : 사냥꾼'))";
+// var nwarlockcard = "#god div:not(:contains('직업 : 흑마법사'))";
+// var npriestcard = "#god div:not(:contains('직업 : 사제'))";
+// var nroguecard = "#god div:not(:contains('직업 : 도적'))";
+// var nshamancard = "#god div:not(:contains('직업 : 주술사'))";
+// var nnaturalcard = "#god div:not(:contains('직업 : 중립'))";
+
+// var magicianpage = "#sec3 .searchmenu .job .magicianpage"
+// var paladinpage = "#sec3 .searchmenu .job .paladinpage"
+// var demonhunterpage = "#sec3 .searchmenu .job .demonhunterpage"
+// var druidpage = "#sec3 .searchmenu .job .druidpage"
+// var hunterpage = "#sec3 .searchmenu .job .hunterpage"
+// var warlockpage = "#sec3 .searchmenu .job .warlockpage"
+// var priestpage = "#sec3 .searchmenu .job .priestpage"
+// var roguepage = "#sec3 .searchmenu .job .roguepage"
+// var shamanpage = "#sec3 .searchmenu .job .shamanpage"
+// var naturalpage = "#sec3 .searchmenu .job .naturalpage"
+
+
+
 $("#sec3 .searchmenu .job .magicianpage").click(function(){
+    // $(nmagiciancard).hide(this);
+    // $("#god div:not(:contains('직업 : 마법사'))").hide(this);
     $(mage).show().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -465,7 +548,8 @@ $("#sec3 .searchmenu .job .magicianpage").click(function(){
     $(rogue).hide().stop();
     $(shaman).hide().stop();
     $(natural).hide().stop();
-});
+  });
+
 $("#sec3 .searchmenu .job .paladinpage").click(function(){
     $(mage).hide().stop();
     $(paladin).show().stop();

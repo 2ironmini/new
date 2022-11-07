@@ -10,7 +10,7 @@ h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
 p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
 body{min-width: 320px;}
 
-.top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between; position: fixed;}
+.top{width: 100%; bottom: 0; height: 30px; display: flex; justify-content: space-between; position: fixed; top: 0px; z-index: 2;}
 .leftmenu{width: fit-content; height: 100%; padding: 2px;}
 .rightmenu{padding: 10px; width: fit-content; height: 100%; display: flex; flex-direction: row;}
 .rightmenu .sitemap{display: flex; align-items: center; gap: 15px;}
@@ -21,11 +21,11 @@ body{min-width: 320px;}
 .sec1{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed; opacity: 1;}
 /* .sec2{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed; opacity: 1;} */
 .sec1.on{display: block;}
-header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
+header{position: fixed; width: 100vw; z-index: 3; top: 10px;}
 .gnb{position: relative; width: fit-content; height: 50px; margin: 0 auto;}
 .gnb .navmenu .m{height: 50px; width: 150px; line-height: 40px; display: flex; justify-content: center; align-items: center;}
 .gnb span{display: block; border-bottom: 2px solid #ff6600; height: 50px; width: 150px; z-index: -1; position: absolute; left: 0; top: 0px;}
-.gnb .navmenu a{color: #000000; text-decoration: none; display: block;}
+.gnb .navmenu a{color: #ffffff; text-decoration: none; display: block;}
 .gnb .navmenu a.on{color: red;}
 .navmenu{width: 100%; height: 50px; display: flex; flex-direction: row; align-items: center;}
 
@@ -45,14 +45,14 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec1{width: 100vw; height: 100%;}
+.sec1{width: 100vw; height: 100%; padding-top: 60px;}
 .sec1.on .gameguide{width: 100vw; height: 100vh; position: relative; overflow: hidden;}
 
 
 .sec1 #slide{display: none;}
 .sec1.on #slide.on{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
 
-.sec1.on #slide.on .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 100px; z-index: 2;}
+.sec1.on #slide.on .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 80px; z-index: 2;}
 
 
 /* .sec1 #slide .right{display: none;} */
@@ -117,8 +117,8 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec1.on #gameintroduce .basic > a{position: absolute; width: 17%; height: 6%; top: 28%; left: 41%; text-decoration: none; text-indent: -999999px; overflow: hidden;}
 
 .sec1.on #whatHS{width: 100vw; height: 100vh; transform: scale(0);}
-.sec1.on #whatHS.on{width: 100vw; height: 100vh; transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; padding-top: 50px; align-items: center; background-color: #000000;}
-.sec1.on #whatHS.on h1{display: inline-block; text-align: center; color: #ffffff;}
+.sec1.on #whatHS.on{width: 100vw; height: 100vh; transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; padding-top: 50px; align-items: center; background-color: #000000; padding-top: 0;}
+.sec1.on #whatHS.on h1{display: inline-block; text-align: center; color: #ffffff; position: fixed;}
 
 .sec1.on #whatHS.on .HSintro{height: 100%; width: 100vw;}
 
@@ -170,9 +170,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-.sec2 .heropage .bg{flex: 1 1 0; height: 100vh; display: none; position: relative; 
-    /* background: url(/project/1x/Hearthstone\ Screenshot\ 09-15-22\ 21.26.39.png) no-repeat 50% / cover; */
-}
+.sec2 .heropage .bg{flex: 1 1 0; height: 100vh; display: none; position: relative; padding-top: 20px;}
 .sec2 .heropage .bg.on{height:100vh; display: block;}
 
 .sec2 .heropage .inner{max-width: 1200px; height: 100vh; margin: 0 auto; display: flex; align-items: center; flex-direction: column; gap: 10px;}
@@ -183,20 +181,20 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 .sec2 .heropage .inner .skin{width: 100%; height: 40%; display: flex; flex-wrap: wrap; flex-direction: row; overflow: hidden; justify-content: space-around;  position: relative;}
 .slick{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; overflow: hidden; justify-content: space-around;}
 .slick button{position: absolute; top: 50%; left: 97%;}
-.slick-prev{display: none !important;}
+.slick-prev{visibility: hidden;}
 
 .slick div {width: 100%;}
 .slick div img{transform: scale(0.9);}
 
 
 .sec2 .heropage .inner .text{width: 100%; height: 40%; align-items: center; justify-content: center;}
-.sec2 .heropage .inner .close{position: absolute; top: 90%; right: 30px; z-index: 100; width: 30px; height: fit-content; border:  solid #fff 1px;}
+.close{position: absolute; top: 90%; right: 30px; z-index: 100; width: 30px; height: fit-content;}
 
 
 
 
 
-#sec3{width: 100vw; height: 100%; padding-top: 50px;}
+#sec3{width: 100vw; height: 100%; padding-top: 60px;}
 #sec3 .searchmenu{width: 100vw; height: 100%;}
 #sec3 .job{width: 100%; height: 70px; display: flex; justify-content: space-around; align-items: center;}
 #sec3 .job div{max-width: 70px; height: 100%; flex: 1 1 70px; display: flex;}
@@ -215,12 +213,13 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; min-width: 100vw; min-height: 100vh;}
+#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; min-width: 100vw; min-height: 100vh; display: flex;}
 #sec3 .cardlist .wrap div{flex: 0 0 220px;}
 #sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
 #god div{display: flex; cursor: pointer; flex-direction: row;}
 #god div img{width: 220px; height: 300px;}
 #god div .textbox{display: none;}
+
 
 #god div.on{position: fixed; top: 0%; left: 0%; background-color: rgba(0, 0, 0, 0.4); cursor: default; width: calc(100%); height: calc(100%); transition: all ease-in-out 1s;}
 #god div.on img{position: absolute; top: 30%; left: calc(20%); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
@@ -228,7 +227,9 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 #god div.on .textbox .closeBt{background: url(/project/ui/xmark-solid.svg) no-repeat 50% / contain; width: 80px; height: 80px; z-index: 10; position: absolute; top: 0%; cursor: pointer; right: 0; background-color: #fff; border-radius: 30%;}
 
 #sec3 .searchmenu{width: 100vw; height: 100%; display: flex; flex-direction: column;}
-#form fieldset{display: flex; flex-direction: column; color: #fff; width: 100%; height: 100%;}
+#sec3 .searchmenu .job{background: url(/project/1x/navbg.png) no-repeat 50% / cover;}
+#sec3 .searchmenu .job div{background: url(/project/1x/filterRT.png) no-repeat right top / contain;}
+#form fieldset{display: flex; flex-direction: column; color: #000; width: 100%; height: 100%; background: url(/project/1x/navbg.png) no-repeat 50% / cover;}
 #form fieldset legend{text-align: center;}
 #form fieldset .radios{display: flex; flex-direction: row;}
 #form fieldset .radios div{flex: 1 1 0;}
@@ -240,7 +241,7 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-
+#sec3 .close{position:fixed; top: 95%; right: 5px; z-index: 100; width: 30px; height: fit-content;}
 
 
 
@@ -268,87 +269,3 @@ header{position: fixed; background-color: purple; width: 100vw; z-index: 100;}
 
 
 
-
-
-
-
-/* .card{width: 100%; height: 100%; display: flex; flex-wrap: wrap; padding: 30px; gap: 30px;}
-.card div{width: 200px; height: 250px; background-repeat: no-repeat; background-size: contain;} */
-.box1{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d49457cfc43ea9b495ea811a38936c9b48d5e37d97616a87a681213eddc3a974.png);}
-.box2{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/596c64da77e78a3d75f05645bf1f364ccf2f78d0667541e83cd5ac4ef546c8c7.png);}
-.box3{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/e0812a360c7b0a77f4ed1b08171e02b6c08ac21efe8b0533c2d4671497e12819.png);}
-.box4{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/1e3a3ab89a014177e4bb657c4fe51ce58fe6b36d650c74ad3c0206a994c72684.png);}
-.box5{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/eff8dbf4bc898cc15545924433d8369633dcfa5440e30161e40fe0dc48102384.png);}
-.box6{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/8d8e02e0c273705d163e425c99cae018b06d631963e59692b6edf3ca84aeeba8.png);}
-.box7{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/86a740a4e87d69062ad7860f0f850995423ee9a66c0b18950c7b1500ed8181a3.png);}
-.box8{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/9f01cf24205b5042bbbc2cfecac36632885c622af604448757d3a2b34efeae96.png);}
-.box9{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/57a37fcae023bdd763b46aca20d93dc08f509b7b9aa643bf9d16ebfac96aa077.png);}
-.box10{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/17bb8560bc869f93dab7b877abed3e7b27017c38e808bf6922e783590701eec6.png);}
-.box11{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/5b9d94817d798ab72fd46abe3af8f0b6d8855b04ce501deec6f8e58c0baf9b6b.png);}
-.box12{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/25553ae6de6ae085a5de1d150d96ed81ef6a2608edd0274195320a15c3122bf1.png);}
-.box13{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/e5d678849fca8f41d5a989a85c7358984a62d92d69380d79fd23ce1a56edc1e4.png);}
-.box14{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d81c34a183bde7c29999b151c151a53fafe47094e26b057a264ac516eb1a45ef.png);}
-.box15{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/cb1402fbf6e5d04e86308a1a4190cefd5be9e6a836602042b8d27e37b7b0889a.png);}
-.box16{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/e42755e8796cfc8a1ec2f5c51215150d69b582ffe9d16c17230b6d576e100e65.png);}
-.box17{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/c7a4baeb893593dffe4b0b7b66cc963b25d8b4650b8c47ef89842a633268dd6e.png);}
-.box18{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d1ed5fc0582adab7f501b5d60e4e81926b9b7ed948813f2ba356ab6548b35544.png);}
-.box19{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d643f5803ab05222ceaa4941977ba09ea3becdbbb15aac6e7a734e5cacf81a51.png);}
-.box20{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/11dccdac912a29ad73c46e547326a8a2a365ed92ffc03287f9c0a657a5ebf1aa.png);}
-.box21{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/b4740354db90cdc322687922d20a1a6adce23d8103762851124ee2f2e9ec11d5.png);}
-.box22{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/17568d24fc21f5ad20b787d83876e74e4864e524201d215f70ba75077d888005.png);}
-.box23{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/5de30681f1f996e2b6c74e3073f7fa230bdb48f56eb8c7852a84c6524c31ef94.png);}
-.box24{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/eefc527fa4a6626464b0744d1747cdedee4f8f6e3f306b58498bda5d086e0f71.png);}
-.box25{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/26bb38db6473778889718641c9f3d1d9733ab2467d78a5f21bbc3397d1dd6cb2.png);}
-.box26{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/952e0350fecd43007238f13360a2e9886b15db3f786c1c6b1e4495cbb70e4f81.png);}
-.box27{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/4416a1ee968fb68b3923bc5dbc0c554a7b244f9950d5723ef6e5adbdf62ad260.png);}
-.box28{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/672d5abaf593e2a05954eaeb34ad0a3e010c2b20edbfec2039e328704244a1d3.png);}
-.box29{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/c9ba98236e4e055f72baaeb761b753da49dd11dbb2affbdfd4aeec617b44d461.png);}
-.box30{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/7856b0db9fade833f5b6b158acb5d1c122d8a3a8d8f83559d728e7af44f60dfd.png);}
-.box31{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/2f5357910295a194c9ffc84e7b8eb3efb80f5b18257572137bdbc10aa54c3f3e.png);}
-.box32{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f8dfc611e7f9aa5e7517312e9bb3461ad7d7373680eb3b241fb74a9dadcdd901.png);}
-.box33{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d6d4bed2330c0a4b2682904ae35a3418743783fc2e96378795551213d5cf391e.png);}
-.box34{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/b3e05e12213f2989ae115a2bc4f8d20f3e3b61a466f45e29bfeea5d2cc5534a6.png);}
-.box35{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d1e978dafe1df5bca59d0b2fc94478f452a0676f2d8b556c9dce5aad40905107.png);}
-.box36{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0c757c8587b6d99821ffe8f6edea40eeca9d956c34e43c024a6099c745bf5ef5.png);}
-.box37{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/7fd20cfb29a8598d6341563b31a00a6f217115eddd01f060db039e6fede72263.png);}
-.box38{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/9fde0c1dea0c776b868716e1ec4d3971375e678869e896ef86fd55ee2939c9ae.png);}
-.box39{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d59cdebc32e2d2d9e32527b26c4f943a0eff96fd0db2d9b3b6918167fe293d91.png);}
-.box40{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ed8b34ddcfcec4d8058f3ddaa79673b8cae5bec79a8698e1f6f5d2d4d4d42c2d.png);}
-.box41{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a7035f1fec3a526d83a3bb5e41d75f8d365e114b3be2c63e5938882162b44dea.png);}
-.box42{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0b7c6a4717768ddccdcc65e10077ee1beb165e0918b7c88cc8588448f9da0114.png);}
-.box43{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/638600906b925edb60a4f04b86f9327802873271a1f2940ac9545d6594e9984f.png);}
-.box44{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/393a860a0c5c084c997e0e9dde61f5f041a8264d457fa84df1bbe6db34b86b4c.png);}
-.box45{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/9f68d43a17fcc6db649c7e7e77340bf9a9264923068bb9beeb8004f22fed4a7e.png);}
-.box46{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ccee6f9501b2dc6b162b719cffc1c95f1f7cb96b15aa18e2fb41176915a03727.png);}
-.box47{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/25897b8c704606f44f3cd7b4f18039fc041aadab9e45c919c9b3bb9e6792589a.png);}
-.box48{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/68441dbde0c203db6667a892aa8c15296859a6dbc5ea196be966faac2540026b.png);}
-.box49{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/5e17e317f67118f8e2c174b1bde646dd58fd36e9813d780eaa0d88d39b03bb48.png);}
-.box50{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/2b08902f5925f32693fbe5b8bb76565b206d41351fbc175cf55898bab0c776b4.png);}
-.box51{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a8e6372faff3391b6a8049f96e86c373e2f399dc00fecd028506a444c5fa460f.png);}
-.box52{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/be32d1223a48b6a8009a6eb4e36731aac6c779dd91ae685b22911671538e1a2c.png);}
-.box53{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/2a2ca0b35b429aa7ad1b090b43d8898d5e4944e1afd8e95b674d309e261e955c.png);}
-.box54{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/aba5a28fe216f1dbbb328da7079a3d9ddb6b714072baab9be421019f1b6107e8.png);}
-.box55{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/40801914ed0a4df6efaae73cae27b45019d96aa23bed3923831a81f4758172cd.png);}
-.box56{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/9cde05129d9db9eca8334d9d6a3157b7ef43b9571415329c4c986c08fc0cfbf4.png);}
-.box57{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/3b0c1be80bc558d895402d47766521a9f768f6dfb431fe7beb0a4efdf8667379.png);}
-.box58{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/1e41d712a4f1bbca34c6fe198ebe9bdb8e52eaa5d3fa5b0364e1a8750d3b4c88.png);}
-.box59{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/92031e10dfad41df65ac1caf6a7cdc02fa5447fb7c6c78f665ae2b37029ea534.png);}
-.box60{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a3e8ef53c41aefa929659fcea04b49303f1ba076bd8a73159af68faea9331250.png);}
-.box61{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/8633659c9bbff3b73e090e46ec9ac549fee07c8bc9ee059a12112aa79cfe723a.png);}
-.box62{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/af748bd481cefde1398bbd0dbc957566e2e807f99367e3173e3a1c8c76ca34ac.png);}
-.box63{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/e1c655e2de4936e5998b9aad11ace06004adb370e8c7699c512f1e0327ae9a14.png);}
-.box64{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/da55523ac1a69a8cf7cfb60c07f90eae005b7985cfd430b2265048a06ff5ff46.png);}
-.box65{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/2fe8e01df73526c2d472246b15d8a7b0ca5a16dbd492a842438444804a56aad5.png);}
-.box66{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/33559e2bbfe0901307351ffc11d96831d8bf4f8f61a931a248d03d3622d00a89.png);}
-.box67{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/bccbd961c1d5bd10eef1fd3606f286e08de7e7a39467c5d8415946f769c861ae.png);}
-.box68{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/8b9ad4176dca9dc8850c891c8164940fdc501aeb6c87b172e667bdbbc8dc9500.png);}
-.box69{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/45e56898a4b0e63fdd998ec727bc4b257b97af38bc07d859f35ff9576e6245c3.png);}
-.box70{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a76bc8f4bc963eac8f6f6873cd16d833685a2fd0fb871d143885de0af63bbde6.png);}
-.box71{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ada28edcbb84bf8c4c4e8d27707f93555ee7fdaa1eb7e8289c00006d550369ce.png);}
-.box72{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/8d85ab2bb148436a1c0398dd1a6df81e4409f065c193d4ea9ea17e41636a9bcd.png);}
-.box73{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a7483e80cbbed7ac37bcf027fecefb6bb61ca63854995833f11ae1f976271663.png);}
-.box74{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/cc6f6186743a14a026da007f81285c964f63d36ca5423da9a3109d0ebae256ba.png);}
-.box75{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/d1bb79373139da903775f8d34e733c8be6474cbf85d256115f6e78ba4959ab11.png);}
-.box76{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/aba0e0b9e74aaf67e358af51acb735d9747cd1cb60dfd37c6935843a7ac81b9c.png);}
-.box77{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/7ee3b0860fae43e333b2c079a7752123ef84b995b6fcc08b528244f58117e23b.png);}
-.box78{background-image: url(https://d15f34w2p8l1cc.cloudfront.net/hearthstone/b30060e3cc32dc234b6db2cd19462c73beac631712d3beb2ba0cd27121948c2d.png);}
