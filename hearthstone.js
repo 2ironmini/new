@@ -94,7 +94,6 @@ function loadCard(obj){
         rarityID.textContent = `${me.rarityId}`;
         artistName.textContent = `카드 디자이너 : ${me.artistName}`;
         manaCost.textContent = `마나 소모량 : ${me.manaCost}마나`;
-        
         text.innerHTML = `카드 설명 : ${me.text}`;
         flavorText.innerHTML = `배경담 : ${me.flavorText}`;
         attack.textContent = `${me.attack}`;
@@ -114,9 +113,13 @@ function loadCard(obj){
         textbox.appendChild(attack);
         textbox.appendChild(health);
         textbox.appendChild(closeBt);
-        id.appendChild(textbox);
+        img.appendChild(textbox);
         textbox.appendChild(rarityID);
         section.appendChild(id);
+
+
+  
+
 }
 
 
@@ -233,95 +236,166 @@ $("p.health.10").html("체력 : 10+");
 //         "#god div:contains('종족 : 나가','카드 타입 : 하수인')"
 // $("#familysel option").on('click')
 
-let Family = [
-  {species: 'Naga', name : "나가"},
-  {species: 'Nagas', name : "나가들"}
-]
+// let Family = [
+//   {species: 'Naga', name : "나가"},
+//   {species: 'Nagas', name : "나가들"}
+// ]
 
-let result = Family.filter((value) => value.Family == '나가')
-console.log(result);
+// let result = Family.filter((value) => value.Family == '나가')
+// console.log(result);
+
+var csschange = {'display': 'flex', 'flex': 'wrap'};
+
 
 $(document).ready(function() {
     $("#familysel").on('change',function() {
       var result_family = $('#familysel option:selected').val();
       if (result_family == '92') {
-        $("#god div:not(:contains('종족 : 나가'))").hide(this).show();
+        $("#god div:not(:contains('종족 : 나가'))").hide(this);
+        $("#god div:contains('종족 : 나가')").css(csschange);
       } 
       else if (result_family == '14') {
-        $("#god div:not(:contains('종족 : 멀록'))").hide(this).show();
+        $("#god div:not(:contains('종족 : 멀록'))").hide(this);
+        $("#god div:contains('종족 : 멀록')").css(csschange);
       } 
       else if (result_family == '15') {
         $("#god div:not(:contains('종족 : 악마'))").hide(this);
+        $("#god div:contains('종족 : 악마')").css(csschange);
       } 
       else if (result_family == '17') {
         $("#god div:not(:contains('종족 : 기계'))").hide(this);
+        $("#god div:contains('종족 : 기계')").css(csschange);
       } 
       else if (result_family == '18') {
         $("#god div:not(:contains('종족 : 정령'))").hide(this);
+        $("#god div:contains('종족 : 정령')").css(csschange);
       } 
       else if (result_family == '20') {
         $("#god div:not(:contains('종족 : 야수'))").hide(this);
+        $("#god div:contains('종족 : 야수')").css(csschange);
       } 
       else if (result_family == '21') {
         $("#god div:not(:contains('종족 : 토템'))").hide(this);
+        $("#god div:contains('종족 : 토템')").css(csschange);
       } 
       else if (result_family == '23') {
         $("#god div:not(:contains('종족 : 해적'))").hide(this);
+        $("#god div:contains('종족 : 해적')").css(csschange);
       } 
       else if (result_family == '24') {
         $("#god div:not(:contains('종족 : 용족'))").hide(this);
+        $("#god div:contains('종족 : 용족')").css(csschange);
       } 
       else if (result_family == '26') {
         $("#god div:not(:contains('종족 : 모두'))").hide(this);
+        $("#god div:contains('종족 : 모두')").css(csschange);
       } 
       else if (result_family == '43') {
         $("#god div:not(:contains('종족 : 가시멧돼지'))").hide(this);
+        $("#god div:contains('종족 : 가시멧돼지')").css(csschange);
       } 
       else if (result_family == '92') {
         $("#god div:not(:contains('종족 : 나가'))").hide(this);
+        $("#god div:contains('종족 : 나가')").css(csschange);
       } 
       else if (result_family == 'other') {
         $("#god div:not(:contains('종족 : 없음'))").hide(this);
+        $("#god div:contains('종족 : 없음')").css(csschange);
       } 
-      return $("#god div");
     });
   }); 
+//     $("#familysel").on('change',function() {
+//       var result_family = $('#familysel option:selected').val();
+//       if (result_family == '92') {
+//         document.$("#god div:not(:contains('종족 : 나가'))")
+//         $("#god div:not(:contains('종족 : 나가'))").style(display("none"));
+//       } 
+//       else if (result_family == '14') {
+//         $("#god div:not(:contains('종족 : 멀록'))").hide(this);
+//       } 
+//       else if (result_family == '15') {
+//         $("#god div:not(:contains('종족 : 악마'))").hide(this);
+//       } 
+//       else if (result_family == '17') {
+//         $("#god div:not(:contains('종족 : 기계'))").hide(this);
+//       } 
+//       else if (result_family == '18') {
+//         $("#god div:not(:contains('종족 : 정령'))").hide(this);
+//       } 
+//       else if (result_family == '20') {
+//         $("#god div:not(:contains('종족 : 야수'))").hide(this);
+//       } 
+//       else if (result_family == '21') {
+//         $("#god div:not(:contains('종족 : 토템'))").hide(this);
+//       } 
+//       else if (result_family == '23') {
+//         $("#god div:not(:contains('종족 : 해적'))").hide(this);
+//       } 
+//       else if (result_family == '24') {
+//         $("#god div:not(:contains('종족 : 용족'))").hide(this);
+//       } 
+//       else if (result_family == '26') {
+//         $("#god div:not(:contains('종족 : 모두'))").hide(this);
+//       } 
+//       else if (result_family == '43') {
+//         $("#god div:not(:contains('종족 : 가시멧돼지'))").hide(this);
+//       } 
+//       else if (result_family == '92') {
+//         $("#god div:not(:contains('종족 : 나가'))").hide(this);
+//       } 
+//       else if (result_family == 'other') {
+//         $("#god div:not(:contains('종족 : 없음'))").hide(this);
+//       } 
+//       return $("#god div");
+//     });
+//   }); 
 
 $(document).ready(function() {
     $("#attacksel").on('change',function() {
       var result_attack = $('#attacksel option:selected').val();
       if (result_attack == '0') {
         $("#god div:not(:contains('공격력 : 0'))").hide(this);
+        $("#god div:contains('공격력 : 0')").css(csschange);
       } 
       else if (result_attack == '1') {
         $("#god div:not(:contains('공격력 : 1'))").hide(this);
+        $("#god div:contains('공격력 : 1')").css(csschange);
       } 
       else if (result_attack == '2') {
         $("#god div:not(:contains('공격력 : 2'))").hide(this);
+        $("#god div:contains('공격력 : 2')").css(csschange);
       } 
       else if (result_attack == '3') {
         $("#god div:not(:contains('공격력 : 3'))").hide(this);
+        $("#god div:contains('공격력 : 3')").css(csschange);
       } 
       else if (result_attack == '4') {
         $("#god div:not(:contains('공격력 : 4'))").hide(this);
+        $("#god div:contains('공격력 : 4')").css(csschange);
       } 
       else if (result_attack == '5') {
         $("#god div:not(:contains('공격력 : 5'))").hide(this);
+        $("#god div:contains('공격력 : 5')").css(csschange);
       } 
       else if (result_attack == '6') {
         $("#god div:not(:contains('공격력 : 6'))").hide(this);
+        $("#god div:contains('공격력 : 6')").css(csschange);
       } 
       else if (result_attack == '7') {
         $("#god div:not(:contains('공격력 : 7'))").hide(this);
+        $("#god div:contains('공격력 : 7')").css(csschange);
       } 
       else if (result_attack == '8') {
         $("#god div:not(:contains('공격력 : 8'))").hide(this);
+        $("#god div:contains('공격력 : 8')").css(csschange);
       } 
       else if (result_attack == '9') {
         $("#god div:not(:contains('공격력 : 9'))").hide(this);
+        $("#god div:contains('공격력 : 9')").css(csschange);
       } 
       else if (result_attack == '10+') {
         $("#god div:not(:contains('공격력 : 10+'))").hide(this);
+        $("#god div:contains('공격력 : 10+')").css(csschange);
       } 
     }); 
   }); 
@@ -331,64 +405,81 @@ $(document).ready(function() {
       var result_health = $('#healthsel option:selected').val();
       if (result_health == '1') {
         $("#god div:not(:contains('체력 : 1.'))").hide(this);
+        $("#god div:contains('체력 : 1.')").css(csschange);
       } 
       else if (result_health == '2') {
         $("#god div:not(:contains('체력 : 2'))").hide(this);
+        $("#god div:contains('체력 : 2')").css(csschange);
       } 
       else if (result_health == '3') {
         $("#god div:not(:contains('체력 : 3'))").hide(this);
+        $("#god div:contains('체력 : 3')").css(csschange);
       } 
       else if (result_health == '4') {
         $("#god div:not(:contains('체력 : 4'))").hide(this);
+        $("#god div:contains('체력 : 4')").css(csschange);
       } 
       else if (result_health == '5') {
         $("#god div:not(:contains('체력 : 5'))").hide(this);
+        $("#god div:contains('체력 : 5')").css(csschange);
       } 
       else if (result_health == '6') {
         $("#god div:not(:contains('체력 : 6'))").hide(this);
+        $("#god div:contains('체력 : 6')").css(csschange);
       } 
       else if (result_health == '7') {
         $("#god div:not(:contains('체력 : 7'))").hide(this);
+        $("#god div:contains('체력 : 7')").css(csschange);
       } 
       else if (result_health == '8') {
         $("#god div:not(:contains('체력 : 8'))").hide(this);
+        $("#god div:contains('체력 : 8')").css(csschange);
       } 
       else if (result_health == '9') {
         $("#god div:not(:contains('체력 : 9'))").hide(this);
+        $("#god div:contains('체력 : 9')").css(csschange);
       } 
       else if (result_health == '10+') {
         $("#god div:not(:contains('체력 : 10+'))").hide(this);
+        $("#god div:contains('체력 : 10+')").css(csschange);
       } 
-      
     }); 
   }); 
 
-var Spell = $(document).ready(function() {
+$(document).ready(function() {
     $("#spellsel").on('change',function() {
       var result_spell = $('#spellsel option:selected').val();
       if (result_spell == '1') {
-        $("#god div:not(:contains('주문 속성 : 자연'))").hide(this);
+        $("#god div:not(:contains('주문 속성 : 비전'))").hide(this);
+        $("#god div:contains('주문 속성 : 비전')").css(csschange);
       } 
       else if (result_spell == '2') {
         $("#god div:not(:contains('주문 속성 : 화염'))").hide(this);
+        $("#god div:contains('주문 속성 : 화염')").css(csschange);
       } 
       else if (result_spell == '3') {
         $("#god div:not(:contains('주문 속성 : 냉기'))").hide(this);
+        $("#god div:contains('주문 속성 : 냉기')").css(csschange);
       } 
       else if (result_spell == '4') {
         $("#god div:not(:contains('주문 속성 : 자연'))").hide(this);
+        $("#god div:contains('주문 속성 : 자연')").css(csschange);
       } 
       else if (result_spell == '5') {
         $("#god div:not(:contains('주문 속성 : 신성'))").hide(this);
+        $("#god div:contains('주문 속성 : 신성')").css(csschange);
       } 
       else if (result_spell == '6') {
         $("#god div:not(:contains('주문 속성 : 암흑'))").hide(this);
+        $("#god div:contains('주문 속성 : 암흑')").css(csschange);
       } 
       else if (result_spell == '7') {
         $("#god div:not(:contains('주문 속성 : 지옥'))").hide(this);
+        $("#god div:contains('주문 속성 : 지옥')").css(csschange);
       } 
       else if (result_spell == 'other') {
         $("#god div:not(:contains('주문 속성 : 없음'))").hide(this);
+        $("#god div:contains('주문 속성 : 없음')").css(csschange);
       } 
     }); 
   }); 
@@ -398,15 +489,19 @@ $(document).ready(function() {
       var result_rarity = $('#raritysel option:selected').val();
       if (result_rarity == '1') {
         $("#god div:not(:contains('희귀도 : 일반'))").hide(this);
+        $("#god div:contains('희귀도 : 일반')").css(csschange);
       } 
       else if (result_rarity == '3') {
         $("#god div:not(:contains('희귀도 : 희귀'))").hide(this);
+        $("#god div:contains('희귀도 : 희귀')").css(csschange);
       } 
       else if (result_rarity == '4') {
         $("#god div:not(:contains('희귀도 : 특급'))").hide(this);
+        $("#god div:contains('희귀도 : 특급')").css(csschange);
       } 
       else if (result_rarity == '5') {
         $("#god div:not(:contains('희귀도 : 전설'))").hide(this);
+        $("#god div:contains('희귀도 : 전설')").css(csschange);
       }
     }); 
   }); 
@@ -416,64 +511,30 @@ $(document).ready(function() {
       var result_set = $('#setsel option:selected').val();
       if (result_set == '1691') {
         $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
+        $("#god div:contains('카드 세트 : 나스리아 성채 살인 사건')").css(csschange);
       } 
-    //   else if (result_set == '9999') {
-    //     $("#god div:not(:contains('희귀도 : 희귀'))").hide(this);
-    //   } 
       else if (result_set == '1658') {
         $("#god div:not(:contains('카드 세트 : 가라앉은 도시로의 항해'))").hide(this);
+        $("#god div:contains('카드 세트 : 가라앉은 도시로의 항해')").css(csschange);
       } 
       else if (result_set == '1626') {
         $("#god div:not(:contains('카드 세트 : 알터랙 계곡'))").hide(this);
+        $("#god div:contains('카드 세트 : 알터랙 계곡')").css(csschange);
       } 
       else if (result_set == '1578') {
         $("#god div:not(:contains('카드 세트 : 스톰윈드'))").hide(this);
+        $("#god div:contains('카드 세트 : 스톰윈드')").css(csschange);
       } 
       else if (result_set == '1525') {
         $("#god div:not(:contains('카드 세트 : 불모의 땅'))").hide(this);
+        $("#god div:contains('카드 세트 : 불모의 땅')").css(csschange);
       } 
       else if (result_set == '1637') {
         $("#god div:not(:contains('카드 세트 : 핵심'))").hide(this);
+        $("#god div:contains('카드 세트 : 핵심')").css(csschange);
       } 
     }); 
   }); 
-
-
-// id.addEventListener
-//         function addOn() {
-//             id.classList.add("on");
-//         };
-//         id.addEventListener('click', addOn);
-
-//         let removeOn = () => 
-//         {
-//             id.remove("on");
-//         };
-//         closeBt.addEventListener('click', removeOn);
-
-
-
-//   $("p.minionType.14").html("종족 : 멀록");
-//   $("p.minionType.15").html("종족 : 악마");
-//   $("p.minionType.17").html("종족 : 기계");
-//   $("p.minionType.18").html("종족 : 정령");
-//   $("p.minionType.20").html("종족 : 야수");
-//   $("p.minionType.21").html("종족 : 토템");
-//   $("p.minionType.23").html("종족 : 해적");
-//   $("p.minionType.24").html("종족 : 용족");
-//   $("p.minionType.26").html("종족 : 모두");
-//   $("p.minionType.43").html("종족 : 가시멧돼지");
-//   $("p.minionType.92").html("종족 : 나가");
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -481,6 +542,8 @@ $(document).ready(function() {
 
 
 load();
+
+
 
 var mage = "div.4";
 var paladin = "div.5";
@@ -494,49 +557,7 @@ var rogue = "div.7";
 var shaman = "div.8";
 var natural = "div.12";
 
-
-// $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
-// $(mage).show(this).hide(not(mage));
-
-// id.addEventListener
-//         function addOn() {
-//             id.classList.add("on");
-//         };
-//         id.addEventListener('click', addOn);
-
-//         let removeOn = () => 
-//         {
-//             id.remove("on");
-//         };
-//         closeBt.addEventListener('click', removeOn);
-// var Allcard = "#god div";
-// var nmagiciancard = "#god div:not(:contains('직업 : 마법사'))";
-// var npaladincard = "#god div:not(:contains('직업 : 성기사'))";
-// var ndemonhuntercard = "#god div:not(:contains('직업 : 성기사'))";
-// var ndruidcard = "#god div:not(:contains('직업 : 드루이드'))";
-// var nhuntercard = "#god div:not(:contains('직업 : 사냥꾼'))";
-// var nwarlockcard = "#god div:not(:contains('직업 : 흑마법사'))";
-// var npriestcard = "#god div:not(:contains('직업 : 사제'))";
-// var nroguecard = "#god div:not(:contains('직업 : 도적'))";
-// var nshamancard = "#god div:not(:contains('직업 : 주술사'))";
-// var nnaturalcard = "#god div:not(:contains('직업 : 중립'))";
-
-// var magicianpage = "#sec3 .searchmenu .job .magicianpage"
-// var paladinpage = "#sec3 .searchmenu .job .paladinpage"
-// var demonhunterpage = "#sec3 .searchmenu .job .demonhunterpage"
-// var druidpage = "#sec3 .searchmenu .job .druidpage"
-// var hunterpage = "#sec3 .searchmenu .job .hunterpage"
-// var warlockpage = "#sec3 .searchmenu .job .warlockpage"
-// var priestpage = "#sec3 .searchmenu .job .priestpage"
-// var roguepage = "#sec3 .searchmenu .job .roguepage"
-// var shamanpage = "#sec3 .searchmenu .job .shamanpage"
-// var naturalpage = "#sec3 .searchmenu .job .naturalpage"
-
-
-
 $("#sec3 .searchmenu .job .magicianpage").click(function(){
-    // $(nmagiciancard).hide(this);
-    // $("#god div:not(:contains('직업 : 마법사'))").hide(this);
     $(mage).show().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -679,50 +700,7 @@ $("#sec3 .searchmenu .job .naturalpage").click(function(){
     $(rogue).hide().stop();
     $(shaman).hide().stop();
     $(natural).show().stop();
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -1080,6 +1058,11 @@ $(document).ready(function(index, a){
 });
 
     
+
+
+
+
+
     
 $(document).ready(function(){  
 $(".sec2 > .heropage > .bg > .inner > .skin > .slick").slick({
@@ -1099,29 +1082,25 @@ $(".sec2 > .heropage > .bg > .inner > .skin > .slick").slick({
 
   });
     
+  const targetF = document.getElementById('familysel');
+  const targetA = document.getElementById('attacksel');
+  const targetH = document.getElementById('healthsel');
+  const targetSp = document.getElementById('spellsel');
+  const targetR = document.getElementById('raritysel');
+  const targetSe = document.getElementById('setsel');
+  
 
-
-
-     
-
-const targetM = document.getElementById('familysel');
-const targetA = document.getElementById('attacksel');
-const targetH = document.getElementById('healthsel');
-const targetSp = document.getElementById('spellsel');
-const targetR = document.getElementById('raritysel');
-const targetSe = document.getElementById('setsel');
-
-
-function radiocheckMinion() {
-    targetM.disabled = false;
-    targetA.disabled = false;
-    targetH.disabled = false;
+  function radiocheckFamily() {
+    targetF.disabled = false;
+    targetA.disabled = true;
+    targetH.disabled = true;
     targetSp.disabled = true;
     targetR.disabled = true;
     targetSe.disabled = true;
-}
+  }
+
 function radiocheckSpell() {
-    targetM.disabled = true;
+    targetF.disabled = true;
     targetA.disabled = true;
     targetH.disabled = true;
     targetSp.disabled = false;
@@ -1129,7 +1108,7 @@ function radiocheckSpell() {
     targetSe.disabled = true;
 }
 function radiocheckRarity() {
-    targetM.disabled = true;
+    targetF.disabled = true;
     targetA.disabled = true;
     targetH.disabled = true;
     targetSp.disabled = true;
@@ -1137,13 +1116,71 @@ function radiocheckRarity() {
     targetSe.disabled = true;
 }
 function radiocheckSet() {
-    targetM.disabled = true;
+    targetF.disabled = true;
     targetA.disabled = true;
     targetH.disabled = true;
     targetSp.disabled = true;
     targetR.disabled = true;
     targetSe.disabled = false;
 }
+function radiocheckAttack() {
+    targetF.disabled = true;
+    targetA.disabled = false;
+    targetH.disabled = true;
+    targetSp.disabled = true;
+    targetR.disabled = true;
+    targetSe.disabled = true;
+}
+function radiocheckHealth() {
+    targetF.disabled = true;
+    targetA.disabled = true;
+    targetH.disabled = false;
+    targetSp.disabled = true;
+    targetR.disabled = true;
+    targetSe.disabled = true;
+}
+
+
+
+
+
+
+
+var csschange = {'display': 'flex', 'flex': 'wrap'};
+
+$(document).ready(function(){
+  $("#radios div input").on('change',function(){
+    var radioval = $("#radios div input:checked").val();
+    if (radioval == '종족') {
+      $("#god div:not(:contains('카드 타입 : 하수인'))").hide(this);
+      $("#god div:contains('카드 타입 : 하수인')").css(csschange);
+    }
+    else if(radioval =='주문') {
+      $("#god div:not(:contains('카드 타입 : 주문'))").hide(this);
+      $("#god div:contains('카드 타입 : 주문')").css(csschange);
+    }
+    else if(radioval =='무기') {
+      $("#god div:not(:contains('카드 타입 : 무기'))").hide(this);
+      $("#god div:contains('카드 타입 : 무기')").css(csschange);
+    }
+    else if(radioval =='장소') {
+      $("#god div:not(:contains('카드 타입 : 장소'))").hide(this);
+      $("#god div:contains('카드 타입 : 장소')").css(csschange);
+    }
+    else if(radioval =='영웅 변신') {
+      $("#god div:not(:contains('카드 타입 : 영웅 교체'))").hide(this);
+      $("#god div:contains('카드 타입 : 영웅 교체')").css(csschange);
+    }
+  });
+});
+  
+
+
+
+
+
+
+
 
 
 // $("#familysel option:selected").val();

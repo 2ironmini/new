@@ -851,14 +851,35 @@
             <form id="form">
                 <fieldset>
                     <!-- <legend>카드 검색</legend> -->
-                    <div class="radios">
+                    <div class="radios" id="radios">
                         <div>
-                            <input type="radio" id="miniondio" name="search" value="하수인" onclick=radiocheckMinion()>
-                            <label for="miniondio">하수인</label>
+                            <input type="radio" id="familydio" name="search" value="종족" onclick=radiocheckFamily()>
+                            <label for="familydio">종족</label>
                         </div>
                         <div>
                             <input type="radio" id="spelldio" name="search" value="주문" onclick=radiocheckSpell()>
                             <label for="spelldio">주문</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="attackdio" name="search" value="공격력" onclick=radiocheckAttack()>
+                            <label for="attackdio">공격력</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="healthdio" name="search" value="체력" onclick=radiocheckHealth()>
+                            <label for="healthdio">체력</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="weapondio" name="search" value="무기">
+                            <label for="weapondio">무기</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="placedio" name="search" value="장소">
+                            <label for="placedio">장소</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="herochangedio" name="search" value="영웅 변신">
+                            <label for="herochangedio">영웅 변신</label>
                         </div>
                         <div>
                             <input type="radio" id="raritydio" name="search" value="희귀도" onclick=radiocheckRarity()>
@@ -886,6 +907,8 @@
                                 <option value="26">기타</option>
                                 <option value="other">종족 없음</option>
                             </select>
+                        </div>
+                        <div>
                             <select id="attacksel" name="attacksel" disabled>
                                 <option value="" selected="selected">공격력</option>
                                 <option value="0">0</option>
@@ -900,7 +923,9 @@
                                 <option value="9">9</option>
                                 <option value="10+">10+</option>
                             </select>
-                            <select id="healthsel" disabled class="minionsel">
+                        </div>
+                        <div>
+                            <select id="healthsel" disabled>
                                 <option value="" selected="selected">체력</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
