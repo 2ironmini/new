@@ -249,6 +249,7 @@ var csschange = {'display': 'flex', 'flex': 'wrap'};
 
 $(document).ready(function() {
     $("#familysel").on('change',function() {
+      loadingProcess();
       var result_family = $('#familysel option:selected').val();
       if (result_family == '92') {
         $("#god div:not(:contains('종족 : 나가'))").hide(this);
@@ -304,54 +305,10 @@ $(document).ready(function() {
       } 
     });
   }); 
-//     $("#familysel").on('change',function() {
-//       var result_family = $('#familysel option:selected').val();
-//       if (result_family == '92') {
-//         document.$("#god div:not(:contains('종족 : 나가'))")
-//         $("#god div:not(:contains('종족 : 나가'))").style(display("none"));
-//       } 
-//       else if (result_family == '14') {
-//         $("#god div:not(:contains('종족 : 멀록'))").hide(this);
-//       } 
-//       else if (result_family == '15') {
-//         $("#god div:not(:contains('종족 : 악마'))").hide(this);
-//       } 
-//       else if (result_family == '17') {
-//         $("#god div:not(:contains('종족 : 기계'))").hide(this);
-//       } 
-//       else if (result_family == '18') {
-//         $("#god div:not(:contains('종족 : 정령'))").hide(this);
-//       } 
-//       else if (result_family == '20') {
-//         $("#god div:not(:contains('종족 : 야수'))").hide(this);
-//       } 
-//       else if (result_family == '21') {
-//         $("#god div:not(:contains('종족 : 토템'))").hide(this);
-//       } 
-//       else if (result_family == '23') {
-//         $("#god div:not(:contains('종족 : 해적'))").hide(this);
-//       } 
-//       else if (result_family == '24') {
-//         $("#god div:not(:contains('종족 : 용족'))").hide(this);
-//       } 
-//       else if (result_family == '26') {
-//         $("#god div:not(:contains('종족 : 모두'))").hide(this);
-//       } 
-//       else if (result_family == '43') {
-//         $("#god div:not(:contains('종족 : 가시멧돼지'))").hide(this);
-//       } 
-//       else if (result_family == '92') {
-//         $("#god div:not(:contains('종족 : 나가'))").hide(this);
-//       } 
-//       else if (result_family == 'other') {
-//         $("#god div:not(:contains('종족 : 없음'))").hide(this);
-//       } 
-//       return $("#god div");
-//     });
-//   }); 
 
 $(document).ready(function() {
     $("#attacksel").on('change',function() {
+      loadingProcess();
       var result_attack = $('#attacksel option:selected').val();
       if (result_attack == '0') {
         $("#god div:not(:contains('공격력 : 0'))").hide(this);
@@ -402,6 +359,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#healthsel").on('change',function() {
+      loadingProcess();
       var result_health = $('#healthsel option:selected').val();
       if (result_health == '1') {
         $("#god div:not(:contains('체력 : 1.'))").hide(this);
@@ -448,6 +406,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#spellsel").on('change',function() {
+      loadingProcess();
       var result_spell = $('#spellsel option:selected').val();
       if (result_spell == '1') {
         $("#god div:not(:contains('주문 속성 : 비전'))").hide(this);
@@ -486,6 +445,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#raritysel").on('change',function() {
+      loadingProcess();
       var result_rarity = $('#raritysel option:selected').val();
       if (result_rarity == '1') {
         $("#god div:not(:contains('희귀도 : 일반'))").hide(this);
@@ -508,6 +468,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#setsel").on('change',function() {
+      loadingProcess();
       var result_set = $('#setsel option:selected').val();
       if (result_set == '1691') {
         $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
@@ -544,6 +505,18 @@ $(document).ready(function() {
 load();
 
 
+function loadingProcess(){
+  openLoading();
+  setTimeout(closeLoading,3000);
+}
+
+function openLoading(){
+  $("#loading").show()
+}
+
+function closeLoading() {
+  $("#loading").hide()
+}
 
 var mage = "div.4";
 var paladin = "div.5";
@@ -558,6 +531,7 @@ var shaman = "div.8";
 var natural = "div.12";
 
 $("#sec3 .searchmenu .job .magicianpage").click(function(){
+  loadingProcess();
     $(mage).show().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -572,6 +546,7 @@ $("#sec3 .searchmenu .job .magicianpage").click(function(){
   });
 
 $("#sec3 .searchmenu .job .paladinpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).show().stop();
     $(demonhunter).hide().stop();
@@ -585,6 +560,7 @@ $("#sec3 .searchmenu .job .paladinpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .demonhunterpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).show().stop();
@@ -598,6 +574,7 @@ $("#sec3 .searchmenu .job .demonhunterpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .druidpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -611,6 +588,7 @@ $("#sec3 .searchmenu .job .druidpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .hunterpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -624,6 +602,7 @@ $("#sec3 .searchmenu .job .hunterpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .warlockpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -637,6 +616,7 @@ $("#sec3 .searchmenu .job .warlockpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .warriorpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -650,6 +630,7 @@ $("#sec3 .searchmenu .job .warriorpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .priestpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -663,6 +644,7 @@ $("#sec3 .searchmenu .job .priestpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .roguepage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -676,6 +658,7 @@ $("#sec3 .searchmenu .job .roguepage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .shamanpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -689,6 +672,7 @@ $("#sec3 .searchmenu .job .shamanpage").click(function(){
     $(natural).hide().stop();
 });
 $("#sec3 .searchmenu .job .naturalpage").click(function(){
+  loadingProcess();
     $(mage).hide().stop();
     $(paladin).hide().stop();
     $(demonhunter).hide().stop();
@@ -745,19 +729,20 @@ $(function(){
 // -----------------------------------------------------all nav depth
 
 
-$("*").removeClass("on").stop().trigger("mouseleave, focusout");
+// $("*").removeClass("on").stop().trigger("mouseleave, focusout");
 
 
 
 
-$(".gnb .navmenu .m:first a").click(function(){
-    $("#sec1").addClass("on").siblings().removeClass("on");
-});    
+// $(".gnb .navmenu .m:first a").click(function(){
+//     $("#sec1").addClass("on").siblings().removeClass("on");
+// });    
 $(".gnb .navmenu .m:nth(1) a").click(function(){
     $("#sec2").addClass("on").siblings().removeClass("on");
 });    
 $(".gnb .navmenu .m:nth(2) a").click(function(){
-    $("#sec3").addClass("on").siblings().removeClass("on");
+  loadingProcess();
+    $("#sec3").addClass("on").siblings().removeClass("on");    
 });    
 // $(".gnb .navmenu .m:nth(3) a").click(function(){
 //     $("#gameintroduce").addClass("on").siblings().removeClass("on");
@@ -786,10 +771,12 @@ $(".gnb .navmenu .m ul").hide();
 
 $(".gnb .navmenu .m:first .snb li:first a").click(function(){
     $("#gameintroduce").addClass("on").siblings().removeClass("on");
+    $("#sec1").addClass("on").siblings().removeClass("on");
 });    
 
 $(".gnb .navmenu .m:first .snb li:last a").click(function(){
     $("#slide").addClass("on").siblings().removeClass("on");
+    $("#sec1").addClass("on").siblings().removeClass("on");
 });    
 
 
@@ -830,12 +817,15 @@ $(function() {
 // -----------------------------------------------------nav3 depth
 
 $(".gnb .navmenu .m:nth(2) .snb li:first a").click(function(){
-    $("#sec3").addClass("on").siblings().removeClass("on");
+    $("#sec3 .searchmenu .job").addClass("on").siblings().removeClass("on");
 });    
 
 $(".gnb .navmenu .m:nth(2) .snb li:nth(1) a").click(function(){
-    $("#sec4").addClass("on").siblings().removeClass("on");
+    $("#sec3 .searchmenu .subform").addClass("on").siblings().removeClass("on");
 });    
+
+// $("#sec3 .searchmenu job").click(function(){
+
 
 
 // -----------------------------------------------------
@@ -1149,8 +1139,9 @@ function radiocheckHealth() {
 var csschange = {'display': 'flex', 'flex': 'wrap'};
 
 $(document).ready(function(){
-  $("#radios div input").on('change',function(){
-    var radioval = $("#radios div input:checked").val();
+  $("#leftradios div input").on('change',function(){
+    loadingProcess();
+    var radioval = $("#leftradios div input:checked").val();
     if (radioval == '종족') {
       $("#god div:not(:contains('카드 타입 : 하수인'))").hide(this);
       $("#god div:contains('카드 타입 : 하수인')").css(csschange);

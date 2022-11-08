@@ -12,11 +12,12 @@
 </head>
 
 <body>
+    <div id="loading" style="display: none;"><span class="material-symbols-outlined"> sync </span>데이터를 불러오고 있습니다 :)</div>
     <header>
         <nav class="gnb">
             <ul class="navmenu">
                 <li class="m">
-                    <a href="#sec1" class="min">게임가이드</a>
+                    <a class="min">게임가이드</a>
                     <ul class="snb">
                         <li>
                             <a href="#gameintroduce">하스스톤이란?</a>
@@ -42,13 +43,13 @@
                     </ul>
                 </li>
                 <li class="m">
-                    <a href="#sec3" class="min">카드 라이브러리</a>
+                    <a class="min">카드 보기(전체)</a>
                     <ul class="snb">
-                        <!-- <li><a href="#sec3">전체 카드</a></li>
-                        <li><a href="#sec4">개별 카드</a></li> -->
+                        <li><a>직업별 카드 보기</a></li>
+                        <li><a>조건별 카드 보기</a></li>
                     </ul>
                 </li>
-                <li class="m">
+                <!-- <li class="m">
                     <a href="#" class="min">미구현</a>
                     <ul class="snb">
                         <li><a href="#">미구현</a></li>
@@ -69,7 +70,7 @@
                         <li><a href="">미구현</a></li>
                         <li><a href="">미구현</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <div class="top">
@@ -327,10 +328,8 @@
                         <h2>영웅 능력 강화</h2><p>제이나는 수련을 거듭하면서 기초를 잊지 않았습니다. 그러다보니 어느새 기본 공격조차 적에겐 뼈아픈 주문이 되었다네요.</p>
                         <h2>주문 생성 및 발견</h2><p>마법사는 다양한 방법으로 주문을 생성해내거나 발견하여 상대방이 예측하지 못한 변수를 만들어냅니다.</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="화살표">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -378,10 +377,8 @@
                         <h2>신병시너지</h2><p>이제 막 신성한 길에 오른 은빛 성기사단 신병이지만 우서는 그들에게 강력한 버프를 부여하여 적에게 맞섭니다.</p>
                         <h2>필드/손패 하수인강화</h2><p>우서는 필드나 손에있는 하수인들을 강화하여 강력한 하수인으로 적을 압도할 수 있습니다.</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -425,10 +422,8 @@
                         <h2>지옥주문 시너지</h2><p>악마를 처단하기 위해 스스로 악마의 힘을 취한 일리단은 지옥주문을 구사하여 적을 처단하는데 거리낌이 없습니다.</p>
                         <h2>유물 시너지</h2><p>악마사냥꾼은 지옥에서 유물을 찾아냈습니다. 유물은 처음에는 약하지만 사용할수록 점점 효과가 강해집니다. 만년동안 응어리진 분노를 조심하세요!</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -476,10 +471,8 @@
                         <h2>추가 마나 수정</h2><p>드루이드는 자연의 힘으로 타직업보다 빠르게 <b>마나수정</b>을 얻거나 회복하여 다양한 플레이가 가능합니다. 심지어 최대마나를 확장시킬 수도 있습니다.</p>
                         <h2>자연 주문 시너지</h2><p>자연을 사랑하고 친애하는 드루이드는 자연 주문을 숨쉬듯 사용하여 여러 상황을 헤쳐나갑니다.</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -524,10 +517,8 @@
                         <h2>영웅 능력 시너지</h2><p>사냥꾼의 화살촉은 적의 하수인 따위는 안중에도 없습니다. 그저 적 영웅만을 겨눌뿐이죠.</p>
                         <!-- <h2>비밀 시너지</h2><p>그렇다고 사냥꾼이 무식한 것은 아닙니다. 그들은 적을 효과적으로 사냥하기위해 여러 <em>비밀</em>로 적의 움직임을 제한하고, 침착하게 숨통을 조여갑니다.</p> -->
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -573,10 +564,8 @@
                         <h2>저주, 덱파괴</h2><p>적 영웅에게 사악한 저주를 줘서 피해를 입히는 것은 물론, 적의 카드까지 파괴하는 흑마법사는 상대방의 덱에 직접적으로 간섭할 수 있는 강력한 직업입니다.</p>
                         <h2>암흑 주문 시너지</h2><p>흑마법사는 암흑 주문으로 상대방에게 끔찍한 악몽을 선사합니다. 상대방의 고통은 흑마법사에게 있어 삶의 낙이랄까요?</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -621,10 +610,8 @@
                         <h2>방어도 증가</h2><p>전사는 타 직업에 비해 <em>방어도</em>를 쌓기 수월합니다. 방어도는 생명력을 초과하여 얻을 수 있으며 보유한 방어도만큼 영웅에게 가해지는 피해를 막을 수 있는데 전사는 많은 방어도를 기반으로 단단한 플레이를 할 수 있습니다!</p>
                         <h2>하수인 피해, 광폭 시너지</h2><p>용맹한 전사의 하수인들은 상처입는 것을 두려워하지 않습니다! 오히려 상처를 입을수록 강해진다고 하네요? 그들의 분노를 조심하는것이 좋을겁니다!</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -669,10 +656,8 @@
                         <h2>하수인복제,강화,침묵</h2><p>자신의 하수인을 빛의 힘으로 강화하거나 복제하여 강력한 하수인을 만들어냅니다, 또한 상대방의 하수인을 침묵시켜서 순식간에 상대방의 필드를 약화시킬 수 있습니다.</p>
                         <h2>죽음의 메아리 시너지</h2><p>죽은자의 영혼 또한 어루만져주는 사제는 그들의 메아리를 잊지 않습니다. <em>죽음의 메아리</em> 하수인을 부활시키거나 그 효과들을 다시 사용하여 한 순간에 강력한 효과를 발동할 수 있습니다.</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -714,10 +699,8 @@
                         <h2>비용 감소</h2><p>도적은 주문이나 하수인의 코스트를 더 적은 비용으로 사용할 수 있게 하는 카드가 존재합니다. 해당 카드를 이용하여 더 많은수의 카드를 사용하여 폭풍같은 플레이가 가능합니다.</p>
                         <h2>다른 직업 카드 생성</h2><p>뒷골목에서 실력을 갈고닦은 도적에겐 타 직업의 카드 또한 자신의 것이나 다름없습니다. 타직업의 카드를 발견 및 생성하여 스타일리쉬한 플레이가 가능합니다. 상대방이 예측할 수 없는 카드로 전장의 판도를 뒤집으세요!</p>
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -768,48 +751,12 @@
                         <h2>전투의함성 시너지</h2><p>타직업보다 전투의 함성 키워드를 효과적으로 사용하여 강력한 효과를 중복으로 사용할 수 있습니다.</p>
                         <!-- <h2>토템 시너지</h2><p>토템은 주술사의 파트너로 언제나 어디서나 주술사와 함께하는 친구입니다. 토템과 관련된 여러장의 카드로 덱을 구성하여 토템시너지를 극대화 할 수 있습니다.</p> -->
                     </div>
-                    <span class="close">
-                        <a href="#herose">
-                            <img src="/project/ui/arrow-up-solid.svg" alt="">
-                        </a>
+                    <span class="close pagingtop">
+                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
-            
         </div>
-        <!-- <div class="aside">
-            <a href="#magician">
-                <img src="/project/1x/마법사1.png" alt="">
-            </a>
-            <a href="#paladin">
-                <img src="/project/1x/성기사1.png" alt="">
-            </a>
-            <a href="#demonhunter">
-                <img src="/project/1x/악마사냥꾼1.png" alt="">
-            </a>
-            <a href="#druid">
-                <img src="/project/1x/드루이드1.png" alt="">
-            </a>
-            <a href="#hunter">
-                <img src="/project/1x/사냥꾼1.png" alt="">
-            </a>
-            <a href="#warlock">
-                <img src="/project/1x/흑마법사1.png" alt="">
-            </a>
-            <a href="#warrior">
-                <img src="/project/1x/전사1.png" alt="">
-            </a>
-            <a href="#priest">
-                <img src="/project/1x/사제1.png" alt="">
-            </a>
-            <a href="#rogue">
-                <img src="/project/1x/도적1.png" alt="">
-            </a>
-            <a href="#shaman">
-                <img src="/project/1x/주술사1.png" alt="">
-            </a>
-            
-        </div> -->
     </div>
     <div class="sec3" id="sec3">
         <div class="searchmenu">
@@ -848,148 +795,157 @@
                     <div></div>
                 </div>
             </div>
-            <form id="form">
-                <fieldset>
-                    <!-- <legend>카드 검색</legend> -->
-                    <div class="radios" id="radios">
-                        <div>
-                            <input type="radio" id="familydio" name="search" value="종족" onclick=radiocheckFamily()>
-                            <label for="familydio">종족</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="spelldio" name="search" value="주문" onclick=radiocheckSpell()>
-                            <label for="spelldio">주문</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="attackdio" name="search" value="공격력" onclick=radiocheckAttack()>
-                            <label for="attackdio">공격력</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="healthdio" name="search" value="체력" onclick=radiocheckHealth()>
-                            <label for="healthdio">체력</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="weapondio" name="search" value="무기">
-                            <label for="weapondio">무기</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="placedio" name="search" value="장소">
-                            <label for="placedio">장소</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="herochangedio" name="search" value="영웅 변신">
-                            <label for="herochangedio">영웅 변신</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="raritydio" name="search" value="희귀도" onclick=radiocheckRarity()>
-                            <label for="raritydio">희귀도</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="setdio" name="search" value="확장팩" onclick=radiocheckSet()>
-                            <label for="setdio">확장팩</label>
-                        </div>
-                    </div>
-                    <div class="types">
-                        <div>
-                            <select id="familysel" name="familysel" disabled>
-                                <option value="" selected="selected">하수인 종족</option>
-                                <option value="43">가시맷돼지</option>
-                                <option value="17">기계</option>
-                                <option value="92">나가</option>
-                                <option value="14">멀록</option>
-                                <option value="15">악마</option>
-                                <option value="20">야수</option>
-                                <option value="24">용족</option>
-                                <option value="18">정령</option>
-                                <option value="21">토템</option>
-                                <option value="23">해적</option>
-                                <option value="26">기타</option>
-                                <option value="other">종족 없음</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select id="attacksel" name="attacksel" disabled>
-                                <option value="" selected="selected">공격력</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10+">10+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select id="healthsel" disabled>
-                                <option value="" selected="selected">체력</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10+">10+</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select id="spellsel" disabled>
-                                <option value="" selected="selected">주문 속성</option>
-                                <option value="3">냉기</option>
-                                <option value="1">비전</option>
-                                <option value="6">암흑</option>
-                                <option value="4">자연</option>
-                                <option value="7">지옥</option>
-                                <option value="2">화염</option>
-                                <option value="5">신성</option>
-                                <option value="other">기타</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select id="raritysel" disabled>
-                                <option value="" selected="selected">희귀도별</option>
-                                <option value="1">일반</option>
-                                <option value="3">희귀</option>
-                                <option value="4">특급</option>
-                                <option value="5">전설</option>
-                            </select>        
-                        </div>
-                        <div>
-                            <select id="setsel" disabled>
-                                <option value="" selected="selected">카드팩별</option>
-                                <option value="9999">나락과 질서</option>
-                                <option value="1691">나스리아 성채 살인 사건</option>
-                                <option value="1658">가라앉은 도시로의 항해</option>
-                                <option value="1626">알터랙 계곡</option>
-                                <option value="1578">스톰윈드</option>
-                                <option value="1525">불모의 땅</option>
-                                <option value="1637">핵심</option>
-                            </select>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
+            <div class="subform" >
+                <div class="leftform">
+                    <form id="lform">
+                        <fieldset>
+                            <legend>카드 타입별</legend>
+                            <div class="radios" id="leftradios">
+                                <div>
+                                    <input type="radio" id="familydio" name="search" value="종족" onclick=radiocheckFamily()>
+                                    <label for="familydio">하수인</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="weapondio" name="search" value="무기">
+                                    <label for="weapondio">무기</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="placedio" name="search" value="장소">
+                                    <label for="placedio">장소</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="herochangedio" name="search" value="영웅 변신">
+                                    <label for="herochangedio">변신</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="spelldio" name="search" value="주문" onclick=radiocheckSpell()>
+                                    <label for="spelldio">주문</label>
+                                </div>
+                            </div>
+                            <div class="types">
+                                <div>
+                                    <select id="familysel" name="familysel" disabled>
+                                        <option value="" selected="selected">하수인 종족</option>
+                                        <option value="43">가시맷돼지</option>
+                                        <option value="17">기계</option>
+                                        <option value="92">나가</option>
+                                        <option value="14">멀록</option>
+                                        <option value="15">악마</option>
+                                        <option value="20">야수</option>
+                                        <option value="24">용족</option>
+                                        <option value="18">정령</option>
+                                        <option value="21">토템</option>
+                                        <option value="23">해적</option>
+                                        <option value="26">기타</option>
+                                        <option value="other">종족 없음</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select id="spellsel" disabled>
+                                        <option value="" selected="selected">주문 속성</option>
+                                        <option value="3">냉기</option>
+                                        <option value="1">비전</option>
+                                        <option value="6">암흑</option>
+                                        <option value="4">자연</option>
+                                        <option value="7">지옥</option>
+                                        <option value="2">화염</option>
+                                        <option value="5">신성</option>
+                                        <option value="other">기타</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="rightform">
+                    <form id="rform">
+                        <fieldset>
+                            <legend>기타 조건</legend>
+                            <div class="radios" id="rightradios">
+                                <div>
+                                    <input type="radio" id="attackdio" name="search" value="공격력" onclick=radiocheckAttack()>
+                                    <label for="attackdio">공격력</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="healthdio" name="search" value="체력" onclick=radiocheckHealth()>
+                                    <label for="healthdio">체력</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="raritydio" name="search" value="희귀도" onclick=radiocheckRarity()>
+                                    <label for="raritydio">희귀도</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="setdio" name="search" value="확장팩" onclick=radiocheckSet()>
+                                    <label for="setdio">확장팩</label>
+                                </div>
+                            </div>
+                            <div class="types right">
+                                <div>
+                                    <select id="attacksel" name="attacksel" disabled>
+                                        <option value="" selected="selected">공격력</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10+">10+</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select id="healthsel" disabled>
+                                        <option value="" selected="selected">체력</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10+">10+</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select id="raritysel" disabled>
+                                        <option value="" selected="selected">희귀도별</option>
+                                        <option value="1">일반</option>
+                                        <option value="3">희귀</option>
+                                        <option value="4">특급</option>
+                                        <option value="5">전설</option>
+                                    </select>        
+                                </div>
+                                <div>
+                                    <select id="setsel" disabled>
+                                        <option value="" selected="selected">카드팩별</option>
+                                        <option value="9999">나락과 질서</option>
+                                        <option value="1691">나스리아 성채 살인 사건</option>
+                                        <option value="1658">가라앉은 도시로의 항해</option>
+                                        <option value="1626">알터랙 계곡</option>
+                                        <option value="1578">스톰윈드</option>
+                                        <option value="1525">불모의 땅</option>
+                                        <option value="1637">핵심</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="cardlist">
-            <div class="wrap" id="god">          
+            <div class="wrap" id="god">
             </div>
-            <span class="close">
-                <a href="#sec3">
-                    <img src="/project/ui/arrow-up-solid.svg" alt="화살표">
-                </a>
+            <span class="close pagingtop">
+                <a href="#sec3"></a>
             </span>
         </div>
     </div>
-    <footer>
-       
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script src="/project/hearthstone.js"></script>
