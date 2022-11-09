@@ -13,6 +13,14 @@
 
 <body>
     <div id="loading" style="display: none;"><span class="material-symbols-outlined"> sync </span>데이터를 불러오고 있습니다 :)</div>
+    <div id="eachcard" style="display: none;">
+        <div class="eachbox">
+            <div id="eachimg">
+            </div>
+            <div id="eachtextbox">
+            </div>
+        </div>
+    </div>
     <header>
         <nav class="gnb">
             <ul class="navmenu">
@@ -30,23 +38,13 @@
                 <li class="m">
                     <a href="#sec2" class="min">영웅 소개</a>
                     <ul class="snb">
-                        <!-- <li><a href="#magician">마법사</a></li>
-                        <li><a href="#">성기사</a></li>
-                        <li><a href="#">악마사냥꾼</a></li>
-                        <li><a href="#">드루이드</a></li>
-                        <li><a href="#">사냥꾼</a></li>
-                        <li><a href="#">흑마법사</a></li>
-                        <li><a href="#">전사</a></li>
-                        <li><a href="#">사제</a></li>
-                        <li><a href="#">도적</a></li>
-                        <li><a href="#">주술사</a></li> -->
                     </ul>
                 </li>
                 <li class="m">
-                    <a class="min">카드 보기(전체)</a>
+                    <a class="min">카드 보기</a>
                     <ul class="snb">
-                        <li><a>직업별 카드 보기</a></li>
-                        <li><a>조건별 카드 보기</a></li>
+                        <li><a onclick=magicianClick()>직업별 카드 보기</a></li>
+                        <li><a onclick=showall()>조건별 카드 보기</a></li>
                     </ul>
                 </li>
                 <!-- <li class="m">
@@ -761,7 +759,7 @@
     <div class="sec3" id="sec3">
         <div class="searchmenu">
             <div class="job">
-                <div class="magicianpage">
+                <div class="magicianpage" id="clickpage">
                     <div></div>
                 </div>
                 <div class="paladinpage">
@@ -946,6 +944,7 @@
             </span>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script src="/project/hearthstone.js"></script>

@@ -26,19 +26,19 @@ function loadCard(obj){
     for (const me of we)
     {
         const id = document.createElement('div');
-        const closeBt = document.createElement('div');
+        
+        // 임시 개별카드화면
+        // id.addEventListener
+        // function addOn() {
+        //     id.classList.add("on");
+        // };
+        // id.addEventListener('click', addOn);
 
-        id.addEventListener
-        function addOn() {
-            id.classList.add("on");
-        };
-        id.addEventListener('click', addOn);
-
-        let removeOn = () => 
-        {
-            id.remove("on");
-        };
-        closeBt.addEventListener('click', removeOn);
+        // let removeOn = () => 
+        // {
+        //     id.remove("on");
+        // };
+        // closeBt.addEventListener('click', removeOn);
         
         const textbox = document.createElement('div')
         const name = document.createElement('h3')
@@ -55,7 +55,9 @@ function loadCard(obj){
         const attack = document.createElement('p');
         const health = document.createElement('p');
         const img = document.createElement('img');
-        
+        const powder = document.createElement('p');
+
+        const closeBt = document.createElement('span');
 
         img.src = me.image;
         img.alt = me.name;
@@ -81,8 +83,9 @@ function loadCard(obj){
         health.className = `health ${me.health}`;
         text.className = `text`;
         flavorText.className = `flavorText`;
-        closeBt.className = 'closeBt';
         textbox.className = 'textbox';
+        closeBt.className = 'closeBt';
+        powder.className = `powder ${me.rarityId}`;
 
 
         name.textContent = me.name;
@@ -93,11 +96,15 @@ function loadCard(obj){
         cardSet.textContent = `${me.cardSetId}`;
         rarityID.textContent = `${me.rarityId}`;
         artistName.textContent = `카드 디자이너 : ${me.artistName}`;
-        manaCost.textContent = `마나 소모량 : ${me.manaCost}마나`;
-        text.innerHTML = `카드 설명 : ${me.text}`;
-        flavorText.innerHTML = `배경담 : ${me.flavorText}`;
+        manaCost.textContent = `${me.manaCost}`;
+        text.innerHTML = `${me.text}`;
+        flavorText.innerHTML = `${me.flavorText}`;
         attack.textContent = `${me.attack}`;
         health.textContent = `${me.health}`;
+        powder.textContent = `${me.rarityId}`;
+
+
+
 
         id.prepend(img);
         textbox.appendChild(name);
@@ -115,11 +122,41 @@ function loadCard(obj){
         textbox.appendChild(closeBt);
         img.appendChild(textbox);
         textbox.appendChild(rarityID);
+        textbox.appendChild(powder);
         section.appendChild(id);
+        
+        const cardOne = document.querySelector("#eachcard"); 
+        const cardTwo = document.querySelector("#eachimg");
+        const cardThr = document.querySelector("#eachtextbox");
+        
+        var eachevent = $(img).on('click',function(){
+          cardTwo.prepend(img);
+          cardThr.prepend(textbox);
+          $(cardOne).show().focus();
+        });
 
+        img.addEventListener
+        function addOn() {
+            eachevent;
+        };
+        img.addEventListener('click', addOn);
 
-  
+        let removeOn = () => 
+        {
+            img.remove(eachevent);
+            id.prepend(img);
+            img.appendChild(textbox);
+            $(cardOne).hide();
+            $(cardTwo).removechild();
+            $(cardThr).removechild();
+            // reload("#sec3");
+            
 
+        };
+        closeBt.addEventListener('click', removeOn);
+        
+
+        
 }
 
 
@@ -127,7 +164,7 @@ function loadCard(obj){
 
 
 
-// $("p:contains('undefined')").hide(this);
+$("p:contains('undefined')").hide(this);
 
 // 직업군 내용
 $("p.class.2").html("직업 : 드루이드");
@@ -159,13 +196,13 @@ $("p.cardType.5").html("카드 타입 : 주문");
 $("p.cardType.7").html("카드 타입 : 무기");
 $("p.cardType.39").html("카드 타입 : 장소");
 
-// 카드세트
-$("p.cardSet.1525").html("카드 세트 : 불모의 땅");
-$("p.cardSet.1578").html("카드 세트 : 스톰윈드");
-$("p.cardSet.1626").html("카드 세트 : 알터랙 계곡");
-$("p.cardSet.1637").html("카드 세트 : 핵심");
-$("p.cardSet.1658").html("카드 세트 : 가라앉은 도시로의 항해");
-$("p.cardSet.1691").html("카드 세트 : 나스리아 성채 살인 사건");
+// 카드팩
+$("p.cardSet.1525").html("카드 팩 : 불모의 땅");
+$("p.cardSet.1578").html("카드 팩 : 스톰윈드");
+$("p.cardSet.1626").html("카드 팩 : 알터랙 계곡");
+$("p.cardSet.1637").html("카드 팩 : 핵심");
+$("p.cardSet.1658").html("카드 팩 : 가라앉은 도시로의 항해");
+$("p.cardSet.1691").html("카드 팩 : 나스리아 성채 살인 사건");
 
 //희귀도
 $("p.rarity.1").html("희귀도 : 일반");
@@ -214,7 +251,28 @@ $("p.health.9").html("체력 : 9");
 $("p.health.10").html("체력 : 10+");
 
 
+// 마나소모량
 
+$("p.manaCost.0").html("마나 소모량 : 0마나")
+$("p.manaCost.1").html("마나 소모량 : 1마나")
+$("p.manaCost.2").html("마나 소모량 : 2마나")
+$("p.manaCost.3").html("마나 소모량 : 3마나")
+$("p.manaCost.4").html("마나 소모량 : 4마나")
+$("p.manaCost.5").html("마나 소모량 : 5마나")
+$("p.manaCost.6").html("마나 소모량 : 6마나")
+$("p.manaCost.7").html("마나 소모량 : 7마나")
+$("p.manaCost.8").html("마나 소모량 : 8마나")
+$("p.manaCost.9").html("마나 소모량 : 9마나")
+$("p.manaCost.10").html("마나 소모량 : 10+마나")
+$("p.manaCost.12").html("마나 소모량 : 10+마나")
+$("p.manaCost.20").html("마나 소모량 : 10+마나")
+
+// 소모 가루
+
+$("p.powder.1").html("제작시 필요 가루 : 40")
+$("p.powder.3").html("제작시 필요 가루 : 100")
+$("p.powder.4").html("제작시 필요 가루 : 400")
+$("p.powder.5").html("제작시 필요 가루 : 1600")
 
 
 
@@ -471,28 +529,28 @@ $(document).ready(function() {
       loadingProcess();
       var result_set = $('#setsel option:selected').val();
       if (result_set == '1691') {
-        $("#god div:not(:contains('카드 세트 : 나스리아 성채 살인 사건'))").hide(this);
-        $("#god div:contains('카드 세트 : 나스리아 성채 살인 사건')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 나스리아 성채 살인 사건'))").hide(this);
+        $("#god div:contains('카드 팩 : 나스리아 성채 살인 사건')").css(csschange);
       } 
       else if (result_set == '1658') {
-        $("#god div:not(:contains('카드 세트 : 가라앉은 도시로의 항해'))").hide(this);
-        $("#god div:contains('카드 세트 : 가라앉은 도시로의 항해')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 가라앉은 도시로의 항해'))").hide(this);
+        $("#god div:contains('카드 팩 : 가라앉은 도시로의 항해')").css(csschange);
       } 
       else if (result_set == '1626') {
-        $("#god div:not(:contains('카드 세트 : 알터랙 계곡'))").hide(this);
-        $("#god div:contains('카드 세트 : 알터랙 계곡')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 알터랙 계곡'))").hide(this);
+        $("#god div:contains('카드 팩 : 알터랙 계곡')").css(csschange);
       } 
       else if (result_set == '1578') {
-        $("#god div:not(:contains('카드 세트 : 스톰윈드'))").hide(this);
-        $("#god div:contains('카드 세트 : 스톰윈드')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 스톰윈드'))").hide(this);
+        $("#god div:contains('카드 팩 : 스톰윈드')").css(csschange);
       } 
       else if (result_set == '1525') {
-        $("#god div:not(:contains('카드 세트 : 불모의 땅'))").hide(this);
-        $("#god div:contains('카드 세트 : 불모의 땅')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 불모의 땅'))").hide(this);
+        $("#god div:contains('카드 팩 : 불모의 땅')").css(csschange);
       } 
       else if (result_set == '1637') {
-        $("#god div:not(:contains('카드 세트 : 핵심'))").hide(this);
-        $("#god div:contains('카드 세트 : 핵심')").css(csschange);
+        $("#god div:not(:contains('카드 팩 : 핵심'))").hide(this);
+        $("#god div:contains('카드 팩 : 핵심')").css(csschange);
       } 
     }); 
   }); 
@@ -824,8 +882,6 @@ $(".gnb .navmenu .m:nth(2) .snb li:nth(1) a").click(function(){
     $("#sec3 .searchmenu .subform").addClass("on").siblings().removeClass("on");
 });    
 
-// $("#sec3 .searchmenu job").click(function(){
-
 
 
 // -----------------------------------------------------
@@ -926,28 +982,6 @@ $(document).ready(function(index, li){
 });
 
 
-
-
-
-// $("#whatHS .slidebt span:last").click(function() {
-//     if (!$(".HSintro li").last().is(":visible")) {
-//         $(".HSintro li:visible").hide().next("li").fadeIn(400);
-//         $("#whatHS .slidebt span:first").removeClass("off");
-//     }
-
-//     if ($(".HSintro li").last().is(":visible")) {
-//         $("#whatHS .slidebt span:last").addClass("off");
-//     }
-//     return false;
-// });
-
-
-
-
-
-
-
-
 // -----------------------------------------------------#slide 컨트롤
 
 
@@ -958,53 +992,6 @@ $("#slide > .control > li").click(function(){
     $("#slide > .right > li > .textguide").addClass("on").siblings();
 });
     
-
-// $("#slide > .control > li:nth(1)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(1)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide li:nth(1)").addClass("on").siblings().removeClass("on");
-// });
-
-// $("#slide > .control > li:nth(2)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(2)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(2)").addClass("on").siblings().removeClass("on");
-// });
-
-// $("#slide > .control > li:nth(3)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(3)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(3)").addClass("on").siblings().removeClass("on");
-    
-// });
-
-// $("#slide > .control > li:nth(4)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(4)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(4)").addClass("on").siblings().removeClass("on");
-    
-// });
-
-// $("#slide > .control > li:nth(5)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(5)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(5)").addClass("on").siblings().removeClass("on");
-    
-// });
-
-// $("#slide > .control > li:nth(6)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(6)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(6)").addClass("on").siblings().removeClass("on");
-    
-// });
-
-// $("#slide > .control > li:nth(7)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(7)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(7)").addClass("on").siblings().removeClass("on");
-    
-// });
-
-// $("#slide > .control > li:nth(8)").click(function(){
-//     $("#slide > .right > li > .guide > li:nth(8)").addClass("on").siblings().removeClass("on");
-//     $("#slide > .right > li > .textguide > li:nth(8)").addClass("on").siblings().removeClass("on");
-    
-// });
-
 
 $("ul.guide li:first").show();
     $("ul.control li").click(function() { 
@@ -1078,6 +1065,7 @@ $(".sec2 > .heropage > .bg > .inner > .skin > .slick").slick({
   const targetSp = document.getElementById('spellsel');
   const targetR = document.getElementById('raritysel');
   const targetSe = document.getElementById('setsel');
+  const targetMana = document.getElementById('manasel');
   
 
   function radiocheckFamily() {
@@ -1129,6 +1117,15 @@ function radiocheckHealth() {
     targetR.disabled = true;
     targetSe.disabled = true;
 }
+function radiocheckMana() {
+    targetF.disabled = true;
+    targetA.disabled = true;
+    targetH.disabled = true;
+    targetSp.disabled = true;
+    targetR.disabled = true;
+    targetSe.disabled = true;
+    targetMana.disabled = false;
+}
 
 
 
@@ -1164,35 +1161,21 @@ $(document).ready(function(){
     }
   });
 });
-  
 
 
 
+$("#sec3 .searchmenu .job div").on('click',function(){
+  $(this).addClass("on").siblings().removeClass("on");
+})
 
 
 
+function magicianClick() {
+  document.getElementById('clickpage').click(this);
+//   // document.getElementsByClassName("magicianpage").click(this);
+//   // 궁금
+}
 
-
-
-// $("#familysel option:selected").val();
-
-
-
-// var temp = $(':radio[name="search"]:checked').val();
-
-// $('input:radio[name=search]:input[value=01]').attr("checked", true);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function showall() {
+  $("#god div").show();
+}

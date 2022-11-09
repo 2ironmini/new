@@ -19,7 +19,6 @@ body{min-width: 320px;}
 .rightmenu .sitemap .sns:nth-last-child(1){color:midnightblue;}
 
 .sec1{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed; opacity: 1;}
-/* .sec2{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed; opacity: 1;} */
 .sec1.on{display: block;}
 header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 .gnb{position: relative; width: fit-content; height: 50px; margin: 0 auto;}
@@ -54,7 +53,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 .sec1 #slide{display: none;}
 .sec1.on #slide.on{width: 100vw; height: 100vh; display: flex; flex-direction: row;}
 
-.sec1.on #slide.on .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 0 1 80px; z-index: 2;}
+.sec1.on #slide.on .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 1 1 80px; z-index: 2; top: -20px;}
 
 
 /* .sec1 #slide .right{display: none;} */
@@ -76,15 +75,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 .sec1.on #slide.on .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
 .sec1.on #slide.on .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
 .sec1.on #slide.on .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(1).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(2).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(3).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(4).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(5).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(6).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(7).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(8).on{display:flex; align-items: center; justify-content: center;}
-.sec1.on #slide.on .right li .textguide.on li:nth-child(9).on{display:flex; align-items: center; justify-content: center;}
+.sec1.on #slide.on .right li .textguide.on li.on{display:flex; align-items: center; justify-content: center;}
 
 
 
@@ -94,26 +85,20 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 
 
-.sec1.on .slide ul.control li{width: 100%; height: 100px; cursor: pointer; opacity: 0.5;}
+.sec1.on .slide ul.control li{width: 100%; height: 80px; cursor: pointer; opacity: 0.5;}
 .sec1.on .slide ul.control li.on{opacity: 1; display: inline-block;}
 .sec1.on .slide ul.control li:hover{opacity: 1; display: inline-block;}
-.sec1.on .slide ul.control .mana1{background: url(/project/1x/mana/1.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana2{background-image: url(/project/1x/mana/2.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana3{background-image: url(/project/1x/mana/3.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana4{background-image: url(/project/1x/mana/4.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana5{background-image: url(/project/1x/mana/5.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana6{background-image: url(/project/1x/mana/6.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana7{background-image: url(/project/1x/mana/7.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana8{background-image: url(/project/1x/mana/8.png); background-repeat: no-repeat; background-size: contain;}
-.sec1.on .slide ul.control .mana9{background-image: url(/project/1x/mana/9.png); background-repeat: no-repeat; background-size: contain;}
-
-
-/* 모바일화면시 left 30%해야함 top은 65 */
-
+.sec1.on .slide ul.control .mana1{background: url(/project/1x/mana/1.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana2{background: url(/project/1x/mana/2.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana3{background: url(/project/1x/mana/3.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana4{background: url(/project/1x/mana/4.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana5{background: url(/project/1x/mana/5.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana6{background: url(/project/1x/mana/6.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana7{background: url(/project/1x/mana/7.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana8{background: url(/project/1x/mana/8.png) no-repeat left / contain;}
+.sec1.on .slide ul.control .mana9{background: url(/project/1x/mana/9.png) no-repeat left / contain;}
 
 .sec1.on #gameintroduce{width: 100%; height: 100%; overflow: hidden;}
-
-
 .sec1.on #gameintroduce .basic{width: 100vw; height: 100vh; background: url(/project/1x/main.png) no-repeat 50% top / cover; position: relative;}
 .sec1.on #gameintroduce .basic:hover{background: url(/project/1x/firsthover.png) no-repeat center top / cover; transform: scale(1.4); transition: all 2s ease-in-out; overflow: hidden;}
 .sec1.on #gameintroduce .basic > a{position: absolute; width: 17%; height: 6%; top: 28%; left: 41%; text-decoration: none; text-indent: -999999px; overflow: hidden;}
@@ -204,6 +189,8 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 #sec3 .job div{max-width: 70px; height: 100%; flex: 1 1 70px; display: flex;}
 #sec3 .job div div{flex: 0 1 70px; background-repeat: no-repeat; background-position: 50%; background-size: contain; cursor: pointer;}
 #sec3 .job div:first-child div{background-image: url(/project/1x/마법사1.png);}
+#sec3 .job div:hover div{border-bottom: 10px solid; border-image-source: linear-gradient(to left, #cefa9c, #e7fdcd); border-image-slice: 1; border-width: 3px;}
+#sec3 .job div.on div{border-bottom: 10px solid; border-image-source: linear-gradient(to left, #00C853, #B2FF59); border-image-slice: 1; border-width: 3px;}
 #sec3 .job div:nth-child(2) div{background-image: url(/project/1x/성기사1.png);}
 #sec3 .job div:nth-child(3) div{background-image: url(/project/1x/악마사냥꾼1.png);}
 #sec3 .job div:nth-child(4) div{background-image: url(/project/1x/드루이드1.png);}
@@ -217,7 +204,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 
 
-#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; width: 100vw; height: 100%; display: flex;}
+#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; width: 100vw; height: 100%; min-height: 100vh; display: flex;}
 #sec3 .cardlist .wrap div{flex: 0 0 220px;}
 #sec3 .cardlist .wrap{width: 100vw; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
 #god div{display: flex; cursor: pointer; flex-direction: row;}
@@ -225,10 +212,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 #god div .textbox{display: none;}
 
 
-#god div.on{position: fixed; top: 0%; left: 0%; background-color: rgba(0, 0, 0, 0.4); cursor: default; width: calc(100%); height: calc(100%); transition: all ease-in-out 1s;}
-#god div.on img{position: absolute; top: 30%; left: calc(20%); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
-#god div.on .textbox{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 50%; height: 300px; position: absolute; top: 30%; left: calc(20% + 220px); background-image: url(/project/1x/라이브러리\ 배경.png); transition: all ease-in-out 1s;}
-#god div.on .textbox .closeBt{background: url(/project/ui/xmark-solid.svg) no-repeat 50% / contain; width: 80px; height: 80px; z-index: 10; position: absolute; top: 0%; cursor: pointer; right: 0; background-color: #fff; border-radius: 30%;}
+
 
 #sec3 .searchmenu{width: 100vw; height: 100%; display: flex; flex-direction: column;}
 
@@ -249,6 +233,10 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 #rform #rightradios div{flex: 1 1 0;}
 #sec3 .searchmenu .subform.on .types.right{display: flex; justify-content: space-around;}
 #sec3 .searchmenu .subform.on .types.right div{flex: 1 1 0;}
+
+
+
+
 
 
 
@@ -289,3 +277,14 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 }
 
 .slick button{position: absolute; top: 96%; left: 50%;}
+
+
+#eachcard{width: 100vw; height: 100vh; position: fixed; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;}
+#eachcard .eachbox{width: 80%; height: 50%; display: flex; flex-direction: row; position: absolute; top: 25%; left: 10%; background: url(/project/1x/라이브러리배경화면50.png) repeat center / cover;}
+#eachimg{width: fit-content; height: 100%; display: flex;}
+#eachimg img{flex: 0 1 0;}
+
+#eachtextbox{width: 70%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+#eachtextbox .textbox{width: 100%; word-break: break-all; display: flex; flex-direction: column; gap: 5px;}
+#eachtextbox h3{text-align: center;}
+span.closeBt{width: 50px; height: 50px; position: absolute; top: 0; right: 0; cursor: pointer; background: url(/project/ui/close_FILL0_wght400_GRAD0_opsz48.svg) no-repeat 50% / cover;}
