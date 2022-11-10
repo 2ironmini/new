@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/project/hearthstone.css">
     <link rel="stylesheet" media="(min-width:320px) and (max-width: 800px)" href="/project/hearthstonem.css">
     <link rel="stylesheet" media="(min-width:801px) and (max-width: 1199px)" href="/project/hearthstonet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.21.0/video-js.min.css">
 </head>
 
 <body>
@@ -93,17 +94,19 @@
         </div>
     </header>
     <div class="sec1" id="sec1">
+        <div id="player"></div>
         <div class="gameguide">
             <div class="gameintroduce" id="gameintroduce">
-                <div class="basic">
-                    <a href="#whatHS" class="gofirst"></a>
-                </div>
                 <div id="whatHS">
                     <h1>하스스톤이란?</h1>
                     <ul class="HSintro">
                         <li>
+                            <video controls  id="video" onclick=Fullscreen()>
+                                <source src="https://assets.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt5f2da92f3229e1dd/5f198eb94afc510797a4f325/homepage_header_video.mp4" type="video/mp4">
+                            </video>
                         </li>
                         <li>
+                            
                         </li>
                         <li>
                         </li>
@@ -111,7 +114,7 @@
                         </li>
                     </ul>
                     <div class="slidebt">
-                        <span class="material-symbols-outlined off">arrow_back_ios</span>
+                        <span class="material-symbols-outlined">arrow_back_ios</span>
                         <span class="material-symbols-outlined">arrow_forward_ios</span>
                     </div>
                 </div>
@@ -947,6 +950,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.21.0/video.min.js"></script>
     <script src="/project/hearthstone.js"></script>
 </body>
 </html>

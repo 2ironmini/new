@@ -843,30 +843,84 @@ $(".gnb .navmenu .m:first .snb li:last a").click(function(){
 
 // -----------------------------------------------------HSintro depth
 
+// $(function() {
+//     $("#whatHS .slidebt span:last").click(function() {
+//         if (!$(".HSintro li").last().is(":visible")) {
+//             $(".HSintro li:visible").hide().next("li").fadeIn(400);
+//             $("#whatHS .slidebt span:first").removeClass("off");
+//         }
+
+//         if ($(".HSintro li").last().is(":visible")) {
+//             $("#whatHS .slidebt span:last").addClass("off");
+//         }
+//         return false;
+//     });
+//     $("#whatHS .slidebt span:first").click(function() {
+//         if (!$(".HSintro li").first().is(":visible")) {
+//             $(".HSintro li:visible").hide().prev("li").fadeIn(400);
+//             $("#whatHS .slidebt span:last").removeClass("off");
+//         }
+
+//         if ($(".HSintro li").first().is(":visible")) {
+//             $("#whatHS .slidebt span:first").addClass("off");
+//         }
+//         return false;
+//     });
+// });
 $(function() {
-    $("#whatHS .slidebt span:last").click(function() {
-        if (!$(".HSintro li").last().is(":visible")) {
-            $(".HSintro li:visible").hide().next("li").fadeIn(400);
-            $("#whatHS .slidebt span:first").removeClass("off");
-        }
+  $("#whatHS .slidebt span:last").click(function(){
+    if (!$(".HSintro li:last").is(":visible")) {
+        $(".HSintro li:visible").hide().next("li").fadeIn(400);
+    }
 
-        if ($(".HSintro li").last().is(":visible")) {
-            $("#whatHS .slidebt span:last").addClass("off");
-        }
-        return false;
-    });
-    $("#whatHS .slidebt span:first").click(function() {
-        if (!$(".HSintro li").first().is(":visible")) {
-            $(".HSintro li:visible").hide().prev("li").fadeIn(400);
-            $("#whatHS .slidebt span:last").removeClass("off");
-        }
-
-        if ($(".HSintro li").first().is(":visible")) {
-            $("#whatHS .slidebt span:first").addClass("off");
-        }
-        return false;
-    });
+    if ($(".HSintro li:first").is(":visible")){
+        $("#whatHS .slidebt span:last").removeClass("off");
+        $("#whatHS .slidebt span:first").addClass("off");
+    }
+    if ($(".HSintro li:nth(1)").is(":visible")){
+        $("#whatHS .slidebt span:last").removeClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    if ($(".HSintro li:nth(2)").is(":visible")){
+        $("#whatHS .slidebt span:last").removeClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    if ($(".HSintro li:last").is(":visible")){
+        $("#whatHS .slidebt span:last").addClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    return false;
+  });
+  $("#whatHS .slidebt span:first").click(function() {
+    if (!$(".HSintro li").first().is(":visible")) {
+        $(".HSintro li:visible").hide().prev("li").fadeIn(400);
+    }
+    if ($(".HSintro li:first").is(":visible")){
+      $("#whatHS .slidebt span:last").removeClass("off");
+      $("#whatHS .slidebt span:first").addClass("off");
+    }
+    if ($(".HSintro li:nth(1)").is(":visible")){
+        $("#whatHS .slidebt span:last").removeClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    if ($(".HSintro li:nth(2)").is(":visible")){
+        $("#whatHS .slidebt span:last").removeClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    if ($(".HSintro li:last").is(":visible")){
+        $("#whatHS .slidebt span:last").addClass("off");
+        $("#whatHS .slidebt span:first").removeClass("off");
+    }
+    return false;
+  });
 });
+    
+
+
+
+
+
+
 
 
 
@@ -1179,3 +1233,82 @@ function magicianClick() {
 function showall() {
   $("#god div").show();
 }
+
+
+var video = document.getElementById('video');
+var youtube = document.getElementById('youtube');
+
+function Fullscreen() {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  }
+
+  // if (video.onended) {
+  //   video.exitFullscreen();
+  // }
+}
+
+
+
+video.onended = (event) => {
+  if (document.fullscreenElement) {
+    document.exitFullscreen()
+      // .then(() => console.log("Document Exited from Full screen mode"))
+      // .catch((err) => console.error(err))
+  } 
+  // else {
+  //   document.documentElement.requestFullscreen();
+  // }
+}
+
+// youtube.onended = (event) => {
+//   if (event.data === 0) {
+//     $("#youtube").css('display','none');
+//   }
+//   if (event.data === 2) {
+//     $("#youtube").css('display','none');
+//   }
+//   if (event.data === 5) {
+//     $("#youtube").css('display','none');
+//   }
+// }
+
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('player', {
+    videoId : 'm6kPKwfuzPI',
+    playerVars: { 'autoplay': 1, 'controls': 1, 'rel' : 0},
+    events : {
+      'onReady' : onPlayerReady,
+      'onStateChange' : onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == 0) {
+    $("body #player").css('display','none');
+  }
+  // if (event.data == YT.PlayerState.PLAYING && !done) {
+  //   setTimeout(stopVideo, 6000);
+  //   done = true;
+  // }
+}
+// // function stopVideo() {
+// //   player.stopVideo();
+// }
+
+
+
