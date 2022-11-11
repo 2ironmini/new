@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <span id="closeyt"></span>
+    <div id="player">
+    </div>
     <div id="loading" style="display: none;"><span class="material-symbols-outlined"> sync </span>데이터를 불러오고 있습니다 :)</div>
     <div id="eachcard" style="display: none;">
         <div class="eachbox">
@@ -26,14 +29,16 @@
         <nav class="gnb">
             <ul class="navmenu">
                 <li class="m">
-                    <a class="min">게임가이드</a>
+                    <a href="#main" class="min" id="HP">
+                        <div></div>
+                    </a>
                     <ul class="snb">
-                        <li>
+                        <!-- <li>
                             <a href="#gameintroduce">하스스톤이란?</a>
                         </li>
                         <li>
                             <a href="#slide">게임의 진행</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li class="m">
@@ -48,21 +53,21 @@
                         <li><a onclick=showall()>조건별 카드 보기</a></li>
                     </ul>
                 </li>
+                <li class="m">
+                    <a class="min">하스스톤이란?</a>
+                    <ul class="snb">
+                        <li><a href="#whatHS">게임 가이드</a></li>
+                        <li><a href="#slide">게임 배경</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                    <a href="#sec4" class="min"> 새소식</a>
+                    <!-- <ul class="snb">
+                        <li><a href="">업데이트</a></li>
+                        <li><a href="">영상관</a></li>
+                    </ul> -->
+                </li>
                 <!-- <li class="m">
-                    <a href="#" class="min">미구현</a>
-                    <ul class="snb">
-                        <li><a href="#">미구현</a></li>
-                        <li><a href="#">미구현</a></li>
-                    </ul>
-                </li>
-                <li class="m">
-                    <a href="" class="min">미구현</a>
-                    <ul class="snb">
-                        <li><a href="">미구현</a></li>
-                        <li><a href="">미구현</a></li>
-                    </ul>
-                </li>
-                <li class="m">
                     <a href="" class="min">미구현</a>
                     <ul class="snb">
                         <li><a href="#">미구현</a></li>
@@ -75,7 +80,8 @@
         <div class="top">
             <div class="leftmenu">
                 <a href="https://www.blizzard.com/ko-kr/" class="blizzard">
-                    <img src="/project/1x/Blizzard.png" alt="Blizzard 공식 홈페이지">
+                    <div>
+                    </div>
                 </a>
             </div>
             <div class="rightmenu">
@@ -92,117 +98,141 @@
                 </div>
             </div>
         </div>
+        
     </header>
+    <div class="main on" id="main">
+        <div class="maininner">
+            <div class="sang">
+                <iframe src="https://www.youtube.com/embed/t2L2JnePW4E?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="jung"></div>
+            <div class="ha"></div>
+        </div>
+    </div>
     <div class="sec1" id="sec1">
-        <div id="player"></div>
         <div class="gameguide">
             <div class="gameintroduce" id="gameintroduce">
                 <div id="whatHS">
-                    <h1>하스스톤이란?</h1>
                     <ul class="HSintro">
+                        <!-- <li>
+                            <span class="intro one">
+                                <span class="imgbox">
+                                </span>
+                                <span class="textbox">
+                                    <span class="boxintext">
+                                        <em>저의 여관에 오신 것을 환영합니다! 여관의 난롯가는 하스스톤을 플레이하며, 마시고, 이야기하고, 자신들의 영웅담을 늘어놓으며 다음 모험을 준비하는 손님들로 항상 붐비고 있습니다. 저요? 저는 손님들이 마실 음료를 나르고, 필요할 때는 조언도 해주며, 여관에 모든 분들이 소중한 추억을 담아 가실 수 있도록 노력하고 있습니다.                                        여관을 찾는 손님들은 정말 천차만별입니다. 도착하자마자 발 뻗고 앉아서 음료를 마시는 손님도 있지만, 정말 멋지게 등장하는 손님도 있습니다. 어떤 날은 글쎄, 갑자기 차원문이 열리더니 마법사가 나오더라니까요! 운이 좋다면 이들이 어디서 왔는지 차원문 가운데에 살짝 비치는 모습을 보실 수도 있습니다. 이런 등장은 서먹서먹한 분위기를 없애기는 최고죠. 다들 그 얘기만 하니까요! 저는 항상 마법사들에게 “내가 술을 한 잔 소환해 주지!” 하고 말하지만, 이들은 자기 음료를 직접 가지고 다니는 것 같더군요.</em>
+                                            <br><b>메모: 저희 여관은 외부 음식물 반입이 금지되어 있습니다!</b>
+                                            <br><em>여관 주인, 하스 스톤브류의 일지에서 인용.</em>
+                                    </span>
+                                    <br>하스스톤은 블리자드 엔터테인먼트가 워크래프트 시리즈를 기반으로 2014년도에 출시한 수집용 카드 게임입니다. 여기서 '하스스톤'은 월드 오브 워크래프트의 기본 아이템인 '귀환석'을 뜻하는데, 이 귀환석을 사용하면 시공간의 제약없이 자신이 지정한 여관으로 돌아갈 수 있으며, 이 여관이 하스스톤의 배경 장소입니다.
+                                </span>
+                            </span>
+                        </li> -->
                         <li>
-                            <video controls  id="video" onclick=Fullscreen()>
-                                <source src="https://assets.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt5f2da92f3229e1dd/5f198eb94afc510797a4f325/homepage_header_video.mp4" type="video/mp4">
-                            </video>
+                            <span class="intro two">
+                                <span class="imgbox">
+                                    <iframe src="https://www.youtube.com/embed/pNOzOtLu2Ac?start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture control;" allowfullscreen></iframe>
+                                </span>
+                                <span class="textbox">
+                                </span>
+                            </span>
                         </li>
                         <li>
-                            
+                            <div class="slide" id="slide">
+                                <ul class="control">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class="right">
+                                    <li>
+                                        <ul class="guide">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>    
+                                        <ul class="textguide">
+                                            <li>
+                                                <div>
+                                                    <h2>손</h2>
+                                                    <p>매 턴 내 덱에서 카드를 한 장 뽑아서 내 손에 추가합니다. 테두리가 초록색인 카드는 해당 턴에 낼 수 있는 카드입니다.<br>테두리가 노란색인 카드는 해당 카드의 특정 조건을 만족했다는 뜻으로, 카드를 손에서 낼 때 명확하게 구별할 수 있습니다. 손에는 카드를 최대 10장까지 들 수 있습니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>영웅</h2>
+                                                    <p>해당 게임에서 내가 플레이하는 영웅입니다. 영웅의 왼쪽하단에는 직접 공격할 때 주는 피해가 나타나며 오른쪽 하단에는 생명력이 표시됩니다. 생명력이 0으로 떨어지면 패배합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>영웅 능력</h2>
+                                                    <p>영웅 능력이란 각 직업이 가지는 고유한 능력으로, 매 턴 1회 사용할 수 있습니다. 카드의 효과로 재사용이 가능하며 영웅능력을 강화하는 카드 또한 존재합니다. 강력한 영웅능력으로 적을 제압해보세요!</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>무기</h2>
+                                                    <p>이곳에 무기를 장착합니다. 왼쪽 하단에 있는 숫자는 무기의 공격력을 나타내며 오른쪽 하단에 있는 숫자는 무기의 내구도를 의미합니다. 내구도는 무기를 사용하여 직접 공격하거나 무기의 조건을 만족하면 1만큼 감소하는데 내구도가 0이되면 무기가 파괴되어 사라집니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>마나 수정</h2>
+                                                    <p>왼쪽에 있는 숫자는 현재 내 영웅이 사용할 수 있는 마나수정의 숫자이고 오른쪽에 있는 숫자가 내 영웅의 최대 마나수정 갯수입니다. 내 턴이 시작되면 사용했던 마나를 모두 회복하고, 추가로 새로운 마나 수정을 하나 얻습니다. 마나 수정은 최대 10개까지 보유할 수 있지만 카드의 효과로 증가할 수도 있습니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>덱</h2>
+                                                    <p>덱은 총 30장의 카드로 구성됩니다. 카드의 효과로 40장까지 증가시킬 수 있습니다만 그만큼 원하는 카드를 드로우할 가능성이 줄어든다는 사실을 잊지마세요! 내 덱이 모두 없어질 때까지 내 턴에 한장씩 카드를 드로우하며, 내 덱에 카드가 없을 경우에는 드로우대신 탈진데미지를 입습니다. 탈진데미지는 1부터 시작하여 탈진데미지를 입을 때 마다 1씩 증가합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <h2>하수인</h2>
+                                                    <p>중앙에 선을그어 위쪽에 있는 하수인은 상대방의 하수인이고 아래쪽에 있는 하수인이 나의 하수인입니다. 하수인은 전장에 최대 7마리까지 존재할 수 있으며 하수인으로 상대방의 영웅이나 하수인을 공격할 수 있습니다. 공격가능 여부는 하수인의 테두리가 초록색으로 표시되므로 쉽게 확인 할 수 있습니다. 보통 하수인이 공격하는데 한 턴이 소요되지만 특정 효과를 가진 하수인은 즉시 공격할 수 있습니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                <h2>게임 기록</h2>
+                                                    <p>이곳에서는 해당 게임에서 최근에 일어난 모든 경과를 알 수 있습니다. 내가 최근에 어떤 효과를 사용했는지, 상대방이 어떤 효과를 사용했는지가 궁금하다면 해당 구역에 마우스를 올려놓아 보세요!</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                <h2>턴 종료</h2>
+                                                    <p>해야할 플레이를 모두 해놓고 이 버튼을 누르지 않는다면 도화선에 불이 붙게 됩니다. 상대방의 인내심에 말이죠! 영웅이 되어 전투에 임하는 하스스톤 유저 여러분께, 언제나 신사적인 게임을 부탁드립니다!</p>
+                                                </div>
+                                            </li>
+                                        </ul>    
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
+                        <!-- <li>
+                        </li> -->
                     </ul>
                     <div class="slidebt">
-                        <span class="material-symbols-outlined">arrow_back_ios</span>
+                        <span class="material-symbols-outlined off" >arrow_back_ios</span>
                         <span class="material-symbols-outlined">arrow_forward_ios</span>
                     </div>
                 </div>
             </div>
-            <div class="slide" id="slide">
-                <ul class="control">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="right">
-                    <li>
-                        <ul class="guide">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>    
-                        <ul class="textguide">
-                            <li>
-                                <div>
-                                    <h2>손</h2>
-                                    <p>매 턴 내 덱에서 카드를 한 장 뽑아서 내 손에 추가합니다. 테두리가 초록색인 카드는 해당 턴에 낼 수 있는 카드입니다.<br>테두리가 노란색인 카드는 해당 카드의 특정 조건을 만족했다는 뜻으로, 카드를 손에서 낼 때 명확하게 구별할 수 있습니다. 손에는 카드를 최대 10장까지 들 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>영웅</h2>
-                                    <p>해당 게임에서 내가 플레이하는 영웅입니다. 영웅의 왼쪽하단에는 직접 공격할 때 주는 피해가 나타나며 오른쪽 하단에는 생명력이 표시됩니다. 생명력이 0으로 떨어지면 패배합니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>영웅 능력</h2>
-                                    <p>영웅 능력이란 각 직업이 가지는 고유한 능력으로, 매 턴 1회 사용할 수 있습니다. 카드의 효과로 재사용이 가능하며 영웅능력을 강화하는 카드 또한 존재합니다. 강력한 영웅능력으로 적을 제압해보세요!</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>무기</h2>
-                                    <p>이곳에 무기를 장착합니다. 왼쪽 하단에 있는 숫자는 무기의 공격력을 나타내며 오른쪽 하단에 있는 숫자는 무기의 내구도를 의미합니다. 내구도는 무기를 사용하여 직접 공격하거나 무기의 조건을 만족하면 1만큼 감소하는데 내구도가 0이되면 무기가 파괴되어 사라집니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>마나 수정</h2>
-                                    <p>왼쪽에 있는 숫자는 현재 내 영웅이 사용할 수 있는 마나수정의 숫자이고 오른쪽에 있는 숫자가 내 영웅의 최대 마나수정 갯수입니다. 내 턴이 시작되면 사용했던 마나를 모두 회복하고, 추가로 새로운 마나 수정을 하나 얻습니다. 마나 수정은 최대 10개까지 보유할 수 있지만 카드의 효과로 증가할 수도 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>덱</h2>
-                                    <p>덱은 총 30장의 카드로 구성됩니다. 카드의 효과로 40장까지 증가시킬 수 있습니다만 그만큼 원하는 카드를 드로우할 가능성이 줄어든다는 사실을 잊지마세요! 내 덱이 모두 없어질 때까지 내 턴에 한장씩 카드를 드로우하며, 내 덱에 카드가 없을 경우에는 드로우대신 탈진데미지를 입습니다. 탈진데미지는 1부터 시작하여 탈진데미지를 입을 때 마다 1씩 증가합니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h2>하수인</h2>
-                                    <p>중앙에 선을그어 위쪽에 있는 하수인은 상대방의 하수인이고 아래쪽에 있는 하수인이 나의 하수인입니다. 하수인은 전장에 최대 7마리까지 존재할 수 있으며 하수인으로 상대방의 영웅이나 하수인을 공격할 수 있습니다. 공격가능 여부는 하수인의 테두리가 초록색으로 표시되므로 쉽게 확인 할 수 있습니다. 보통 하수인이 공격하는데 한 턴이 소요되지만 특정 효과를 가진 하수인은 즉시 공격할 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                <h2>게임 기록</h2>
-                                    <p>이곳에서는 해당 게임에서 최근에 일어난 모든 경과를 알 수 있습니다. 내가 최근에 어떤 효과를 사용했는지, 상대방이 어떤 효과를 사용했는지가 궁금하다면 해당 구역에 마우스를 올려놓아 보세요!</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                <h2>턴 종료</h2>
-                                    <p>해야할 플레이를 모두 해놓고 이 버튼을 누르지 않는다면 도화선에 불이 붙게 됩니다. 상대방의 인내심에 말이죠! 영웅이 되어 전투에 임하는 하스스톤 유저 여러분께, 언제나 신사적인 게임을 부탁드립니다!</p>
-                                </div>
-                            </li>
-                        </ul>    
-                    </li>
-                </ul>
-            </div>
+            <div class="gamebg"></div>
         </div>
     </div>
     <div class="sec2" id="sec2">
@@ -945,6 +975,67 @@
             <span class="close pagingtop">
                 <a href="#sec3"></a>
             </span>
+        </div>
+    </div>
+    <div class="sec4" id="sec4">
+        <div class="maininner">
+            <div class="up">
+                <div class="patch">
+                    <div class="patchimg"></div>
+                    <div class="patchtext">
+                        <h4>24.6.2 패치노트</h4>
+                        <p>24.6.2패치는 앱 스토어 업데이트가 필요 없는 데이터 패치로, 아래와 같은 사항이 적용됩니다.</p>
+                        <br><h5>전장 업데이트</h5>
+                        <ul>
+                            <li class="lv1"><b>퀘스트 및 보상 업데이트</b>
+                                <ul class="txtindent">
+                                    <li class="lv2">황금 망치와 납치용 자루가 퀘스트 보상 목록에 다시 추가되었습니다.</li>
+                                    <li class="lv2">수사관 고용(퀘스트)
+                                        <ul class="txtindent">
+                                            <li class="lv3">기본수치 변경 전 : 골드가 남아 있는 상태에서 턴을 3회 종료해야 합니다.</li>
+                                            <li class="lv3"><b>기본수치 변경 후 : 골드가 남아 있는 상태에서 턴을 2회 종료해야 합니다.</b></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lv2">불안정한 독(퀘스트 보상)
+                                        <ul class="txtindent">
+                                            <li class="lv3">변경 전 : 내 하수인들이 +8/+8을 얻고, 공격한 후에, 죽습니다. 끔찍하게.</li>
+                                            <li class="lv3"><b>변경 후 : 내 하수인들이 +7/+7을 얻고, 공격한 후에, 죽습니다. 끔찍하게.</b></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lv2">꼬마 부하 일당, 황금 망치, 불안정한 독의 획득 난이도가 하향 조정되었습니다.</li>
+                                    <li class="lv2">훔친 황금의 획득 난이도가 상향 조정되었습니다.</li>
+                                    <li class="lv2">취조관 화이트메인과 경게하는 돌숨결이 신비로운 지혜의 공 행운 뽑기로 얻을 수 있는 중립 하수인 목록에 추가되었습니다.</li>
+                                </ul>
+                            </li>
+                            <li class="lv1"><b>방어도 단계 업데이트</b>
+                                <ul>
+                                    <li class="lv2">크툰의 방어도가 감소하였습니다.(방어도 4단계로 이전)</li>
+                                    <li class="lv2">간수의 방어도가 감소하였습니다.(방어도 4단계로 이전)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><h5>투기장 업데이트</h5>
+                        <ul>
+                            <li>뽑기 목록에서 기본 세트가 사라지던 오류를 수정하였습니다.
+                            <li>전 직업 카드의 출현율이 증가했습니다.
+                                <ul>
+                                    <li><em>개발자 의견 : 투기장에서 직업카드가 승패를 결정짓는 카드로 자리매김하고 있는 만큼, 직업 밸런스를 집중적으로 살펴볼 것입니다, 필요에 따라 추가적인 조정 사항을 적용할 수도 있습니다.</em></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5>오류 수정 및 게임 개선 사항</h5>
+                        <ul>
+                            <li>[하스스톤] 덱 코드 문제와 덱이 정상적으로 저장되지 않던 오류를 수정하였습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="down">
+                <div class="watch">
+                    <div class="watchimg"></div>
+                    <div class="watchtext"></div>
+                </div>
+            </div>
         </div>
     </div>
     
