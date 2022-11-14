@@ -741,10 +741,6 @@ $(".gnb .navmenu .m:nth(3) a").click(function(){
 $(".gnb .navmenu .m:last a").click(function(){
     $("#sec4").addClass("on").siblings().removeClass("on");
 });    
-// $(".gnb .navmenu .m:nth(5) a").click(function(){
-//     $("#gameintroduce").addClass("on").siblings().removeClass("on");
-// });    
-
 
 $(".gnb .navmenu .m ul").hide();  
     $(".gnb .navmenu .m ul li").hover(function(){
@@ -755,16 +751,21 @@ $(".gnb .navmenu .m ul").hide();
 
 // -----------------------------------------------------
 
-// -----------------------------------------------------nav1 depth
+// -----------------------------------------------------nav3 depth
 
 
 
 
 $(".gnb .navmenu .m:nth(3) .snb li:first a").click(function(){
-    $("#gameintroduce").addClass("on").siblings().removeClass("on");
+    $("#gamebg").addClass("on").siblings().removeClass("on");
 });    
 $(".gnb .navmenu .m:nth(3) .snb li:last a").click(function(){
-    $("#slide").addClass("on").siblings().removeClass("on");
+  // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ첫번째 li에 포커스
+    $("#gameintroduce").addClass("on").siblings().removeClass("on");
+    $("#slide ul.control li:first").addClass("on").siblings().removeClass("on");
+    $("#slide ul.right li .guide.on li:first").addClass("on").siblings().removeClass("on");
+    $("#slide ul.right li .textguide.on li:first").addClass("on").siblings().removeClass("on");
+    // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 });    
 
 
@@ -823,7 +824,7 @@ $(function() {
     
 // -----------------------------------------------------
 
-// -----------------------------------------------------nav3 depth
+// -----------------------------------------------------nav2 depth
 
 $(".gnb .navmenu .m:nth(2) .snb li:first a").click(function(){
     $("#sec3 .searchmenu .job").addClass("on").siblings().removeClass("on");
@@ -839,8 +840,7 @@ $(".gnb .navmenu .m:nth(2) .snb li:nth(1) a").click(function(){
 
 $(".sec2 .herose .Hr:first a").click(function(){
     $("#magician").addClass("on").siblings().removeClass("on");
-});    
-
+  });
 $(".sec2 .herose .Hr:nth(1) a").click(function(){
     $("#paladin").addClass("on").siblings().stop().removeClass("on");
 });    
@@ -939,27 +939,13 @@ $("ul.guide li:first").show();
 
 // ----------------------------------------------------- introduce
 
-$("#gameintroduce .basic a").click(function() { 
-    $("#whatHS").addClass("on").siblings().removeClass("on");
-});
+
 
 // -----------------------------------------------------
 
 $(document).ready(function(index, li){
     $(".slide > .control > li").addClass(function(index){
         return `mana${index+1}`;
-    });
-});
-
-$(document).ready(function(index, a){
-    $(".cardlist > div > a > img").addClass(function(index){
-        return `box${index+1}`;
-    });
-});
-
-$(document).ready(function(index, a){
-    $(".manacost > a > img").addClass(function(index){
-        return `mana${index+0}`;
     });
 });
     
@@ -1177,6 +1163,7 @@ var player;
   });
 }
 
+
 function onPlayerReady(event) {
   event.target.playVideo();
 }
@@ -1189,25 +1176,38 @@ function onPlayerStateChange(event) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(closeyt).click(function(){
   $("body #player").fadeOut(3000);
   $(this).hide();
 })
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	gallerySliderSwiper();
+});
+
+function gallerySliderSwiper() {
+	var gallerySliderSwiper = new Swiper('.swiper-container', {
+		navigation: {
+			nextEl: '.swiperbt.next',
+			prevEl: '.swiperbt.prev',
+		},
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+    loop: true
+	})
+}
+
+function gamebggo() {
+  $(click(".gnb .navmenu .m:nth(3) .snb li:first a"));
+}
+
+
+$("#sec2 #heropage div.bg .inner .close").click(function(){
+  $("#sec2 #heropage div.bg").removeClass("on");
+})

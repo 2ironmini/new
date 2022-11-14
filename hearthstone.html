@@ -6,9 +6,10 @@
     <title>블리자드_하스스톤</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="/project/hearthstone.css">
-    <link rel="stylesheet" media="(min-width:320px) and (max-width: 800px)" href="/project/hearthstonem.css">
-    <link rel="stylesheet" media="(min-width:801px) and (max-width: 1199px)" href="/project/hearthstonet.css">
+    <link rel="stylesheet" media="(min-width:320px) and (max-width: 767px)" href="/project/hearthstonem.css">
+    <link rel="stylesheet" media="(min-width:768px) and (max-width: 1199px)" href="/project/hearthstonet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.21.0/video-js.min.css">
 </head>
 
@@ -54,10 +55,10 @@
                     </ul>
                 </li>
                 <li class="m">
-                    <a class="min">하스스톤이란?</a>
+                    <a class="min" onclick=gamebggo()>하스스톤이란?</a>
                     <ul class="snb">
-                        <li><a href="#whatHS">게임 가이드</a></li>
-                        <li><a href="#slide">게임 배경</a></li>
+                        <li><a href="#gamebg">게임 배경</a></li>
+                        <li><a href="#gameintroduce">게임 가이드</a></li>
                     </ul>
                 </li>
                 <li class="m">
@@ -111,23 +112,21 @@
     </div>
     <div class="sec1" id="sec1">
         <div class="gameguide">
+            <div class="gamebg" id="gamebg">
+                <div class="intro">
+                    <div class="textbox">
+                        <div>
+                        <p><em>저의 여관에 오신 것을 환영합니다! 여관의 난롯가는 하스스톤을 플레이하며, 마시고, 이야기하고, 자신들의 영웅담을 늘어놓으며 다음 모험을 준비하는 손님들로 항상 붐비고 있습니다. 저요? 저는 손님들이 마실 음료를 나르고, 필요할 때는 조언도 해주며, 여관에 모든 분들이 소중한 추억을 담아 가실 수 있도록 노력하고 있습니다.                                        여관을 찾는 손님들은 정말 천차만별입니다. 도착하자마자 발 뻗고 앉아서 음료를 마시는 손님도 있지만, 정말 멋지게 등장하는 손님도 있습니다. 어떤 날은 글쎄, 갑자기 차원문이 열리더니 마법사가 나오더라니까요! 운이 좋다면 이들이 어디서 왔는지 차원문 가운데에 살짝 비치는 모습을 보실 수도 있습니다. 이런 등장은 서먹서먹한 분위기를 없애기는 최고죠. 다들 그 얘기만 하니까요! 저는 항상 마법사들에게 “내가 술을 한 잔 소환해 주지!” 하고 말하지만, 이들은 자기 음료를 직접 가지고 다니는 것 같더군요.</em></p>
+                        <br><b>메모: 저희 여관은 외부 음식물 반입이 금지되어 있습니다!</b>
+                        <br><em>여관 주인, 하스 스톤브류의 일지에서 인용.</em>
+                        <p><br>하스스톤은 블리자드 엔터테인먼트가 워크래프트 시리즈를 기반으로 2014년도에 출시한 수집용 카드 게임입니다. 여기서 '하스스톤'은 월드 오브 워크래프트의 기본 아이템인 '귀환석'을 뜻하는데, 이 귀환석을 사용하면 시공간의 제약없이 자신이 지정한 여관으로 돌아갈 수 있으며, 이 여관이 하스스톤의 배경 장소입니다.</p>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
             <div class="gameintroduce" id="gameintroduce">
                 <div id="whatHS">
                     <ul class="HSintro">
-                        <!-- <li>
-                            <span class="intro one">
-                                <span class="imgbox">
-                                </span>
-                                <span class="textbox">
-                                    <span class="boxintext">
-                                        <em>저의 여관에 오신 것을 환영합니다! 여관의 난롯가는 하스스톤을 플레이하며, 마시고, 이야기하고, 자신들의 영웅담을 늘어놓으며 다음 모험을 준비하는 손님들로 항상 붐비고 있습니다. 저요? 저는 손님들이 마실 음료를 나르고, 필요할 때는 조언도 해주며, 여관에 모든 분들이 소중한 추억을 담아 가실 수 있도록 노력하고 있습니다.                                        여관을 찾는 손님들은 정말 천차만별입니다. 도착하자마자 발 뻗고 앉아서 음료를 마시는 손님도 있지만, 정말 멋지게 등장하는 손님도 있습니다. 어떤 날은 글쎄, 갑자기 차원문이 열리더니 마법사가 나오더라니까요! 운이 좋다면 이들이 어디서 왔는지 차원문 가운데에 살짝 비치는 모습을 보실 수도 있습니다. 이런 등장은 서먹서먹한 분위기를 없애기는 최고죠. 다들 그 얘기만 하니까요! 저는 항상 마법사들에게 “내가 술을 한 잔 소환해 주지!” 하고 말하지만, 이들은 자기 음료를 직접 가지고 다니는 것 같더군요.</em>
-                                            <br><b>메모: 저희 여관은 외부 음식물 반입이 금지되어 있습니다!</b>
-                                            <br><em>여관 주인, 하스 스톤브류의 일지에서 인용.</em>
-                                    </span>
-                                    <br>하스스톤은 블리자드 엔터테인먼트가 워크래프트 시리즈를 기반으로 2014년도에 출시한 수집용 카드 게임입니다. 여기서 '하스스톤'은 월드 오브 워크래프트의 기본 아이템인 '귀환석'을 뜻하는데, 이 귀환석을 사용하면 시공간의 제약없이 자신이 지정한 여관으로 돌아갈 수 있으며, 이 여관이 하스스톤의 배경 장소입니다.
-                                </span>
-                            </span>
-                        </li> -->
                         <li>
                             <span class="intro two">
                                 <span class="imgbox">
@@ -232,7 +231,6 @@
                     </div>
                 </div>
             </div>
-            <div class="gamebg"></div>
         </div>
     </div>
     <div class="sec2" id="sec2">
@@ -360,7 +358,6 @@
                         <h2>주문 생성 및 발견</h2><p>마법사는 다양한 방법으로 주문을 생성해내거나 발견하여 상대방이 예측하지 못한 변수를 만들어냅니다.</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -409,7 +406,6 @@
                         <h2>필드/손패 하수인강화</h2><p>우서는 필드나 손에있는 하수인들을 강화하여 강력한 하수인으로 적을 압도할 수 있습니다.</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -454,7 +450,6 @@
                         <h2>유물 시너지</h2><p>악마사냥꾼은 지옥에서 유물을 찾아냈습니다. 유물은 처음에는 약하지만 사용할수록 점점 효과가 강해집니다. 만년동안 응어리진 분노를 조심하세요!</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -503,7 +498,6 @@
                         <h2>자연 주문 시너지</h2><p>자연을 사랑하고 친애하는 드루이드는 자연 주문을 숨쉬듯 사용하여 여러 상황을 헤쳐나갑니다.</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -549,7 +543,6 @@
                         <!-- <h2>비밀 시너지</h2><p>그렇다고 사냥꾼이 무식한 것은 아닙니다. 그들은 적을 효과적으로 사냥하기위해 여러 <em>비밀</em>로 적의 움직임을 제한하고, 침착하게 숨통을 조여갑니다.</p> -->
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -596,7 +589,6 @@
                         <h2>암흑 주문 시너지</h2><p>흑마법사는 암흑 주문으로 상대방에게 끔찍한 악몽을 선사합니다. 상대방의 고통은 흑마법사에게 있어 삶의 낙이랄까요?</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -642,7 +634,6 @@
                         <h2>하수인 피해, 광폭 시너지</h2><p>용맹한 전사의 하수인들은 상처입는 것을 두려워하지 않습니다! 오히려 상처를 입을수록 강해진다고 하네요? 그들의 분노를 조심하는것이 좋을겁니다!</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -688,7 +679,6 @@
                         <h2>죽음의 메아리 시너지</h2><p>죽은자의 영혼 또한 어루만져주는 사제는 그들의 메아리를 잊지 않습니다. <em>죽음의 메아리</em> 하수인을 부활시키거나 그 효과들을 다시 사용하여 한 순간에 강력한 효과를 발동할 수 있습니다.</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -731,7 +721,6 @@
                         <h2>다른 직업 카드 생성</h2><p>뒷골목에서 실력을 갈고닦은 도적에겐 타 직업의 카드 또한 자신의 것이나 다름없습니다. 타직업의 카드를 발견 및 생성하여 스타일리쉬한 플레이가 가능합니다. 상대방이 예측할 수 없는 카드로 전장의 판도를 뒤집으세요!</p>
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -783,7 +772,6 @@
                         <!-- <h2>토템 시너지</h2><p>토템은 주술사의 파트너로 언제나 어디서나 주술사와 함께하는 친구입니다. 토템과 관련된 여러장의 카드로 덱을 구성하여 토템시너지를 극대화 할 수 있습니다.</p> -->
                     </div>
                     <span class="close pagingtop">
-                        <a href="#herose"></a>
                     </span>
                 </div>
             </div>
@@ -972,9 +960,9 @@
         <div class="cardlist">
             <div class="wrap" id="god">
             </div>
-            <span class="close pagingtop">
+            <div class="gotop">
                 <a href="#sec3"></a>
-            </span>
+            </div>
         </div>
     </div>
     <div class="sec4" id="sec4">
@@ -984,8 +972,7 @@
                     <div class="patchimg"></div>
                     <div class="patchtext">
                         <h4>24.6.2 패치노트</h4>
-                        <p>24.6.2패치는 앱 스토어 업데이트가 필요 없는 데이터 패치로, 아래와 같은 사항이 적용됩니다.</p>
-                        <br><h5>전장 업데이트</h5>
+                        <h5>전장 업데이트</h5>
                         <ul>
                             <li class="lv1"><b>퀘스트 및 보상 업데이트</b>
                                 <ul class="txtindent">
@@ -1016,24 +1003,40 @@
                         </ul>
                         <br><h5>투기장 업데이트</h5>
                         <ul>
-                            <li>뽑기 목록에서 기본 세트가 사라지던 오류를 수정하였습니다.
-                            <li>전 직업 카드의 출현율이 증가했습니다.
+                            <li class="lv1"><b>뽑기 목록에서 기본 세트가 사라지던 오류를 수정하였습니다.</b>
+                            <li class="lv1"><b>전 직업 카드의 출현율이 증가했습니다.</b>
                                 <ul>
                                     <li><em>개발자 의견 : 투기장에서 직업카드가 승패를 결정짓는 카드로 자리매김하고 있는 만큼, 직업 밸런스를 집중적으로 살펴볼 것입니다, 필요에 따라 추가적인 조정 사항을 적용할 수도 있습니다.</em></li>
                                 </ul>
                             </li>
                         </ul>
-                        <h5>오류 수정 및 게임 개선 사항</h5>
+                        <br><h5>오류 수정 및 게임 개선 사항</h5>
                         <ul>
-                            <li>[하스스톤] 덱 코드 문제와 덱이 정상적으로 저장되지 않던 오류를 수정하였습니다.</li>
+                            <li class="lv1"><b>[하스스톤] 덱 코드 문제와 덱이 정상적으로 저장되지 않던 오류를 수정하였습니다.</b></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="down">
                 <div class="watch">
-                    <div class="watchimg"></div>
-                    <div class="watchtext"></div>
+                    <div class="mediaroom swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <iframe id="player0" src="https://www.youtube.com/embed/t2L2JnePW4E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe id="player1" src="https://www.youtube.com/embed/cquVKLMYAFo?start=93" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe id="player2" src="https://www.youtube.com/embed/dnTiorvMI2E" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe id="player3" src="https://www.youtube.com/embed/8PHRYjy6TME" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperbt next"></div>
+                    <div class="swiperbt prev"></div>
                 </div>
             </div>
         </div>
@@ -1041,6 +1044,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.21.0/video.min.js"></script>
     <script src="/project/hearthstone.js"></script>
 </body>

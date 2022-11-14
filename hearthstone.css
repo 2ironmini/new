@@ -63,18 +63,20 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 .sec1{width: 100vw; height: 100%; padding-top: 60px;}
 .sec1 .gameguide{display: none;}
+.sec1 .gameguide .gamebg{display: none;}
+.sec1.on .gameguide .gamebg.on{display: block; width: 100%; height: 100%;}
+.sec1.on .gameguide .gamebg.on .intro{background: url(/project/1x/juin.jpg) no-repeat center / cover; max-width: 1200px; margin: 0 auto; height: 50%; position: relative;}
+.sec1.on .gameguide .gamebg.on .intro .textbox{position: absolute; width: 100%; height: 100%; top: 90%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg);}
+.sec1.on .gameguide .gamebg.on .intro .textbox div{background: url(/project/1x/logo.png) no-repeat center / cover; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; line-height: 1.5rem;}
+
 
 .sec1.on .gameguide{width: 100vw; height: 100vh; position: relative; overflow: hidden; display: block;}
-
-
-
-/* .sec1.on #slide{width: 100vw; height: 100vh; display: flex; flex-direction: row;} */
 
 .sec1.on #slide .control{width: 15%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; flex: 1 1 80px; z-index: 2; top: -50px;}
 
 
-/* .sec1 #slide .right{display: none;} */
-.sec1.on #slide .right{width: 100vw; height: 100vh; position: absolute; top: 0;}
+.sec1 #slide .right{display: none;}
+.sec1.on #slide .right{width: 100vw; height: 100vh; position: absolute; top: 0; display: block;}
 .sec1.on #slide .right li{width: 100vw; height: 100vh;}
 .sec1.on #slide .right li .guide{width: 100vw; height: 60vh; display: none;}
 .sec1.on #slide .right li .guide.on {transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center;}
@@ -83,15 +85,15 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 .sec1 #slide .right li .textguide{width: 100vw; height: 40vh; transform:  scaleX(0); display: flex; }
 .sec1.on #slide .right li .textguide.on{transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center; transform: scale(1); transition: all ease-in-out 1s;}
 .sec1.on #slide .right li .textguide.on li{display: none; width: 70%; color: #ffffff;}
-.sec1.on #slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_heroactive.png) no-repeat center 95% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(4).on{background: url(/project/1x/intro_weapon.png) no-repeat 30% bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(5).on{background: url(/project/1x/intro_mana.png) no-repeat right bottom / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(6).on{background: url(/project/1x/intro_deck.png) no-repeat right 70% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; display: block; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_heroactive.png) no-repeat center 95% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(4).on{background: url(/project/1x/intro_weapon.png) no-repeat 30% bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(5).on{background: url(/project/1x/intro_mana.png) no-repeat right bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(6).on{background: url(/project/1x/intro_deck.png) no-repeat right 70% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
 .sec1.on #slide .right li .textguide.on li.on{display:flex; align-items: flex-start; justify-content: center;align-items: center; justify-content: center; padding-bottom: 100px;}
 
 
@@ -187,6 +189,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 .sec2 .heropage .bg{flex: 1 1 0; height: 100vh; display: none; position: relative;}
 .sec2 .heropage .bg.on{height:100vh; display: block;}
+#sec2 #heropage div.bg .inner .close{cursor: pointer;}
 
 .sec2 .heropage .inner{max-width: 1200px; height: 100vh; margin: 0 auto; display: flex; align-items: center; flex-direction: column; gap: 10px; background: url(/project/1x/라이브러리배경화면50.png) repeat-y 50% / cover;}
 .sec2 .heropage .inner h1{padding-top: 50px; font-size: 2rem; color: #000;}
@@ -203,11 +206,11 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 
 .sec2 .heropage .inner .text{width: 90%; height: 40%; align-items: center; justify-content: center; color: #000;}
-.close.pagingtop{position: absolute; top: 90%; right: 30px; z-index: 100; width: 30px; height: 30px; display: flex;}
-#sec3 .close.pagingtop{position: fixed; right: 10px; top: 50%;}
-.pagingtop a{width: 30px; height: 30px; background: url(/project/ui/SVG/Asset\ 1.svg) no-repeat 50%;}
+.close.pagingtop{position: absolute; top: 95%; right: 20%; z-index: 100; width: 30px; height: 30px; display: flex; cursor: pointer; background: url(/project/ui/arrow-up-solid.svg) no-repeat 50%;}
 
 
+#sec3 .cardlist .gotop{position: fixed; right: 10px; top: 50%; width: 30px; height: 30px;}
+#sec3 .cardlist .gotop a{background: url(/project/ui/arrow-up-solid.svg) no-repeat 50%; width: 30px; height: 30px; position: fixed; z-index: 1;}
 
 
 
@@ -248,7 +251,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 #sec3 .searchmenu .job.on{background: url(/project/1x/navbg.png) no-repeat 50% / cover; display: flex;}
 #sec3 .searchmenu .job.on div{display: flex; justify-content: center;}
 
-#sec3 .searchmenu .job div{background: url(/project/1x/filterRT.png) no-repeat right top / contain;}
+/* #sec3 .searchmenu .job div{background: url(/project/1x/filterRT.png) no-repeat right top / contain;} */
 #sec3 .searchmenu .subform{width: 90%; height: 100%; display: none;}
 #sec3 .searchmenu .subform.on{width: 100%; height: 100%; display: flex; flex-direction: row; background: url(https://d2q63o9r0h0ohi.cloudfront.net/_next/static/media/wood_middle_repeat.b4458ce9f1d0c41bb51b9b8385c0943f.png) repeat 50% / cover;}
 
@@ -268,7 +271,7 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 
 #sec4.on{width: 100vw; height: 100%; padding-top: 60px;}
 #sec4.on .maininner{height: calc(100vh - 60px); width: 100%;}
-#sec4.on .maininner .up{width: 100%; height: 50%; flex-direction: column; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 27 27 27 / 1 / 0;}
+#sec4.on .maininner .up{width: 100%; height: 70%; flex-direction: column; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 27 27 27 / 1 / 0;}
 #sec4.on .maininner .up .patch{width: 100%; height: 100%;}
 #sec4.on .maininner .up .patch .patchimg{width: 100%; height: 100%; background: url(/project/1x/patchNote.png) no-repeat center / cover; cursor: pointer; transition: all ease-in-out 0.5s;}
 #sec4.on .maininner .up .patch .patchtext{width: 100%; height: 0; transition: all ease-in-out 0.5s; overflow: hidden;}
@@ -277,23 +280,25 @@ header{position: absolute; width: 100vw; z-index: 3; top: 10px;}
 #sec4.on .maininner .up .patch.on .patchimg{height: 0%;}
 #sec4.on .maininner .up .patch.on .patchtext{height: 100%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg); transition: all ease-in-out 0.5s; display: flex; flex-direction: column; align-items: center; gap: 3px; justify-content: center;}
 
-#sec4.on .maininner .up .patch.on .patchtext p{font-size: 1rem;}
 #sec4.on .maininner .up .patch.on .patchtext li{font-size: 0.5rem;}
-#sec4.on .maininner .up .patch.on .patchtext li.lv1{list-style-type: square; font-size: 0.7rem;}
-#sec4.on .maininner .up .patch.on .patchtext li.lv2{list-style-type: circle; list-style-position: inside; font-size: 0.6rem;}
-#sec4.on .maininner .up .patch.on .patchtext li.lv3{text-indent: 15px; font-size: 0.5rem;}
+#sec4.on .maininner .up .patch.on .patchtext ul{width: 90%;}
+#sec4.on .maininner .up .patch.on .patchtext li.lv1{list-style-type: square; font-size: 1rem; line-height: 1.2rem;}
+#sec4.on .maininner .up .patch.on .patchtext li.lv2{list-style-type: circle; list-style-position: inside; font-size: 0.9rem; line-height: 1.1rem;}
+#sec4.on .maininner .up .patch.on .patchtext li.lv3{text-indent: 15px; font-size: 0.8rem; line-height: 1rem;}
+#sec4.on .maininner .up h4{font-size: 1.5rem;}
+#sec4.on .maininner .up h5{font-size: 1.2rem;}
 /* #sec4.on .maininner .up .patch.on .patchtext ul{font-size: 0.6rem;} */
 /* #sec4.on .maininner .up .patch.on .patchtext ul.txtindent{text-indent: 10px;} */
 
-#sec4.on .maininner .down{width: 100%; height: 50%; flex-direction: column; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 27 27 27 / 1 / 0;}
-#sec4.on .maininner .down .watch{width: 100%; height: 100%;}
-#sec4.on .maininner .down .watch .watchimg{width: 100%; height: 100%; background: url(/project/1x/patchNote.png) no-repeat center / cover; cursor: pointer; transition: all ease-in-out 0.5s;}
-#sec4.on .maininner .down .watch .watchtext{width: 100%; height: 0; transition: all ease-in-out 0.5s;}
+#sec4.on .maininner .down{width: 100%; height: 30%; flex-direction: row; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 27 27 27 / 1 / 0;}
+#sec4.on .maininner .down .watch{width: 100%; height: 100%; position: relative; padding: 0 60px; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg); align-items: center; justify-content: center;}
+#sec4.on .maininner .down .watch .mediaroom{width: 100%; height: 100%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg); display: flex; flex-direction: row; overflow: hidden;}
+.swiper-slide{display: flex; justify-content: flex-start; align-items: flex-start; width: 100%;}
+.swiperbt{position: absolute; top: 50%; width: 30px; height: 30px; background-color: #00C853; cursor: pointer;}
+.swiperbt.next{right: 20px; background: url(/project/ui/arrow-right-solid.svg) no-repeat 50% / contain;}
+.swiperbt.prev{left: 20px; background: url(/project/ui/arrow-left-solid.svg) no-repeat 50% / contain;}
 
-#sec4.on .maininner .down .watch.on{width: 100%; height: 100%;}
-#sec4.on .maininner .down .watch.on .watchimg{height: 50%;}
-#sec4.on .maininner .down .watch.on .watchtext{height: 50%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg); transition: all ease-in-out 0.5s;}
-
+#sec4.on .maininner .down .watch .mediaroom iframe{border: 0; width: 100%; height: 100%;}
 
 
 
