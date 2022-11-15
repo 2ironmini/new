@@ -677,35 +677,6 @@ $("#sec3 .searchmenu .job .naturalpage").click(function(){
     $(natural).show().stop();
 });
 
-
-// mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
-
-
-
-
-
-
-
-$(function() {
-    var w = $(".gnb .navmenu .m").width();            
-    $(".gnb").append("<span></span>");
-    
-    $(".gnb .navmenu .m").on("mouseenter focusin", function() {
-        var index = $(this).index();
-        console.log(index);
-        
-        $(this).find(".min").addClass("on");
-        $(this).siblings().find(".min").removeClass("on");
-        $(".gnb span").stop().animate({
-            left: index * w
-        }, "fast", "swing");
-    });
-
-    $(".gnb .navmenu li .min:eq(0)").stop().trigger("mouseenter");     
-});
-
-
 $(function(){
     $(".gnb .navmenu .m").on("mouseenter focusin click", function(){
         $("ul",this).show();
@@ -731,16 +702,23 @@ $(".gnb .navmenu .m:first a").click(function(){
 $(".gnb .navmenu .m:nth(1) a").click(function(){
     $("#sec2").addClass("on").siblings().removeClass("on");
 });    
-$(".gnb .navmenu .m:nth(2) a").click(function(){
-  loadingProcess();
-    $("#sec3").addClass("on").siblings().removeClass("on");    
-});    
-$(".gnb .navmenu .m:nth(3) a").click(function(){
-    $("#sec1").addClass("on").siblings().removeClass("on");
-});    
+$(".main .maininner .ha").click(function(){
+  $("#sec2").addClass("on").siblings().removeClass("on");
+})
+// $(".gnb .navmenu .m:nth(2) a").click(function(){
+//   loadingProcess();
+//     $("#sec3").addClass("on").siblings().removeClass("on");    
+// });    
+// $(".gnb .navmenu .m:nth(3) a").click(function(){
+//     $("#sec1").addClass("on").siblings().removeClass("on");
+// });    
 $(".gnb .navmenu .m:last a").click(function(){
     $("#sec4").addClass("on").siblings().removeClass("on");
 });    
+
+$(".main .maininner .jung .patchimg").click(function(){
+    $("#sec4").addClass("on").siblings().removeClass("on").focus("#sec4");
+})
 
 $(".gnb .navmenu .m ul").hide();  
     $(".gnb .navmenu .m ul li").hover(function(){
@@ -758,6 +736,7 @@ $(".gnb .navmenu .m ul").hide();
 
 $(".gnb .navmenu .m:nth(3) .snb li:first a").click(function(){
     $("#gamebg").addClass("on").siblings().removeClass("on");
+    $("#sec1").addClass("on").siblings().removeClass("on");
 });    
 $(".gnb .navmenu .m:nth(3) .snb li:last a").click(function(){
   // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ첫번째 li에 포커스
@@ -766,6 +745,7 @@ $(".gnb .navmenu .m:nth(3) .snb li:last a").click(function(){
     $("#slide ul.right li .guide.on li:first").addClass("on").siblings().removeClass("on");
     $("#slide ul.right li .textguide.on li:first").addClass("on").siblings().removeClass("on");
     // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    $("#sec1").addClass("on").siblings().removeClass("on");
 });    
 
 
@@ -827,22 +807,25 @@ $(function() {
 // -----------------------------------------------------nav2 depth
 
 $(".gnb .navmenu .m:nth(2) .snb li:first a").click(function(){
+    loadingProcess();
     $("#sec3 .searchmenu .job").addClass("on").siblings().removeClass("on");
-});    
+    $("#sec3").addClass("on").siblings().removeClass("on");    
+    });    
 
 $(".gnb .navmenu .m:nth(2) .snb li:nth(1) a").click(function(){
+    loadingProcess();
     $("#sec3 .searchmenu .subform").addClass("on").siblings().removeClass("on");
-});    
-
+    $("#sec3").addClass("on").siblings().removeClass("on");    
+    });
 // -----------------------------------------------------
 
 // -----------------------------------------------------영웅소개 depth
 
 $(".sec2 .herose .Hr:first a").click(function(){
-    $("#magician").addClass("on").siblings().removeClass("on");
+  $("#magician").addClass("on").siblings().removeClass("on");
   });
 $(".sec2 .herose .Hr:nth(1) a").click(function(){
-    $("#paladin").addClass("on").siblings().stop().removeClass("on");
+  $("#paladin").addClass("on").siblings().stop().removeClass("on");
 });    
 
 $(".sec2 .herose .Hr:nth(2) a").click(function(){
@@ -1131,7 +1114,7 @@ function showall() {
 //   //   document.documentElement.requestFullscreen();
 //   // }
 // }
-
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡ유튜브 영상 컨트롤 
 var tag = document.createElement('script');
 var closeyt = document.getElementById('closeyt');
 
@@ -1177,14 +1160,14 @@ function onPlayerStateChange(event) {
 }
 
 $(closeyt).click(function(){
-  $("body #player").fadeOut(3000);
+  $("body #player").fadeOut(2000);
   $(this).hide();
 })
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 
 
-
-
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡswiper 컨트롤
 document.addEventListener("DOMContentLoaded", function () {
 	gallerySliderSwiper();
 });
@@ -1203,11 +1186,15 @@ function gallerySliderSwiper() {
 	})
 }
 
-function gamebggo() {
-  $(click(".gnb .navmenu .m:nth(3) .snb li:first a"));
-}
+
 
 
 $("#sec2 #heropage div.bg .inner .close").click(function(){
   $("#sec2 #heropage div.bg").removeClass("on");
 })
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+// $(".main .maininner .ha").on('hover focusin',function(){
+//   $(".main .maininner .ha div").addClass("on");
+// })

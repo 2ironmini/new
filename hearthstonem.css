@@ -5,6 +5,21 @@
 h1{padding: 10px; font-size: 1.5rem; line-height: 1.5rem; color: #ffffff;}
 h2{font-size: 1rem; line-height: 1.2rem; text-align: center;}
 p{font-size: 0.8rem; text-align: center; line-height: 1rem;}
+
+
+
+#HP div{background: url(/project/1x/mainHp.png) no-repeat center / contain; width: 50px; height: 100%;}
+#HP div:hover{background: url(/project/1x/mainHpHover.png) no-repeat center / contain;;}
+.m a{font-size: 0.8rem;}
+
+.sec1.on #whatHS .slidebt{height: 2rem; width: 50%; position: fixed; bottom: 7%; left: 25%; display: flex; justify-content: space-between;}
+.sec1.on #whatHS .slidebt .material-symbols-outlined{font-size: 2rem;}
+
+
+
+
+
+
 .sec2 .heropage .inner{padding: 20px 0;}
 .sec2 .heropage .inner .text{width: 100%; height: 35%; padding-bottom: 50px;}
 .sec2 .heropage .inner .basic{height: 20%;}
@@ -26,6 +41,15 @@ p{font-size: 0.8rem; text-align: center; line-height: 1rem;}
 #rform{width: 100%; height: 100%;}
 
 .slick button{position: absolute; top: 83%; left: 50%;}
+
+.main .foot{width: 100%; height: 250px; color: #fff;}
+.main .foot .footinner{max-width: 1200px; margin: 0 auto; height: 100%; padding: 10px; gap: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; background-color: rgba(0, 0, 0, 0.6);}
+.main .foot .footinner .foottop{display: flex; width: 100%; justify-content: space-between; font-weight: bold; font-size: 0.7rem;}
+.main .foot .footinner .foottop span{cursor: pointer; text-align: center;}
+.main .foot .footinner .footmid{font-size: 0.7rem; width: 100%;}
+.main .foot .footinner .footbot{font-weight: bold;}
+
+
 
 
 
@@ -50,4 +74,8 @@ p{font-size: 0.8rem; text-align: center; line-height: 1rem;}
 .sec1.on .gameguide .gamebg.on .intro .textbox div p em{font-size: 0.7rem; line-height: 0.7rem;}
 .sec1.on .gameguide .gamebg.on .intro .textbox div b{line-height: 0.9rem; font-size: 0.9rem;}
 .sec1.on .gameguide .gamebg.on .intro .textbox div em{line-height: 0.9rem; font-size: 0.9rem;}
+
+.main .maininner .ha .hidetxt p{font-size: 2rem; line-height: 2rem;}
+
+#sec4.on .maininner .down .watch .mediaroom iframe{border: 0; width: 100%; height: 60%; align-self: center;}
 
