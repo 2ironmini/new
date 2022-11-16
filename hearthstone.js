@@ -1154,14 +1154,14 @@ function onPlayerReady(event) {
 var done = false;
 function onPlayerStateChange(event) {
   if (event.data == 0) {
-    $("body #player").fadeOut(2000).css('display','none');
-    $("#closeyt").hide();
+    $("body #player").remove();
+    $("#closeyt").remove();
   }
 }
 
 $(closeyt).click(function(){
-  $("body #player").fadeOut(2000);
-  $(this).hide();
+  $("body #player").remove();
+  $(this).remove();
 })
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
