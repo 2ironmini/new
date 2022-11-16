@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+
+*{margin: 0; padding: 0; box-sizing: border-box; word-break: keep-all;}
+
+h3{font-size: 1.8rem;}
+h4{color: rgb(0, 0, 0); font-size: 1.1rem; line-height: 1.4rem;}
+.project{width: 100%; height: 100%; position: relative;}
+.project .autobg{width: 100%; height: 100%;}
+.project .autobg img{opacity: 0.6; width: 100%;}
+
+.back{position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: -1; cursor: none;}
+
+.border{position: absolute; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 24 24 27 24 / 1 / 0;}
+.project .border{width: 50%; height: 50%;  top: 30%; left: 40%; position: fixed;}
+#link .border{width: 30%; height: 70%; top: 14%; left: 20%;}
+h3{text-align: center;}
+
+#ctlbar{position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; display: flex; cursor: pointer;}
+#ctlbar .on{display: flex; width: 100%; height: 100%;}
+#ctlbar span{display: flex; font-size: 40px;}
+#ctlbar .off{display: none;}
+
+
+.txtbox{width: 100%; height: 100%; display: flex; flex-direction: column; gap: 10px; background: url(/project/1x/txtbg.jpg) no-repeat center / cover; padding: 10px;}
+.txtbox > ul{display: flex; flex-direction: column; height: 100%; justify-content: space-around;}
+li.lv1{list-style: none; margin-left: 1.5rem; text-indent: -1.5rem; display: flex; flex-direction: column; gap: 5px;}
+
+li.lv1 ul{display: flex; flex-direction: column; gap: 5px;}
+li.lv2{list-style: circle; list-style: outside; font-size: 1rem; padding-left: 0px; text-indent: 0px;}
+li.lv2.nos{list-style: none; display: flex; flex-direction: row; gap: 5px;}
+
+
+.box{width: 30px; height: 30px; background-color: black; display: inline-block; outline: solid white 1px; cursor: pointer;}
+.box.nline{outline: none;}
+.hoveref{display: none; line-height: 30px;}
+.box:hover+.hoveref{width: 100%; height: 100%; display: block;}
+
+.box.color1{background-color: #4e2919; border-radius: 25%;}
+.box.color2{background-color: #e9d4a9; border-radius: 25%;}
+.box.color3{background-color: #8a7762; border-radius: 25%;}
+
+.box.logo1{background: url(/project/index/ui/css_filetype_icon_177544.svg) no-repeat center /contain;}
+.box.logo2{background: url(/project/index/ui/figma_logo_icon_147289.svg) no-repeat center /contain;}
+.box.logo3{background: url(/project/index/ui/html_filetype_icon_177535.svg) no-repeat center /contain;}
+.box.logo4{background: url(/project/index/ui/js_filetype_icon_177532.svg) no-repeat center /contain;}
+.box.logo5{background: url(/project/index/ui/psd_file_design_graphic_digital_artwork_adobe_photoshop_icon_191032.svg) no-repeat center /contain;}
+
