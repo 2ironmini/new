@@ -42,7 +42,7 @@ body{min-width: 320px;}
 .main .maininner .ha .hidetxt p{font-size: 3rem; visibility: hidden;}
 .main .maininner .ha:hover .hidetxt{width: 100%; display: block;}
 .main .maininner .ha:hover .heroimg{opacity: 0.9;}
-.main .maininner .ha:hover .hidetxt p{transition: all ease-in-out 1s; visibility: visible;}
+.main .maininner .ha:hover .hidetxt p{visibility: visible;}
 .main .foot{width: 100%; height: 250px; color: #fff;}
 .main .foot .footinner{max-width: 1200px; margin: 0 auto; height: 100%; padding: 30px; gap: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; background-color: rgba(0, 0, 0, 0.6);}
 .main .foot .footinner .foottop{display: flex; width: 80%; justify-content: space-between; font-weight: bold;}
@@ -51,7 +51,7 @@ body{min-width: 320px;}
 .main .foot .footinner .footbot{font-weight: bold;}
 
 
-.sec1{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed; opacity: 1;}
+#bodybg{width: 100%; height: 100%; background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt0c6db71db535f97a/5f8df46861a67a1420846b72/homepage_tavern_background.jpg) no-repeat center center; z-index: -1; position: fixed;}
 .sec1.on{display: block;}
 header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .gnb{position: relative; width: 100%; height: 50px; margin: 0 auto; display: flex; flex-direction: row; align-items: center; justify-content: center;}
@@ -87,11 +87,11 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .sec1 .gameguide .gamebg{display: none;}
 .sec1.on .gameguide .gamebg.on{display: block; width: 100%; height: 100%;}
 .sec1.on .gameguide .gamebg.on .intro{background: url(/project/1x/juin.jpg) no-repeat center / cover; max-width: 1200px; margin: 0 auto; height: 50%; position: relative;}
-.sec1.on .gameguide .gamebg.on .intro .textbox{position: absolute; width: 100%; height: 100%; top: 90%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg);}
+.sec1.on .gameguide .gamebg.on .intro .textbox{position: absolute; width: 100%; height: 100%; top: 100%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg);}
 .sec1.on .gameguide .gamebg.on .intro .textbox div{background: url(/project/1x/logo.png) no-repeat center / cover; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; line-height: 1.5rem;}
 
 
-.sec1.on .gameguide{width: 100vw; height: 100vh; position: relative; overflow: hidden; display: block;}
+.sec1.on .gameguide{width: 100vw; height: calc(100vh - 60px); position: relative; overflow: hidden; display: block;}
 
 .sec1.on #slide .control{width: 15%; height: 80%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; z-index: 2; top: 5%;}
 
@@ -100,21 +100,21 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .sec1.on #slide .right{width: 100vw; height: 100vh; position: absolute; top: 0; display: block;}
 .sec1.on #slide .right li{width: 100vw; height: 100vh;}
 .sec1.on #slide .right li .guide{width: 100vw; height: 60vh; display: none;}
-.sec1.on #slide .right li .guide.on {transform: scale(1); transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center;}
+.sec1.on #slide .right li .guide.on {transform: scale(1); transition: all ease-in-out 0.5s; display: flex; flex-direction: column; align-items: center;}
 .sec1.on #slide .right li .guide.on li{display: none;}
 .sec1.on #slide .right li .guide.on li.on{display: block;}
 .sec1 #slide .right li .textguide{width: 100vw; height: 40vh; transform:  scaleX(0); display: flex; }
-.sec1.on #slide .right li .textguide.on{transition: all ease-in-out 1s; display: flex; flex-direction: column; align-items: center; transform: scale(1); transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .textguide.on{display: flex; flex-direction: column; align-items: center; transform: scale(1); transition: all ease-in-out 0.5s;}
 .sec1.on #slide .right li .textguide.on li{display: none; width: 70%; color: #ffffff;}
-.sec1.on #slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_heroactive.png) no-repeat center 95% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(4).on{background: url(/project/1x/intro_weapon.png) no-repeat 30% bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(5).on{background: url(/project/1x/intro_mana.png) no-repeat right bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(6).on{background: url(/project/1x/intro_deck.png) no-repeat right 70% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
-.sec1.on #slide .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 1s;}
+.sec1.on #slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_heroactive.png) no-repeat center 95% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(4).on{background: url(/project/1x/intro_weapon.png) no-repeat 30% bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(5).on{background: url(/project/1x/intro_mana.png) no-repeat right bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(6).on{background: url(/project/1x/intro_deck.png) no-repeat right 70% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(7).on{background: url(/project/1x/intro_minion.png) no-repeat center center / cover;; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(8).on{background: url(/project/1x/intro_log.png) no-repeat left 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
+.sec1.on #slide .right li .guide.on li:nth-child(9).on{background: url(/project/1x/intro_end.png) no-repeat right 45% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
 .sec1.on #slide .right li .textguide.on li.on{display:flex; align-items: flex-start; justify-content: center;align-items: center; justify-content: center; padding-bottom: 100px;}
 
 
@@ -147,25 +147,25 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 
 .sec1.on #whatHS .HSintro li{display: block; height: 100%;}
 .sec1.on #whatHS .HSintro li .intro{width: 100%; height: 100%;}
-.sec1.on #whatHS .HSintro li .intro .imgbox{width:100%; height: 100%; border: 0px;}
+.sec1.on #whatHS .HSintro li .intro .imgbox{width:100vw; height: 100%; border: 0px;}
 .sec1.on #whatHS .HSintro li .intro .imgbox iframe{width: 100%; height: 95%; border: 0;}
 .sec1.on #whatHS .HSintro > li:last-child{width: 100vw; height: 100vh; display: none; position: relative;}
 
 .sec1.on #whatHS .slidebt{height: 3rem; width: 50%; position: fixed; bottom: 8%; left: 25%; justify-content: space-between; display: flex;}
-.sec1.on #whatHS .slidebt .material-symbols-outlined{font-size: 3rem; color: #ffffff; cursor: pointer;}
+.sec1.on #whatHS .slidebt .material-symbols-outlined{font-size: 3rem; color: #fff; cursor: pointer;}
 .sec1.on #whatHS .slidebt .material-symbols-outlined.off{cursor: default; opacity: 0.5;}
 .sec1.on #whatHS .span:first-child{width: fit-content; height: 3rem;}
 .sec1.on #whatHS .span:last-child{width: fit-content; height: 3rem;}
 
-.sec2{width: 100%; height: 100vh;}
-.sec2 .herose{width: 100vw; height: 100vh; display: flex; flex-direction: row; overflow: hidden;}
-.sec2 .heropage{width: 100vw; height: fit-content; overflow: hidden; display: flex; flex-direction: column;}
+.sec2{width: 100%; height: 100%;}
+.sec2 .herose{width: 100%; height: calc(100vh - 60px); display: flex; flex-direction: row; overflow: hidden;}
+.sec2 .heropage{width: 100%; height: fit-content; overflow: hidden; display: flex; flex-direction: column;}
 .sec2 .herose .Hr{flex: 1 1 0; display: flex; align-items: center; justify-content: center; flex-direction: column;}
 .sec2 .herose .Hr .hidename{height: 0; text-align: center; word-wrap:break-word; display: block;}
 .sec2 .herose .Hr .hidename h1{display: none;}
 
 
-.sec2 .herose .Hr:hover .hidename h1{height: fit-content; display: block;  color: #ffffff; word-wrap:break-word; transition: all ease-in-out 1s;}
+.sec2 .herose .Hr:hover .hidename h1{height: fit-content; display: block;  color: #ffffff; word-wrap:break-word;}
 .Hr a{width: 100%; max-width: 80px; height: 100%; max-height: 80px; background-repeat: no-repeat; background-size: contain;}
 .Hr.demonhunter{background: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt881c2890e465706d/5e5fe3d58902221b5e1dd5ea/dh.jpg) no-repeat 48%;}
 .Hr.demonhunter a{background-image: url(/project/1x/악마사냥꾼1.png);}
@@ -218,8 +218,8 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 
 
 
-#sec3{width: 100%; height: 100%; padding-top: 60px;}
-#sec3 .searchmenu{width: 100vw; height: 100%;}
+#sec3{width: 100%; height: 100%;}
+#sec3 .searchmenu{width: 100%; height: 100%;}
 #sec3 .job{width: 100%; height: 70px; display: flex; justify-content: space-between; align-items: center;}
 #sec3 .job div{height: 100%; flex: 1 1 0px; display: flex;}
 #sec3 .job div div{flex: 0 1 70px; background-repeat: no-repeat; background-position: 50%; background-size: contain; cursor: pointer;}
@@ -239,9 +239,9 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 
 
 
-#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; width: 100vw; height: 100%; min-height: 100vh; display: flex;}
+#sec3 .cardlist{background: url(/project/1x/라이브러리\ 배경.png) repeat-y right center / 100%; width: 100%; height: 100%; min-height: 100vh; display: flex;}
 #sec3 .cardlist .wrap div{flex: 0 0 220px;}
-#sec3 .cardlist .wrap{width: 100vw; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
+#sec3 .cardlist .wrap{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;}
 #god div{display: flex; cursor: pointer; flex-direction: row;}
 #god div img{width: 220px; height: 300px;}
 #god div .textbox{display: none;}
@@ -249,7 +249,7 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 
 
 
-#sec3 .searchmenu{width: 100vw; height: 100%; display: flex; flex-direction: column;}
+#sec3 .searchmenu{width: 100%; height: 100%; display: flex; flex-direction: column;}
 
 #sec3 .searchmenu .job{display: none;}
 #sec3 .searchmenu .job.on{background: url(/project/1x/navbg.png) no-repeat 50% / cover; display: flex;}
@@ -273,7 +273,7 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 #sec3 .searchmenu .subform.on .types{display: flex; flex-direction: row; justify-content: space-between;}
 #sec3 .searchmenu .subform.on legend{text-align: center; color: #fff;}
 
-#sec4.on{width: 100%; height: 100%; padding-top: 60px;}
+#sec4.on{width: 100%; height: 100%;}
 #sec4.on .maininner{height: calc(100vh - 60px); width: 100%;}
 #sec4.on .maininner .up{width: 100%; height: 60%; flex-direction: column; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 27 27 27 / 1 / 0;}
 #sec4.on .maininner .up .patch{width: 100%; height: 100%; cursor: pointer;}
