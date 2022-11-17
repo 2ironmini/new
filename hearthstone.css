@@ -57,11 +57,11 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .gnb{position: relative; width: 100%; height: 50px; margin: 0 auto; display: flex; flex-direction: row; align-items: center; justify-content: center;}
 .navmenu{width: 100%; height: 50px; display: flex; flex-direction: row; align-items: center; justify-content: space-around;}
 .navmenu li{width: 100%;}
-.navmenu li:first{order: 3;}
-.navmenu li:nth-child(1){order: 2;}
-.navmenu li:nth-child(2){order: 4;}
-.navmenu li:nth-child(3){order: 1;}
+.navmenu li:nth-child(1){order: 3;}
+.navmenu li:nth-child(2){order: 2;}
+.navmenu li:nth-child(3){order: 4;}
 .navmenu li:last-child{order: 5;}
+
 .gnb .navmenu .m{height: 50px; line-height: 40px; display: flex; justify-content: center; align-items: center;}
 .gnb .navmenu .m:hover{border-bottom: 2px solid #ff6600;}
 
