@@ -701,6 +701,7 @@ $(".gnb .navmenu .m:first a").click(function(){
 });    
 $(".gnb .navmenu .m:nth(1) a").click(function(){
     $("#sec2").addClass("on").siblings().removeClass("on");
+    $("#heropage .bg.on").removeClass("on");
 });    
 $(".main .maininner .ha").click(function(){
   $("#sec2").addClass("on").siblings().removeClass("on");

@@ -14,6 +14,9 @@ p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
 .sec1.on #whatHS .span:last-child{height: 2.5rem;}
 
 
+.sec1.on .gameguide .gamebg.on .textbox{max-width: 1200px; width: 100%; height: 60%; background-image: url(https://d2vkoy1na2a6o6.cloudfront.net/images/ui/parchment-f5126a8249a32eb235b139078b4cc13b5fb9d2c29b0e825569312681123d721a1f2e1addb4bad78f979933e561361e2ee2c5f5881ab4fef5385c66c6276c3b44.jpg); margin: 0 auto;}
+.sec1.on .gameguide .gamebg.on .textbox div{background: url(/project/1x/logo.png) no-repeat center / cover; width: 70%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; line-height: 1.5rem; margin: 0 auto;}
+.sec1.on .gameguide .gamebg.on .textbox div p em{font-size: 0.8rem; line-height: 0.8rem;}
 
 
 
