@@ -58,6 +58,19 @@ nav div:hover{border-bottom: 1px solid white;}
 #sec2 .down .left .txt .txtbox .lt{max-width: 30%; text-align: center; display: flex; flex-direction: column; gap: 1rem; border-right: 1px solid black;}
 #sec2 .down .left .txt .txtbox .lt div{width: 100%;}
 #sec2 .down .left .txt .txtbox .rt{flex: 1 1 0; display: flex; flex-direction: column; gap: 1rem;}
+#sec2 .down .left .txt .txtbox .rt > div{width: 100%;}
+
+#sec2 .down .left .txt .txtbox .rt .logobox{flex: 1 1 0; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px;}
+#sec2 .down .left .txt .txtbox .rt .logobox .css.logo{background: url(/project/index/ui/css_filetype_icon_177544.svg) no-repeat center /contain; cursor: pointer; width: 30px; height: 100%;}
+#sec2 .down .left .txt .txtbox .rt .logobox .figma.logo{background: url(/project/index/ui/figma_logo_icon_147289.svg) no-repeat center /contain; cursor: pointer; width: 30px; height: 100%;}
+#sec2 .down .left .txt .txtbox .rt .logobox .html.logo{background: url(/project/index/ui/html_filetype_icon_177535.svg) no-repeat center /contain; cursor: pointer; width: 30px; height: 100%;}
+#sec2 .down .left .txt .txtbox .rt .logobox .js.logo{background: url(/project/index/ui/js_filetype_icon_177532.svg) no-repeat center /contain; cursor: pointer; width: 30px; height: 100%;}
+#sec2 .down .left .txt .txtbox .rt .logobox .psd.logo{background: url(/project/index/ui/psd_file_design_graphic_digital_artwork_adobe_photoshop_icon_191032.svg) no-repeat center /contain; cursor: pointer; width: 30px; height: 100%;}
+#sec2 .down .left .txt .txtbox .rt .logobox .hoveref{display: none; font-weight: bold;}
+#sec2 .down .left .txt .txtbox .rt .logobox .logo:hover+.hoveref{width:fit-content; height: 100%; display: block;}
+
+
+
 #sec2 .down .right{height: 60%; margin-right: 10%; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 23 24 27 24 / 1 / 0;}
 #sec2 .down .right a{width: 100%; height: 100%;}
 #sec2 .down .right a .img{background: url(/project/ppt/320/bg.jpg) no-repeat center / cover; width: 100%; height: 100%; cursor: pointer;}
