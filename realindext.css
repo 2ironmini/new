@@ -1,0 +1,7 @@
+#sec2 .down .left{margin-left: 5%;}
+#sec2 .down .right{margin-right: 5%;}
+
+#sec2 .down .left .txt p{font-size: 0.8rem;}
+#sec2 .down .left .txt .txtbox{display: flex; flex-direction: row; width: 100%; height: fit-content; gap: 0.8rem; font-size: 0.8rem;}
+#sec3 .down .contact .lt div{font-size: 2rem;}
+#sec3 .down .contact .rt div{font-size: 2rem;}

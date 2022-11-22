@@ -1,0 +1,16 @@
+#sec2 .down{display: flex; flex-direction: column; top: 60px;}
+#sec2 .down .left{margin-left: 0; height: 40%; width: 90%; padding: 5px;}
+#sec2 .down .left .txt{gap: 5px;}
+#sec2 .down .left .txt h1{font-size: 1rem; line-height: 1rem;}
+#sec2 .down .left .txt h3{font-size: 0.8rem; line-height: 0.8rem;}
+#sec2 .down .left .txt p{font-size: 0.7rem; line-height: 1rem;}
+#sec2 .down .left .txt a{font-size: 1rem; line-height: 1rem; text-align: center;}
+#sec2 .down .left .txt .txtbox{gap: 0.5rem;}
+#sec2 .down .left .txt .txtbox .lt{gap: 2px; font-size: 0.6rem; line-height: 0.6rem;}
+#sec2 .down .left .txt .txtbox .rt{gap: 2px; font-size: 0.6rem; line-height: 0.6rem;}
+#sec2 .down .right{height: 40%; width: 100%; margin-right: 0%; border: solid black 30px; border-image: url(https://images.blz-contentstack.com/v3/assets/bltc965041283bac56c/blt47cbe0118299f668/5f1ef3b8bb238f5556376422/homepage-frame-grid.png) 23 24 27 24 / 1 / 0;}
+
+#sec3 .down .contact .lt div{font-size: 1rem; word-break: break-all;}
+#sec3 .down .contact .rt div{font-size: 1rem; word-break: break-all;}
+
+#sec3 .down .contact{width: 80%; height: 40%; position: absolute; top: 30%; left: 10%; padding: 5px;}
