@@ -1,4 +1,6 @@
-
+window.onload = function(){
+    $("#one").click();
+}
 
 
 
