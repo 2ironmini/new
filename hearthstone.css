@@ -11,7 +11,7 @@ h2{font-size: 1.5rem; line-height: 3rem; text-align: center;}
 p{font-size: 1rem; text-align: center; line-height: 1.5rem;}
 body{min-width: 320px;}
 
-#closeyt{position: fixed; z-index: 101; top: 50px; width: 5%; height: 5%; right: 5px; cursor: pointer; background: url(/project/ui/close_FILL0_wght400_GRAD0_opsz48.svg) no-repeat 50% / cover;}
+#closeyt{position: fixed; z-index: 101; top: 50px; width: 5%; height: 5%; right: 5px; cursor: pointer; background: url(/project/ui/close_FILL0_wght400_GRAD0_opsz48.svg) no-repeat 50% / cover; display: none; color: #e9d4a9;}
 
 .top{width: 100%; height: 20px; display: flex; justify-content: space-between; position: fixed; z-index: 2; top: 0;}
 .leftmenu{width: 60px; height: 100%; padding: 2px 0 0 2px; display: flex;}
@@ -63,7 +63,7 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .navmenu li:last-child{order: 5;}
 
 .gnb .navmenu .m{height: 50px; line-height: 40px; display: flex; justify-content: center; align-items: center;}
-.gnb .navmenu .m:hover{border-bottom: 2px solid #ff6600;}
+.gnb .navmenu .m:hover{border-bottom: 2px solid #d89103;}
 
 .gnb .navmenu a{color: #ffffff; text-decoration: none; display: block;}
 .gnb .navmenu a:hover{color: red;}
@@ -71,12 +71,11 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 #HP div{background: url(/project/1x/hearthstone.webp) no-repeat 30% 50% / 100%; width: 150px; height: 100%;}
 .gnb .m{float: left; width: 150px; position: relative; text-align: center;}
 .gnb .m>a{display: block; height: 50px; line-height: 50px;}
-.gnb .m ul{position: absolute; left: 0px; top: 50px; width: 100%; background-color: beige;
+.gnb .m ul{position: absolute; left: 0px; top: 50px; width: 100%;}
 
-}
-.gnb .m ul li>a{color: #000000; display: block;}
+.gnb .m ul li>a{color: #fff; display: block;}
 .gnb .m ul li a:hover,.gnb .m ul li a:focus,.gnb .m ul li a:active{background-color: #ffffff;}
-.gnb .m ul li a{border-bottom: 1px solid #ff6600;}
+.gnb .m ul li a{border-bottom: 1px solid #d89103;}
 .gnb .m ul li:last-child a{border: none;}
 
 
@@ -152,7 +151,7 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .sec1.on #whatHS .HSintro > li:last-child{width: 100vw; height: 100vh; display: none; position: relative;}
 
 .sec1.on #whatHS .slidebt{height: 3rem; width: 50%; position: fixed; bottom: 8%; left: 25%; justify-content: space-between; display: flex;}
-.sec1.on #whatHS .slidebt .material-symbols-outlined{font-size: 3rem; color: #fff; cursor: pointer;}
+.sec1.on #whatHS .slidebt .material-symbols-outlined{font-size: 3rem; color: #e9d4a9; cursor: pointer;}
 .sec1.on #whatHS .slidebt .material-symbols-outlined.off{cursor: default; opacity: 0.5;}
 .sec1.on #whatHS .span:first-child{width: fit-content; height: 3rem;}
 .sec1.on #whatHS .span:last-child{width: fit-content; height: 3rem;}
@@ -212,11 +211,11 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 
 
 
-.close.pagingtop{position: absolute; top: 95%; right: 48%; z-index: 100; width: 30px; height: 30px; display: flex; cursor: pointer; background: url(/project/ui/SVG/Asset\ 1.svg) no-repeat 50%;}
+.close.pagingtop{position: absolute; top: 95%; right: 48%; z-index: 100; width: 30px; height: 30px; display: flex; cursor: pointer; background: url(/project/ui/SVG/Asset1.svg) no-repeat 50%;}
 
 
 #sec3 .cardlist .gotop{position: fixed; right: 10px; top: 50%; width: 30px; height: 30px;}
-#sec3 .cardlist .gotop a{background: url(/project/ui/SVG/Asset\ 1.svg) no-repeat 50%; width: 30px; height: 30px; position: fixed; z-index: 1;}
+#sec3 .cardlist .gotop a{background: url(/project/ui/SVG/Asset1.svg) no-repeat 50%; width: 30px; height: 30px; position: fixed; z-index: 1;}
 
 
 

@@ -1184,6 +1184,9 @@ function onPlayerStateChange(event) {
   }
 }
 
+$(closeyt).show(10000);
+
+
 $(closeyt).click(function(){
   $("body #player").remove();
   $(this).remove();
