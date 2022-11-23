@@ -72,10 +72,10 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .gnb .m{float: left; width: 150px; position: relative; text-align: center;}
 .gnb .m>a{display: block; height: 50px; line-height: 50px;}
 .gnb .m ul{position: absolute; left: 0px; top: 50px; width: 100%;}
-
-.gnb .m ul li>a{color: #fff; display: block;}
+/* .gnb .m:hover, .gnb .m:focus,.gnb .m:active{background-color: #ffffff;} */
+.gnb .m ul li>a{color: #fff; display: block; z-index: 100;}
 .gnb .m ul li a:hover,.gnb .m ul li a:focus,.gnb .m ul li a:active{background-color: #ffffff;}
-.gnb .m ul li a{border-bottom: 1px solid #d89103;}
+.gnb .m ul li a{border-bottom: 1px solid #d89103; background-color: #000;}
 .gnb .m ul li:last-child a{border: none;}
 
 
@@ -102,9 +102,9 @@ header{position: absolute; width: 100%; z-index: 3; top: 10px;}
 .sec1.on #slide .right li .guide.on {transform: scale(1); transition: all ease-in-out 0.5s; display: flex; flex-direction: column; align-items: center;}
 .sec1.on #slide .right li .guide.on li{display: none;}
 .sec1.on #slide .right li .guide.on li.on{display: block;}
-.sec1 #slide .right li .textguide{width: 100vw; height: 40vh; transform:  scaleX(0); display: flex; }
-.sec1.on #slide .right li .textguide.on{display: flex; flex-direction: column; align-items: center; transform: scale(1); transition: all ease-in-out 0.5s;}
-.sec1.on #slide .right li .textguide.on li{display: none; width: 70%; color: #ffffff;}
+.sec1 #slide .right li .textguide{width: 100vw; height: 40vh; transform:  scaleX(0); display: flex;}
+.sec1.on #slide .right li .textguide.on{display: flex; flex-direction: column; align-items: center; transform: scale(1); transition: all ease-in-out 0.5s; background: url(/project/1x/txtbg.jpg) no-repeat center / cover;}
+.sec1.on #slide .right li .textguide.on li{display: none; width: 70%; color: #000;}
 .sec1.on #slide .right li .guide.on li:nth-child(1).on{background: url(/project/1x/intro_hand.png) no-repeat center bottom / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
 .sec1.on #slide .right li .guide.on li:nth-child(2).on{background: url(/project/1x/intro_hero.png) no-repeat center 90% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
 .sec1.on #slide .right li .guide.on li:nth-child(3).on{background: url(/project/1x/intro_heroactive.png) no-repeat center 95% / cover; width: 100%; height: 100%; transition: all ease-in-out 0.5s;}
